@@ -2,6 +2,8 @@
 
 This project extracts recommended scientific papers from huggingface.co/papers, stores them in a JSON file, and provides a web interface for searching and sorting the papers by publication date and the number of upvotes. It should help staying up-to-date with research in ML. Thanks a lot to AK for posting the papers.
 
+Try it out [here](https://htmlpreview.github.io/?https://github.com/mwoedlinger/huggingface-papers-scrapper/blob/main/index.html).
+
 ## Features
 
 - Fetch and parse scientific papers recommended on huggingface.co/papers.
