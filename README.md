@@ -6,10 +6,10 @@ Try it out [here](https://htmlpreview.github.io/?https://github.com/mwoedlinger/
 
 ## Features
 
-- Fetch and parse scientific papers recommended on huggingface.co/papers.
-- Store paper details in a structured JSON file.
-- Web interface for keyword search within the paper titles, abstracts, and authors.
+- Web interface for keyword search within the paper titles, abstracts, tags and authors.
 - Sort papers by publication date or number of upvotes.
+- Select papers by date, tag or author
+- Combine search queries with a semicolon
 
 ## How-to
 
