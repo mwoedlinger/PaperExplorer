@@ -26,6 +26,7 @@ function loadPapers() {
 
 function getSortedAndFilteredPapers() {
     const searchText = document.getElementById('search-box').value.toLowerCase();
+    const searchTerms = searchText.split(';').map(term => term.trim());
     const sortOption = document.getElementById('sort-options').value;
     const startDate = document.getElementById('start-date').value;
     const endDate = document.getElementById('end-date').value;
@@ -35,11 +36,12 @@ function getSortedAndFilteredPapers() {
         const start = startDate ? new Date(startDate) : new Date(-8640000000000000);
         const end = endDate ? new Date(endDate) : new Date(8640000000000000);
 
-        return (paper.title.toLowerCase().includes(searchText) ||
-                paper.authors.some(author => author.toLowerCase().includes(searchText)) ||
-                paper.abstract.toLowerCase().includes(searchText) ||
-                paper.tags.some(tag => tag.toLowerCase().includes(searchText))) &&
-                (paperDate >= start && paperDate <= end);
+        return searchTerms.every(term =>
+            paper.title.toLowerCase().includes(term) ||
+            paper.authors.some(author => author.toLowerCase().includes(term)) ||
+            paper.abstract.toLowerCase().includes(term) ||
+            paper.tags.some(tag => tag.toLowerCase().includes(term))
+        ) && (paperDate >= start && paperDate <= end);
     });
 
     if (sortOption === 'date') {
@@ -77,7 +79,8 @@ function displayPapers() {
             authorElement.className = 'paper-author';
             authorElement.textContent = author + ', ';
             authorElement.onclick = function() {
-                document.getElementById('search-box').value = author;
+                const currentSearch = document.getElementById('search-box').value;
+                document.getElementById('search-box').value = currentSearch ? `${currentSearch}; ${author}` : author;
                 displayPapers();
             };
             authorsContainer.appendChild(authorElement);
@@ -89,9 +92,10 @@ function displayPapers() {
             tagElement.className = 'paper-tag';
             tagElement.textContent = tag;
             tagElement.onclick = function() {
-                document.getElementById('search-box').value = tag; 
-                displayPapers();
-            };
+                const currentSearch = document.getElementById('search-box').value;
+                document.getElementById('search-box').value = currentSearch ? `${currentSearch}; ${tag}` : tag;
+                displayPapers(); 
+            };            
             tagsContainer.appendChild(tagElement);
         });
 
