@@ -68,9 +68,9 @@ function displayPapers() {
             <div class="paper-tags"></div> <!-- Container for tags -->
             <p class="paper-abstract">${paper.abstract}</p>
             <div class="paper-meta">
-                <span>Published: ${paper.publication_date}</span>
-                <span>Upvotes: ${paper.upvotes}</span>
-                <span>Url: <a href=${paper.url} class="paper-url">${paper.url}</a></span>
+                <span class="meta-date">Published: ${paper.publication_date}</span>
+                <span class="meta-upvotes">Upvotes: ${paper.upvotes}</span>
+                <span class="meta-url">Url: <a href=${paper.url} class="paper-url">${paper.url}</a></span>
             </div>
         `;
         const authorsContainer = element.querySelector('.paper-authors');

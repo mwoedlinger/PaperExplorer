@@ -88,6 +88,11 @@ body, html {
     gap: 20px; /* Space between meta info items */
 }
 
+.paper-meta span {
+    display: inline-block;
+    margin-right: 10px; /* Adds some space between meta information */
+}
+
 .paper-url {
     word-break: break-all; /* Ensure URL does not overflow container */
 }
@@ -113,3 +118,12 @@ body, html {
     font-size: 14px
 }
 
+@media (max-width: 600px) {
+    .meta-date {
+        display: none;
+    }
+
+    .meta-upvotes {
+        display: none; 
+    }
+}
