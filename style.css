@@ -2,18 +2,80 @@ body, html {
     font-family: Arial, sans-serif;
     padding: 20px;
     margin: 0;
+    background-color: #f4f4f4; /* Light background for modern look */
 }
 
 #search-container {
+    background-color: #fff; /* White background for the search area */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; /* Space between elements */
     margin-bottom: 20px;
 }
 
-#search-box {
-    width: 300px;
+#search-box, #start-date, #end-date, #sort-options {
     padding: 10px;
-    margin-right: 10px;
+    border: 1px solid #ccc; /* Light border for inputs and select */
+    border-radius: 4px; /* Rounded corners for inputs */
+    width: 100%; /* Full width to accommodate smaller screens */
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    font-size: 16px; /* Slightly larger font for readability */
+}
+
+#sort-options {
+    min-width: 150px; /* Ensures sort options dropdown is not too narrow */
+}
+
+@media (min-width: 600px) {
+    #search-box {
+        width: auto;
+        flex: 1; /* Allows search box to grow */
+    }
+    #start-date, #end-date, #sort-options {
+        width: auto; /* Adjust width on larger screens */
+    }
 }
 
 #papers-container {
     margin-top: 20px;
+    background-color: #fff; /* White background for paper listings */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent shadow with search container */
+}
+
+.paper {
+    margin-bottom: 20px; /* Space between paper entries */
+}
+
+.paper-title {
+    font-size: 24px; /* Larger, bolder title */
+    font-weight: bold;
+    margin-bottom: 5px; /* Smaller gap between title and authors */
+}
+
+.paper-authors {
+    font-size: 14px; /* Prominent author list, but smaller than title */
+    margin-bottom: 10px; /* Space before abstract */
+}
+
+.paper-abstract {
+    line-height: 1.2;
+    padding-left: 20px; /* Indent the entire abstract */
+    margin-bottom: 10px; /* Space before meta information */
+}
+
+.paper-meta {
+    font-size: 14px; /* Smaller meta information */
+    display: flex; /* Align meta information horizontally */
+    justify-content: flex-start; /* Align to the start of the flex container */
+    gap: 20px; /* Space between meta info items */
+}
+
+.paper-url {
+    word-break: break-all; /* Ensure URL does not overflow container */
 }
