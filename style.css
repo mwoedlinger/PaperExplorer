@@ -1,0 +1,19 @@
+body, html {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+#search-container {
+    margin-bottom: 20px;
+}
+
+#search-box {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#papers-container {
+    margin-top: 20px;
+}
