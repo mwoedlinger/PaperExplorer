@@ -63,6 +63,18 @@ body, html {
     margin-bottom: 10px; /* Space before abstract */
 }
 
+.paper-author {
+    cursor: pointer;
+    transition: color 0.3s;
+    display: inline; /* Ensure authors are inline */
+}
+
+.paper-author:hover {
+    color: #007bff; /* Change color on hover */
+    text-decoration: underline; /* Underline to indicate it's clickable */
+}
+
+
 .paper-abstract {
     line-height: 1.2;
     padding-left: 20px; /* Indent the entire abstract */
@@ -79,3 +91,25 @@ body, html {
 .paper-url {
     word-break: break-all; /* Ensure URL does not overflow container */
 }
+
+.paper-tag {
+    display: inline-block;
+    background-color: #e0e0e0; /* Light gray background */
+    padding: 3px 8px;
+    border-radius: 4px; /* Rounded corners for tags */
+    margin-right: 5px; /* Space between tags */
+    font-size: 14px;
+    cursor: pointer; /* Changes cursor to indicate clickable items */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.paper-tag:hover {
+    background-color: #d0d0d0; /* Darker shade on hover for visual feedback */
+    text-decoration: underline; /* Underline to indicate it's clickable */
+}
+
+
+.paper-tags {
+    font-size: 14px
+}
+
