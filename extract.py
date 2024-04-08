@@ -24,11 +24,13 @@ def get_arxiv_info(arxiv_link: str) -> Optional[Dict[str, str]]:
             if response.ok:
                 soup = BeautifulSoup(response.text, "xml")
                 entry = soup.find('entry')
+                categories = [category['term'] for category in entry.find_all('category')]
                 return {
                     "title": entry.find('title').text.strip(),
                     "authors": [author.text.strip() for author in entry.find_all('name')],
                     "abstract": entry.find('summary').text.strip(),
-                    "publication_date": entry.find('published').text.strip()
+                    "publication_date": entry.find('published').text.strip(),
+                    "tags": categories
                 }
             else:
                 print(f"Error: Unable to fetch data from arXiv API, status code {response.status_code}")
