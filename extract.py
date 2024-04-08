@@ -116,9 +116,12 @@ if __name__ == '__main__':
         
         current_date += timedelta(days=1)
         
-    # Read papers.json as dict:
-    with open("papers.json", "r") as fp:
-        old_articles = json.load(fp)
+    # Read papers.json as dict if it exists
+    try:
+        with open("papers.json", "r") as fp:
+            old_articles = json.load(fp)
+    except FileNotFoundError:
+        old_articles = {}
 
     # update the file with new articles
     articles.update(articles)
