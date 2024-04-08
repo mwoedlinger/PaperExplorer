@@ -126,6 +126,6 @@ if __name__ == '__main__':
         old_articles = {}
 
     # update the file with new articles
-    articles.update(articles)
+    articles.update(old_articles)
     with open("papers.json", "w") as fp:
         json.dump(articles, fp, indent=4)
