@@ -16,7 +16,7 @@ document.getElementById('search-box').addEventListener('input', function() {
 });
 
 function loadPapers() {
-    fetch('papers_old.json')
+    fetch('papers.json')
         .then(response => response.json())
         .then(data => {
             papersData = Object.values(data);
