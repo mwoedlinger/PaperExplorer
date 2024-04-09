@@ -77,15 +77,14 @@ function createPaperElement(paper) {
     const element = document.createElement('div');
     element.className = 'paper';
 
-    let authorsHTML = paper.authors.map(author => `<span class="paper-author">${author}, </span>`).join('');
-    authorsHTML = authorsHTML.slice(0, -2); // Remove the last comma and space
+    let authorsHTML = paper.authors.map(author => `<span class="paper-author">${author}</span>`).join(', ');
     let tagsHTML = paper.tags.map(tag => `<span class="paper-tag">${tag}</span>`).join(' ');
 
     element.innerHTML = `
         <a href="${paper.url}" target="_blank"><h3 class="paper-title">${paper.title}</h3></a>
         <div class="paper-authors">${authorsHTML}</div>
         <div class="paper-tags">${tagsHTML}</div>
-        <p class="paper-abstract">${paper.abstract}</p>
+        <p class="paper-abstract">${paper.abstract}</p> <!-- Ensure this is not inside a clickable span -->
         <div class="paper-meta">
             <span class="meta-date">Date: ${paper.publication_date}</span>
             <span class="meta-upvotes">Votes: ${paper.upvotes}</span>
