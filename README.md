@@ -1,6 +1,6 @@
 # huggingface-papers-scrapper
 
-This project extracts recommended scientific papers from huggingface.co/papers, stores them in a JSON file, and provides a web interface for searching and sorting the papers by publication date and the number of upvotes. It should help staying up-to-date with research in ML. Thanks a lot to AK for posting the papers.
+I created this small repo to make it easier to stay up-to-date with research in ML. It uses the paper recommendations posted (almost) daily on huggingface.co/paper (Thanks a lot to AK) and stores all of the them in papers.json. A simple web interface allows searching in all recommended papers, sorting them by upvotes (from huggingface) or date. You can also select papers by arxiv tag by clicking on the tags below the author list.
 
 Try it out [here](https://htmlpreview.github.io/?https://github.com/mwoedlinger/huggingface-papers-scrapper/blob/main/index.html).
 
@@ -8,10 +8,11 @@ Try it out [here](https://htmlpreview.github.io/?https://github.com/mwoedlinger/
 
 - Web interface for keyword search within the paper titles, abstracts, tags and authors.
 - Sort papers by publication date or number of upvotes.
-- Select papers by date, tag or author
+- Define a date range with start and end date
+- Select arxiv tags or authors by clicking on them
 - Combine search queries with a semicolon
 
-## How-to
+## How-to run locally
 
 Clone the repository:
 ```bash
