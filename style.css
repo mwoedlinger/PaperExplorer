@@ -148,3 +148,41 @@ a {
         padding: 5px;
     }
 }
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#pagination-controls button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #f4f4f4; /* Lighter background for a softer look */
+    color: #333; /* Dark grey text for contrast */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 4px; /* Slightly rounded corners for a softer look */
+    cursor: pointer;
+    font-size: 14px; /* Smaller text for a more refined appearance */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#pagination-controls button:disabled {
+    background-color: #fafafa; /* Even lighter background for disabled state */
+    color: #ccc; /* Light grey text to indicate non-interactivity */
+    cursor: not-allowed;
+    border-color: #f0f0f0; /* Light border for disabled buttons */
+}
+
+#pagination-controls button:hover:not(:disabled) {
+    background-color: #e6e6e6; /* Slightly darker shade for hover effect */
+    color: #212529; /* Slightly darker text on hover for better readability */
+}
+
+#pagination-controls span {
+    font-size: 14px;
+    color: #333;
+    margin: 0 10px; /* Ensures a bit of spacing around the page number */
+}
+
