@@ -125,11 +125,11 @@ a {
     font-size: 14px
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .paper-meta {
         display: none;
     }
-}
+} */
 
 @media (max-width: 6000px) {
     #search-container {
