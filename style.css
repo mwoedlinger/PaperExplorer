@@ -130,3 +130,21 @@ a {
         display: none;
     }
 }
+
+@media (max-width: 6000px) {
+    #search-container {
+        padding: 10px; /* Reduced padding for the search area on small screens */
+    }
+
+    #search-box, #start-date, #end-date, #sort-options {
+        padding: 8px; /* Reduced padding for form fields on small screens */
+    }
+
+    .paper-abstract {
+        padding-left: 10px; /* Slightly reduce the indentation of the abstract */
+    }
+
+    body, html {
+        padding: 5px;
+    }
+}
