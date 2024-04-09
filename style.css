@@ -56,6 +56,17 @@ body, html {
     font-size: 24px; /* Larger, bolder title */
     font-weight: bold;
     margin-bottom: 5px; /* Smaller gap between title and authors */
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* no underline */
+  }
+
+.paper-title:hover {
+    color: #212223; /* Change color on hover */
+    text-decoration: underline; /* Underline to indicate it's clickable */
 }
 
 .paper-authors {
@@ -86,15 +97,12 @@ body, html {
     display: flex; /* Align meta information horizontally */
     justify-content: flex-start; /* Align to the start of the flex container */
     gap: 20px; /* Space between meta info items */
+    color: #3c3c3c;
 }
 
 .paper-meta span {
     display: inline-block;
     margin-right: 10px; /* Adds some space between meta information */
-}
-
-.paper-url {
-    word-break: break-all; /* Ensure URL does not overflow container */
 }
 
 .paper-tag {
@@ -113,17 +121,12 @@ body, html {
     text-decoration: underline; /* Underline to indicate it's clickable */
 }
 
-
 .paper-tags {
     font-size: 14px
 }
 
 @media (max-width: 600px) {
-    .meta-date {
+    .paper-meta {
         display: none;
-    }
-
-    .meta-upvotes {
-        display: none; 
     }
 }
