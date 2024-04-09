@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="search-container">
-        <input type="text" id="search-box" placeholder="Search by title, author, tags or abstract..." aria-label="Search papers">
-        <select id="sort-options" aria-label="Sort options">
+    <div id="search-container">
+        <input type="text" id="search-box" placeholder="Search by title, author, tags or abstract...">
+        <select id="sort-options">
             <option value="date">Sort by Date</option>
             <option value="upvotes">Sort by Upvotes</option>
         </select>
-        <input type="date" id="start-date" placeholder="Start Date" aria-label="Start date">
-        <input type="date" id="end-date" placeholder="End Date" aria-label="End date">
-    </form>
+        <input type="date" id="start-date" placeholder="Start Date">
+        <input type="date" id="end-date" placeholder="End Date">
+    </div>
     <div id="papers-container"></div>
     <script src="script.js"></script>
 </body>

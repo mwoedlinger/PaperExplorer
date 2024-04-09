@@ -2,39 +2,26 @@ let papersData = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     loadPapers();
-    setupEventListeners();
-});
-
-function setupEventListeners() {
-    const searchBox = document.getElementById('search-box');
-    let debounceTimeout;
-    searchBox.addEventListener('input', function() {
-        clearTimeout(debounceTimeout);
-        debounceTimeout = setTimeout(() => {
-            displayPapers();
-        }, 300); // Debounce input to reduce frequent calls
-    });
-
     document.getElementById('start-date').addEventListener('change', displayPapers);
     document.getElementById('end-date').addEventListener('change', displayPapers);
-    document.getElementById('sort-options').addEventListener('change', displayPapers);
-}
+});
+
+document.getElementById('sort-options').addEventListener('change', function() {
+    displayPapers();
+});
+
+document.getElementById('search-box').addEventListener('input', function() {
+    displayPapers();
+});
 
 function loadPapers() {
     fetch('papers.json')
-        .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             papersData = Object.values(data);
             displayPapers();
         })
-        .catch(error => {
-            console.error('Error loading the papers:', error);
-            // Implement user feedback here, for example, using a simple alert or a more sophisticated method
-            alert('Failed to load papers. Please try again later.');
-        });
+        .catch(error => console.error('Error loading the papers:', error));
 }
 
 function getSortedAndFilteredPapers() {
@@ -47,7 +34,7 @@ function getSortedAndFilteredPapers() {
     let filteredPapers = papersData.filter(paper => {
         const paperDate = new Date(paper.publication_date);
         const start = startDate ? new Date(startDate) : new Date(-8640000000000000);
-        const end = endDate ? new Date(endDate) : new Date();
+        const end = endDate ? new Date(endDate) : new Date(8640000000000000);
 
         return searchTerms.every(term =>
             paper.title.toLowerCase().includes(term) ||
@@ -76,15 +63,41 @@ function displayPapers() {
         const element = document.createElement('div');
         element.className = 'paper';
         element.innerHTML = `
-            <a href="${paper.url}"><h3 class="paper-title">${paper.title}</h3></a>
-            <div class="paper-authors">${paper.authors.join(', ')}</div>
-            <div class="paper-tags">${paper.tags.map(tag => `<span class="paper-tag">${tag}</span>`).join('')}</div>
+            <a href=${paper.url}><h3 class="paper-title">${paper.title}</h3></a>
+            <div class="paper-authors"></div> <!-- Container for authors -->
+            <div class="paper-tags"></div> <!-- Container for tags -->
             <p class="paper-abstract">${paper.abstract}</p>
             <div class="paper-meta">
                 <span class="meta-date">Date: ${paper.publication_date}</span>
                 <span class="meta-upvotes">Votes: ${paper.upvotes}</span>
             </div>
         `;
+        const authorsContainer = element.querySelector('.paper-authors');
+        paper.authors.forEach(author => {
+            const authorElement = document.createElement('span');
+            authorElement.className = 'paper-author';
+            authorElement.textContent = author + ', ';
+            authorElement.onclick = function() {
+                const currentSearch = document.getElementById('search-box').value;
+                document.getElementById('search-box').value = currentSearch ? `${currentSearch}; ${author}` : author;
+                displayPapers();
+            };
+            authorsContainer.appendChild(authorElement);
+        });
+
+        const tagsContainer = element.querySelector('.paper-tags');
+        paper.tags.forEach(tag => {
+            const tagElement = document.createElement('span');
+            tagElement.className = 'paper-tag';
+            tagElement.textContent = tag;
+            tagElement.onclick = function() {
+                const currentSearch = document.getElementById('search-box').value;
+                document.getElementById('search-box').value = currentSearch ? `${currentSearch}; ${tag}` : tag;
+                displayPapers(); 
+            };            
+            tagsContainer.appendChild(tagElement);
+        });
+
         container.appendChild(element);
     });
 }
