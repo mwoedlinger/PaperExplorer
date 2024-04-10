@@ -25,12 +25,14 @@ def get_arxiv_info(arxiv_link: str) -> Optional[Dict[str, str]]:
                 soup = BeautifulSoup(response.text, "xml")
                 entry = soup.find('entry')
                 categories = [category['term'] for category in entry.find_all('category')]
+                date_time = entry.find('published').text.strip()
                 return {
                     "title": entry.find('title').text.strip(),
                     "authors": [author.text.strip() for author in entry.find_all('name')],
                     "abstract": entry.find('summary').text.strip(),
-                    "publication_date": entry.find('published').text.strip(),
-                    "tags": categories
+                    "publication_date": date_time.split('T')[0],
+                    "publication_time": date_time.split('T')[1].split('Z')[0],
+                    "tags": categories,
                 }
             else:
                 print(f"Error: Unable to fetch data from arXiv API, status code {response.status_code}")
@@ -100,7 +102,19 @@ if __name__ == '__main__':
     parser.add_argument('--end_date', type=str, help='End date in YYYY-MM-DD format. Example 2024-02-15')
     args = parser.parse_args()
 
-    start_date = datetime.strptime(args.start_date, '%Y-%m-%d').date()
+
+    if args.start_date:      
+        start_date = datetime.strptime(args.start_date, '%Y-%m-%d').date()
+    else: # check papers.json for the last date and start from the next day
+        try:
+            with open("papers.json", "r") as fp:
+                articles = json.load(fp)
+            start_date = datetime.strptime(max(articles.values(), key=lambda x: x['publication_date'])['publication_date'], '%Y-%m-%d').date() + timedelta(days=1)
+            print(f'Starting from {start_date}')
+        except FileNotFoundError:
+            start_date = datetime.now().date()
+            print('No existing data found. Starting from today')
+
     if args.end_date:
         end_date = datetime.strptime(args.end_date, '%Y-%m-%d').date()
     else:
