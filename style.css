@@ -1,60 +1,11 @@
 body, html {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px; /* Adds padding around the entire page */
-    background-color: #f4f4f4; /* Sets a background color for the entire page */
+    padding: 20px; /* Preserves original padding on mobile */
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Keep the body to the full viewport height */
-    overflow: hidden; /* Prevent the body from scrolling */
-}
-
-#search-container {
-    position: fixed;
-    top: 20px; /* Aligns with page padding */
-    left: 20px;
-    right: 20px; /* Adjusts to not stretch entirely to the edges, matching the new body padding */
-    z-index: 100;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds shadow for depth */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    box-sizing: border-box;
-}
-
-#pagination-controls {
-    position: fixed;
-    bottom: 20px; /* Aligns with page padding */
-    left: 0;
-    right: 0; /* Ensures it stretches across the full width */
-    z-index: 100;
-    background-color: transparent; /* Makes the background blend with the page */
-    padding: 10px 20px;
-    border-radius: 0; /* Removes rounded corners for a seamless blend */
-    box-shadow: none; /* Removes shadow for a flat appearance */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-#papers-container {
-    position: absolute;
-    top: 140px; /* Adjust based on the actual height of your fixed search-container */
-    bottom: 80px; /* Adjust based on the actual height of your fixed pagination-controls */
-    left: 20px;
-    right: 20px;
-    overflow-y: auto;
-    background-color: #fff;
-    padding: 20px;
-    margin: 0; /* Adjusted to remove additional spacing */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    box-sizing: border-box;
+    height: auto; /* Set height to auto for mobile to enable natural page flow */
 }
 
 
@@ -170,58 +121,6 @@ a {
     font-size: 14px
 }
 
-
-/* @media (max-width: 600px) {
-    #search-container {
-        padding: 10px; 
-    }
-
-    #search-box, #start-date, #end-date, #sort-options {
-        padding: 8px;/
-    }
-
-    .paper-abstract {
-        padding-left: 10px; 
-    }
-
-    body, html {
-        padding: 5px;
-    }
-} */
-
-@media (max-width: 768px) {
-    body, html {
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
-
-    #search-container, #pagination-controls {
-        flex-direction: column; /* Stack the search inputs and buttons vertically */
-        padding: 10px; /* Reduce padding to save space */
-    }
-
-    #search-box, #start-date, #end-date, #sort-options {
-        margin-bottom: 10px; /* Add some space between inputs */
-        width: calc(100% - 20px); /* Adjust width to ensure it fits within the container */
-    }
-
-    .paper {
-        padding: 10px; /* Reduce padding for each paper to save space */
-    }
-
-    .paper-title, .paper-authors, .paper-abstract, .paper-meta {
-        font-size: 14px; /* Reduce font size for better readability on small screens */
-    }
-
-    .paper-abstract {
-        padding-left: 10px; 
-    }
-
-    .paper-tags, .paper-tag {
-        font-size: 12px; /* Adjust tag font size for space efficiency */
-    }
-}
-
-
 #pagination-controls button {
     padding: 8px 12px;
     margin: 0 5px;
@@ -252,3 +151,101 @@ a {
     margin: 0 10px; /* Ensures a bit of spacing around the page number */
 }
 
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+    body, html {
+        padding: 10px; /* Adjusted padding for larger screens */
+        height: 100vh; /* Fixed height for larger screens to enable inner scrolling */
+        overflow: hidden; /* Prevent scrolling of the body on larger screens to maintain the layout */
+    }
+
+    #search-container {
+        position: fixed;
+        top: 20px; /* Aligns with page padding */
+        left: 20px;
+        right: 20px; /* Adjusts to not stretch entirely to the edges, matching the new body padding */
+        z-index: 100;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px; /* Adds rounded corners */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds shadow for depth */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    #pagination-controls {
+        position: fixed;
+        bottom: 20px; /* Aligns with page padding */
+        left: 0;
+        right: 0; /* Ensures it stretches across the full width */
+        z-index: 100;
+        background-color: transparent; /* Makes the background blend with the page */
+        padding: 10px 20px;
+        border-radius: 0; /* Removes rounded corners for a seamless blend */
+        box-shadow: none; /* Removes shadow for a flat appearance */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    #papers-container {
+        position: absolute;
+        top: 140px; /* Adjust based on the actual height of your fixed search-container */
+        bottom: 80px; /* Adjust based on the actual height of your fixed pagination-controls */
+        left: 20px;
+        right: 20px;
+        overflow-y: auto;
+        background-color: #fff;
+        padding: 20px;
+        margin: 0; /* Adjusted to remove additional spacing */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 768px) {
+    .paper-abstract {
+        padding-left: 10px; 
+    }
+
+    body, html {
+        padding: 5px;
+    }
+    #search-container {
+        background-color: #fff; /* White background for the search area */
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 8px; /* Rounded corners for modern look */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px; /* Space between elements */
+        margin-bottom: 20px;
+    }
+
+    #search-box, #start-date, #end-date, #sort-options {
+        width: calc(100% - 20px); /* Adjust width to ensure it fits within the container */
+        padding: 8px;/
+    }
+
+    #papers-container {
+        margin-top: 20px;
+        background-color: #fff; /* White background for paper listings */
+        padding: 20px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent shadow with search container */
+    }
+
+    #pagination-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
