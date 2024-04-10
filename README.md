@@ -27,9 +27,8 @@ python -m http.server
 ```
 open a browser and go to `http://localhost:8000` to see the web interface.
 
-The papers.json file contains papers until `2024-04-08`, if you want more recent papers you need to update the file with
+The papers.json file in the repository gets updated daily, if you clone it and want more recent papers you need to update the file with
 ```bash
-python extract.py --start_date 2024-04-09
+python extract.py --start_date YYYY-MM-DD
 ```
-(you can also specify an end date with `--end_date` if you are only interested in papers between two specific dates).
-This might take a few minutes (took me around 5 second per date).
+which updates the `papers.json` file with all papers posted since `YYYY-MM-DD` (you can also specify an end date with `--end_date` if you are only interested in papers between two specific dates). This might take a moment (took me around 5 seconds per day).
