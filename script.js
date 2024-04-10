@@ -187,3 +187,20 @@ function addClickEventsToRefineSearch(element) {
         };
     });
 }
+
+document.addEventListener('DOMContentLoaded', adjustPapersContainer);
+window.addEventListener('resize', adjustPapersContainer);
+
+function adjustPapersContainer() {
+    const searchContainer = document.getElementById('search-container');
+    const paginationControls = document.getElementById('pagination-controls');
+    const papersContainer = document.getElementById('papers-container');
+
+    const searchContainerHeight = searchContainer.offsetHeight;
+    const paginationControlsHeight = paginationControls.offsetHeight;
+
+    // Adjust the top margin of the papers container
+    papersContainer.style.top = `${searchContainerHeight + 40}px`; // Added 40px for some spacing between the search container and papers container
+    // Adjust the bottom margin to accommodate the pagination controls and additional spacing
+    papersContainer.style.bottom = `${paginationControlsHeight + 30}px`; // Adjust this value as needed
+}
