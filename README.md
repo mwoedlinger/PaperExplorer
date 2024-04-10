@@ -14,9 +14,11 @@ Try it out [here](https://htmlpreview.github.io/?https://github.com/mwoedlinger/
 
 ## How-to run locally
 
-Clone the repository:
+Clone the repository and install the requirements:
 ```bash
-git clone https://github.com/yourusername/scientific-paper-recommender.git
+git clone https://github.com/mwoedlinger/HuggingfacePapersViewer.git
+cd HuggingfacePapersViewer
+pip install -r requirements.txt
 ```
 
 Search papers with the web interface:
