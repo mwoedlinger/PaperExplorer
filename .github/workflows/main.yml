@@ -26,6 +26,9 @@ jobs:
     - name: Run the script
       run: python extract.py
 
+    - name: Set Git to use HTTPS
+      run: git remote set-url origin https://github.com/mwoedlinger/HuggingfacePapersViewer.git
+
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
