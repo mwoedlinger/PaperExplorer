@@ -4,10 +4,10 @@ let currentPage = 1;
 const papersPerPage = 50;
 let totalPapers = 0;
 
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
     loadPapers();
     setupEventListeners();
-});
+};
 
 window.addEventListener('resize', debounce(adjustPapersContainer, 100));
 
