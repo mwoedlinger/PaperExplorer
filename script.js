@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('resize', debounce(adjustPapersContainer, 100));
 
+function changePage(direction) {
+    const totalPages = Math.ceil(totalPapers / papersPerPage);
+    currentPage += direction;
+    currentPage = Math.max(1, Math.min(currentPage, totalPages));
+    displayPapers();
+}
+
 function setupEventListeners() {
     document.getElementById('start-date').addEventListener('change', displayPapers);
     document.getElementById('end-date').addEventListener('change', displayPapers);
@@ -45,37 +52,18 @@ function displayPapers() {
     container.innerHTML = '';
     const papersToDisplay = getSortedAndFilteredPapers();
     totalPapers = papersToDisplay.length;
+    const startIndex = (currentPage - 1) * papersPerPage;
+    const endIndex = startIndex + papersPerPage;
+    const paginatedPapers = papersToDisplay.slice(startIndex, endIndex);
     const fragment = document.createDocumentFragment();
 
-    papersToDisplay.slice(0, papersPerPage).forEach(paper => {
+    paginatedPapers.slice(0, papersPerPage).forEach(paper => {
         fragment.appendChild(createPaperElement(paper));
     });
 
     container.appendChild(fragment);
     updatePaginationControls();
     adjustPapersContainer(); // Adjust container size after display
-}
-function setupEventListeners() {
-    document.getElementById('start-date').addEventListener('change', displayPapers);
-    document.getElementById('end-date').addEventListener('change', displayPapers);
-    document.getElementById('sort-options').addEventListener('change', displayPapers);
-    document.getElementById('search-box').addEventListener('input', function() {
-        if (debounceTimer) clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(displayPapers, 300);
-    });
-    document.getElementById('prev-page').addEventListener('click', function() {
-        if (currentPage > 1) {
-            currentPage--;
-            displayPapers();
-        }
-    });
-    document.getElementById('next-page').addEventListener('click', function() {
-        const totalPages = Math.ceil(totalPapers / papersPerPage);
-        if (currentPage < totalPages) {
-            currentPage++;
-            displayPapers();
-        }
-    });
 }
 
 function getSortedAndFilteredPapers() {
@@ -150,13 +138,6 @@ function updatePaginationControls() {
     document.getElementById('current-page').textContent = `${currentPage} / ${totalPages}`;
     document.getElementById('prev-page').disabled = currentPage === 1;
     document.getElementById('next-page').disabled = currentPage >= totalPages;
-}
-
-function changePage(direction) {
-    const totalPages = Math.ceil(totalPapers / papersPerPage);
-    currentPage += direction;
-    currentPage = Math.max(1, Math.min(currentPage, totalPages));
-    displayPapers();
 }
 
 // Debounce function to optimize resize event handling
