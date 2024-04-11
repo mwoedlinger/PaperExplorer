@@ -1,0 +1,39 @@
+name: Update papers.json
+
+on:
+  schedule:
+    # Runs at midnight UTC
+    - cron:  '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run the script
+      run: python update_papers.py
+
+    - name: setup git config
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "action@github.com"
+
+    - name: Commit changes
+      run: |
+        git add papers.json
+        git commit -m "Update papers.json" -a || echo "No changes to commit"
+        git push https://${{ secrets.GH_PAT }}@github.com/mwoedlinger/HuggingfacePapersViewer.git uptodate
+
