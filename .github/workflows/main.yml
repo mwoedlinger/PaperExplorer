@@ -16,19 +16,19 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'  # Specify the Python version you need
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
 
     - name: Run the script
-      run: python extract.py  # Runs your Python script
+      run: python extract.py
 
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add papers.json  # Add the updated JSON file
+        git add papers.json
         git commit -m "Update papers.json" -a || echo "No changes to commit"
-        git push
+        git push https://${{ secrets.GH_PAT }}@github.com/mwoedlinger/HuggingfacePapersViewer.git HEAD:main
