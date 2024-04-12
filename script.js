@@ -36,7 +36,10 @@ function loadPapers() {
         papersData = JSON.parse(cachedData);
         displayPapers();
     } else {
-        fetch('papers.json')
+        const date = new Date();
+        const dateString = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`;
+
+        fetch(`papers.json?date=${dateString}`)
             .then(response => response.json())
             .then(data => {
                 papersData = Object.values(data);

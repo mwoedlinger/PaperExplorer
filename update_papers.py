@@ -141,6 +141,7 @@ if __name__ == '__main__':
 
     # remove duplicates
     articles = {k: v for k, v in articles.items() if k not in old_articles}
+    print(f'Found {len(articles)} new articles')
     if articles:
         # update the file with new articles
         old_articles.update(articles)
