@@ -1,4 +1,4 @@
-# Huggingface Papers Viewer
+# ML Paper Explorer
 
 I created this small repo to make it easier to stay up-to-date with research in ML. It uses the paper recommendations posted (almost) daily on huggingface.co/papers (Thanks a lot to AK) and stores all of the them in papers.json. A simple web interface allows searching in all recommended papers, sorting them by upvotes (from huggingface) or date. You can also select papers by arxiv tag by clicking on the tags below the author list.
 
