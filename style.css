@@ -246,3 +246,35 @@ a {
         align-items: center;
     }
 }
+
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    font-size: 30px; /* Reduce font size for subtlety */
+    color: #e7e7e7; /* Adjust color for subtlety */
+    z-index: 1000; /* Ensure the link stays on top of other elements */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+    height: 40px; /* Set the height to match the pagination buttons */
+    line-height: 40px; /* Center the icon vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.github-link i {
+    height: 100%; /* Ensure the icon fills the entire height of the container */
+}
+
+.github-link:hover {
+    color: #333; /* Change color on hover */
+}
+
+/* Media query to hide GitHub link on mobile */
+@media (max-width: 768px) {
+    .github-link {
+        display: none; /* Hide the GitHub link on mobile */
+    }
+}

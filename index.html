@@ -6,12 +6,13 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title>Paper Viewer</title>
+    <title>ML Papers</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div id="search-container">
-        <input type="text" id="search-box" placeholder="Search by title, author, tags or abstract...">
+        <input type="text" id="search-box" placeholder="Search in title, author, tags or abstract. Separate search queries with semikolons ...">
         <select id="sort-options">
             <option value="date">Sort by Date</option>
             <option value="upvotes">Sort by Upvotes</option>
@@ -25,6 +26,9 @@
         <button id="next-page">Next</button>
     </div>    
     <div id="papers-container"></div>
+    <a href="https://github.com/mwoedlinger/PaperExplorer" target="_blank" class="github-link">
+        <i class="fab fa-github"></i>
+    </a>
     <script src="script.js"></script>
 </body>
 </html>
