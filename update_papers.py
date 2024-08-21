@@ -49,15 +49,6 @@ def get_date(soup: BeautifulSoup) -> Tuple[int, int]:
     return month_to_num[date_parts[0].text.lower()], int(date_parts[1].text)
 
 def get_articles(url: str, min_upvotes: Optional[int] = None) -> Dict[str, Dict]:
-    """Fetches the articles from the given URL
-
-    Args:
-        url (str): URL of the huggingface papers page
-        min_upvotes (Optional[int], optional): Minimum number of upvotes required. Defaults to None.
-
-    Returns:
-        Dict[str, Dict]: _description_
-    """
     collection = {}
 
     with requests.get(url) as response:
@@ -66,8 +57,6 @@ def get_articles(url: str, min_upvotes: Optional[int] = None) -> Dict[str, Dict]
             return collection
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        # Check if the date in the URL matches the date on the page
-        # This is important because on dates where no papers are published, the page will show the latest valid date
         if (int(url.split('-')[-2]), int(url.split('-')[-1])) != get_date(soup):
             print('Date does not match URL. Skipped!')
             return collection
@@ -84,8 +73,11 @@ def get_articles(url: str, min_upvotes: Optional[int] = None) -> Dict[str, Dict]
 
             arxiv_id = primary_link['href'].split('/')[-1]
             arxiv_link = f'https://arxiv.org/abs/{arxiv_id}'
-            upvotes = article.find('div', class_='leading-none')
-            upvotes = int(upvotes.text) if upvotes and upvotes.text.isdigit() else None
+
+            # New upvotes extraction
+            upvotes_div = article.find('div', class_='shadow-alternate')
+            upvotes = upvotes_div.find('div', class_='leading-none')
+            upvotes = int(upvotes.text) if upvotes and upvotes.text.isdigit() else 0
 
             if min_upvotes and (upvotes is None or upvotes < min_upvotes):
                 continue

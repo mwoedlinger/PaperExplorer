@@ -22,8 +22,6 @@ def get_articles(url: str, min_upvotes: Optional[int] = None) -> Dict[str, Dict]
             return collection
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        # Check if the date in the URL matches the date on the page
-        # This is important because on dates where no papers are published, the page will show the latest valid date
         if (int(url.split('-')[-2]), int(url.split('-')[-1])) != get_date(soup):
             print('Date does not match URL. Skipped!')
             return collection
@@ -39,8 +37,11 @@ def get_articles(url: str, min_upvotes: Optional[int] = None) -> Dict[str, Dict]
                 continue
 
             arxiv_id = primary_link['href'].split('/')[-1]
-            upvotes = article.find('div', class_='leading-none')
-            upvotes = int(upvotes.text) if upvotes and upvotes.text.isdigit() else None
+
+            # New upvotes extraction
+            upvotes_div = article.find('div', class_='shadow-alternate')
+            upvotes = upvotes_div.find('div', class_='leading-none')
+            upvotes = int(upvotes.text) if upvotes and upvotes.text.isdigit() else 0
 
             if min_upvotes and (upvotes is None or upvotes < min_upvotes):
                 continue
@@ -89,6 +90,8 @@ if __name__ == '__main__':
     for arxiv_id, upvotes in upvote_dict.items():
         if arxiv_id in articles:
             articles[arxiv_id]['upvotes'] = upvotes
+        else:
+            print(f'Article {arxiv_id} not found in the existing data')
 
     # save updated articles
     with open("papers.json", "w") as fp:
