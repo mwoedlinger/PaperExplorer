@@ -133071,5 +133071,24 @@
             "cs.LG"
         ],
         "upvotes": 0
+    },
+    "2502.11262": {
+        "url": "https://arxiv.org/abs/2502.11262",
+        "title": "Generating Skyline Datasets for Data Science Models",
+        "authors": [
+            "Mengying Wang",
+            "Hanchao Ma",
+            "Yiyang Bian",
+            "Yangxin Fan",
+            "Yinghui Wu"
+        ],
+        "abstract": "Preparing high-quality datasets required by various data-driven AI and\nmachine learning models has become a cornerstone task in data-driven analysis.\nConventional data discovery methods typically integrate datasets towards a\nsingle pre-defined quality measure that may lead to bias for downstream tasks.\nThis paper introduces MODis, a framework that discovers datasets by optimizing\nmultiple user-defined, model-performance measures. Given a set of data sources\nand a model, MODis selects and integrates data sources into a skyline dataset,\nover which the model is expected to have the desired performance in all the\nperformance measures. We formulate MODis as a multi-goal finite state\ntransducer, and derive three feasible algorithms to generate skyline datasets.\nOur first algorithm adopts a \"reduce-from-universal\" strategy, that starts with\na universal schema and iteratively prunes unpromising data. Our second\nalgorithm further reduces the cost with a bi-directional strategy that\ninterleaves data augmentation and reduction. We also introduce a\ndiversification algorithm to mitigate the bias in skyline datasets. We\nexperimentally verify the efficiency and effectiveness of our skyline data\ndiscovery algorithms, and showcase their applications in optimizing data\nscience pipelines.",
+        "publication_date": "2025-02-16",
+        "publication_time": "20:33:59",
+        "tags": [
+            "cs.DB",
+            "cs.AI"
+        ],
+        "upvotes": 5
     }
 }
