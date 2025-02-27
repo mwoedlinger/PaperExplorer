@@ -134502,5 +134502,461 @@
             "60D05"
         ],
         "upvotes": 0
+    },
+    "2502.18411": {
+        "url": "https://arxiv.org/abs/2502.18411",
+        "title": "OmniAlign-V: Towards Enhanced Alignment of MLLMs with Human Preference",
+        "authors": [
+            "Xiangyu Zhao",
+            "Shengyuan Ding",
+            "Zicheng Zhang",
+            "Haian Huang",
+            "Maosong Cao",
+            "Weiyun Wang",
+            "Jiaqi Wang",
+            "Xinyu Fang",
+            "Wenhai Wang",
+            "Guangtao Zhai",
+            "Haodong Duan",
+            "Hua Yang",
+            "Kai Chen"
+        ],
+        "abstract": "Recent advancements in open-source multi-modal large language models (MLLMs)\nhave primarily focused on enhancing foundational capabilities, leaving a\nsignificant gap in human preference alignment. This paper introduces\nOmniAlign-V, a comprehensive dataset of 200K high-quality training samples\nfeaturing diverse images, complex questions, and varied response formats to\nimprove MLLMs' alignment with human preferences. We also present MM-AlignBench,\na human-annotated benchmark specifically designed to evaluate MLLMs' alignment\nwith human values. Experimental results show that finetuning MLLMs with\nOmniAlign-V, using Supervised Fine-Tuning (SFT) or Direct Preference\nOptimization (DPO), significantly enhances human preference alignment while\nmaintaining or enhancing performance on standard VQA benchmarks, preserving\ntheir fundamental capabilities. Our datasets, benchmark, code and checkpoints\nhave been released at https://github.com/PhoenixZ810/OmniAlign-V.",
+        "publication_date": "2025-02-25",
+        "publication_time": "18:05:14",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 53
+    },
+    "2502.18137": {
+        "url": "https://arxiv.org/abs/2502.18137",
+        "title": "SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference",
+        "authors": [
+            "Jintao Zhang",
+            "Chendong Xiang",
+            "Haofeng Huang",
+            "Jia Wei",
+            "Haocheng Xi",
+            "Jun Zhu",
+            "Jianfei Chen"
+        ],
+        "abstract": "An efficient attention implementation is essential for large models due to\nits quadratic time complexity. Fortunately, attention commonly exhibits\nsparsity, i.e., many values in the attention map are near zero, allowing for\nthe omission of corresponding computations. Many studies have utilized the\nsparse pattern to accelerate attention. However, most existing works focus on\noptimizing attention within specific models by exploiting certain sparse\npatterns of the attention map. A universal sparse attention that guarantees\nboth the speedup and end-to-end performance of diverse models remains elusive.\nIn this paper, we propose SpargeAttn, a universal sparse and quantized\nattention for any model. Our method uses a two-stage online filter: in the\nfirst stage, we rapidly and accurately predict the attention map, enabling the\nskip of some matrix multiplications in attention. In the second stage, we\ndesign an online softmax-aware filter that incurs no extra overhead and further\nskips some matrix multiplications. Experiments show that our method\nsignificantly accelerates diverse models, including language, image, and video\ngeneration, without sacrificing end-to-end metrics. The codes are available at\nhttps://github.com/thu-ml/SpargeAttn.",
+        "publication_date": "2025-02-25",
+        "publication_time": "12:02:17",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV",
+            "cs.PF"
+        ],
+        "upvotes": 40
+    },
+    "2502.18449": {
+        "url": "https://arxiv.org/abs/2502.18449",
+        "title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open\n  Software Evolution",
+        "authors": [
+            "Yuxiang Wei",
+            "Olivier Duchenne",
+            "Jade Copet",
+            "Quentin Carbonneaux",
+            "Lingming Zhang",
+            "Daniel Fried",
+            "Gabriel Synnaeve",
+            "Rishabh Singh",
+            "Sida I. Wang"
+        ],
+        "abstract": "The recent DeepSeek-R1 release has demonstrated the immense potential of\nreinforcement learning (RL) in enhancing the general reasoning capabilities of\nlarge language models (LLMs). While DeepSeek-R1 and other follow-up work\nprimarily focus on applying RL to competitive coding and math problems, this\npaper introduces SWE-RL, the first approach to scale RL-based LLM reasoning for\nreal-world software engineering. Leveraging a lightweight rule-based reward\n(e.g., the similarity score between ground-truth and LLM-generated solutions),\nSWE-RL enables LLMs to autonomously recover a developer's reasoning processes\nand solutions by learning from extensive open-source software evolution data --\nthe record of a software's entire lifecycle, including its code snapshots, code\nchanges, and events such as issues and pull requests. Trained on top of Llama\n3, our resulting reasoning model, Llama3-SWE-RL-70B, achieves a 41.0% solve\nrate on SWE-bench Verified -- a human-verified collection of real-world GitHub\nissues. To our knowledge, this is the best performance reported for\nmedium-sized (<100B) LLMs to date, even comparable to leading proprietary LLMs\nlike GPT-4o. Surprisingly, despite performing RL solely on software evolution\ndata, Llama3-SWE-RL has even emerged with generalized reasoning skills. For\nexample, it shows improved results on five out-of-domain tasks, namely,\nfunction coding, library use, code reasoning, mathematics, and general language\nunderstanding, whereas a supervised-finetuning baseline even leads to\nperformance degradation on average. Overall, SWE-RL opens up a new direction to\nimprove the reasoning capabilities of LLMs through reinforcement learning on\nmassive software engineering data.",
+        "publication_date": "2025-02-25",
+        "publication_time": "18:45:04",
+        "tags": [
+            "cs.SE",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 35
+    },
+    "2502.17363": {
+        "url": "https://arxiv.org/abs/2502.17363",
+        "title": "KV-Edit: Training-Free Image Editing for Precise Background Preservation",
+        "authors": [
+            "Tianrui Zhu",
+            "Shiyi Zhang",
+            "Jiawei Shao",
+            "Yansong Tang"
+        ],
+        "abstract": "Background consistency remains a significant challenge in image editing\ntasks. Despite extensive developments, existing works still face a trade-off\nbetween maintaining similarity to the original image and generating content\nthat aligns with the target. Here, we propose KV-Edit, a training-free approach\nthat uses KV cache in DiTs to maintain background consistency, where background\ntokens are preserved rather than regenerated, eliminating the need for complex\nmechanisms or expensive training, ultimately generating new content that\nseamlessly integrates with the background within user-provided regions. We\nfurther explore the memory consumption of the KV cache during editing and\noptimize the space complexity to $O(1)$ using an inversion-free method. Our\napproach is compatible with any DiT-based generative model without additional\ntraining. Experiments demonstrate that KV-Edit significantly outperforms\nexisting approaches in terms of both background and image quality, even\nsurpassing training-based methods. Project webpage is available at\nhttps://xilluill.github.io/projectpages/KV-Edit",
+        "publication_date": "2025-02-24",
+        "publication_time": "17:40:09",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 26
+    },
+    "2502.18364": {
+        "url": "https://arxiv.org/abs/2502.18364",
+        "title": "ART: Anonymous Region Transformer for Variable Multi-Layer Transparent\n  Image Generation",
+        "authors": [
+            "Yifan Pu",
+            "Yiming Zhao",
+            "Zhicong Tang",
+            "Ruihong Yin",
+            "Haoxing Ye",
+            "Yuhui Yuan",
+            "Dong Chen",
+            "Jianmin Bao",
+            "Sirui Zhang",
+            "Yanbin Wang",
+            "Lin Liang",
+            "Lijuan Wang",
+            "Ji Li",
+            "Xiu Li",
+            "Zhouhui Lian",
+            "Gao Huang",
+            "Baining Guo"
+        ],
+        "abstract": "Multi-layer image generation is a fundamental task that enables users to\nisolate, select, and edit specific image layers, thereby revolutionizing\ninteractions with generative models. In this paper, we introduce the Anonymous\nRegion Transformer (ART), which facilitates the direct generation of variable\nmulti-layer transparent images based on a global text prompt and an anonymous\nregion layout. Inspired by Schema theory suggests that knowledge is organized\nin frameworks (schemas) that enable people to interpret and learn from new\ninformation by linking it to prior knowledge.}, this anonymous region layout\nallows the generative model to autonomously determine which set of visual\ntokens should align with which text tokens, which is in contrast to the\npreviously dominant semantic layout for the image generation task. In addition,\nthe layer-wise region crop mechanism, which only selects the visual tokens\nbelonging to each anonymous region, significantly reduces attention computation\ncosts and enables the efficient generation of images with numerous distinct\nlayers (e.g., 50+). When compared to the full attention approach, our method is\nover 12 times faster and exhibits fewer layer conflicts. Furthermore, we\npropose a high-quality multi-layer transparent image autoencoder that supports\nthe direct encoding and decoding of the transparency of variable multi-layer\nimages in a joint manner. By enabling precise control and scalable layer\ngeneration, ART establishes a new paradigm for interactive content creation.",
+        "publication_date": "2025-02-25",
+        "publication_time": "16:57:04",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 21
+    },
+    "2502.17262": {
+        "url": "https://arxiv.org/abs/2502.17262",
+        "title": "Unveiling Downstream Performance Scaling of LLMs: A Clustering-Based\n  Perspective",
+        "authors": [
+            "Chengyin Xu",
+            "Kaiyuan Chen",
+            "Xiao Li",
+            "Ke Shen",
+            "Chenggang Li"
+        ],
+        "abstract": "The rapid advancements in computing dramatically increase the scale and cost\nof training Large Language Models (LLMs). Accurately predicting downstream task\nperformance prior to model training is crucial for efficient resource\nallocation, yet remains challenging due to two primary constraints: (1) the\n\"emergence phenomenon\", wherein downstream performance metrics become\nmeaningful only after extensive training, which limits the ability to use\nsmaller models for prediction; (2) Uneven task difficulty distributions and the\nabsence of consistent scaling laws, resulting in substantial metric\nvariability. Existing performance prediction methods suffer from limited\naccuracy and reliability, thereby impeding the assessment of potential LLM\ncapabilities. To address these challenges, we propose a\nClustering-On-Difficulty (COD) downstream performance prediction framework. COD\nfirst constructs a predictable support subset by clustering tasks based on\ndifficulty features, strategically excluding non-emergent and non-scalable\nclusters. The scores on the selected subset serve as effective intermediate\npredictors of downstream performance on the full evaluation set. With\ntheoretical support, we derive a mapping function that transforms performance\nmetrics from the predictable subset to the full evaluation set, thereby\nensuring accurate extrapolation of LLM downstream performance. The proposed\nmethod has been applied to predict performance scaling for a 70B LLM, providing\nactionable insights for training resource allocation and assisting in\nmonitoring the training process. Notably, COD achieves remarkable predictive\naccuracy on the 70B LLM by leveraging an ensemble of small models,\ndemonstrating an absolute mean deviation of 1.36% across eight important LLM\nevaluation benchmarks.",
+        "publication_date": "2025-02-24",
+        "publication_time": "15:44:57",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 14
+    },
+    "2502.15499": {
+        "url": "https://arxiv.org/abs/2502.15499",
+        "title": "Scale-Distribution Decoupling: Enabling Stable and Effective Training of\n  Large Language Models",
+        "authors": [
+            "Ya Wang",
+            "Zhijian Zhuo",
+            "Yutao Zeng",
+            "Xun Zhou",
+            "Jian Yang",
+            "Xiaoqing Li"
+        ],
+        "abstract": "Training stability is a persistent challenge in the pre-training of large\nlanguage models (LLMs), particularly for architectures such as Post-Norm\nTransformers, which are prone to gradient explosion and dissipation. In this\npaper, we propose Scale-Distribution Decoupling (SDD), a novel approach that\nstabilizes training by explicitly decoupling the scale and distribution of the\nweight matrix in fully-connected layers. SDD applies a normalization mechanism\nto regulate activations and a learnable scaling vector to maintain\nwell-conditioned gradients, effectively preventing $\\textbf{gradient explosion\nand dissipation}$. This separation improves optimization efficiency,\nparticularly in deep networks, by ensuring stable gradient propagation.\nExperimental results demonstrate that our method stabilizes training across\nvarious LLM architectures and outperforms existing techniques in different\nnormalization configurations. Furthermore, the proposed method is lightweight\nand compatible with existing frameworks, making it a practical solution for\nstabilizing LLM training. Code is available at https://github.com/kaihemo/SDD.",
+        "publication_date": "2025-02-21",
+        "publication_time": "14:49:34",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 12
+    },
+    "2502.16069": {
+        "url": "https://arxiv.org/abs/2502.16069",
+        "title": "Curie: Toward Rigorous and Automated Scientific Experimentation with AI\n  Agents",
+        "authors": [
+            "Patrick Tser Jern Kon",
+            "Jiachen Liu",
+            "Qiuyi Ding",
+            "Yiming Qiu",
+            "Zhenning Yang",
+            "Yibo Huang",
+            "Jayanth Srinivasa",
+            "Myungjin Lee",
+            "Mosharaf Chowdhury",
+            "Ang Chen"
+        ],
+        "abstract": "Scientific experimentation, a cornerstone of human progress, demands rigor in\nreliability, methodical control, and interpretability to yield meaningful\nresults. Despite the growing capabilities of large language models (LLMs) in\nautomating different aspects of the scientific process, automating rigorous\nexperimentation remains a significant challenge. To address this gap, we\npropose Curie, an AI agent framework designed to embed rigor into the\nexperimentation process through three key components: an intra-agent rigor\nmodule to enhance reliability, an inter-agent rigor module to maintain\nmethodical control, and an experiment knowledge module to enhance\ninterpretability. To evaluate Curie, we design a novel experimental benchmark\ncomposed of 46 questions across four computer science domains, derived from\ninfluential research papers, and widely adopted open-source projects. Compared\nto the strongest baseline tested, we achieve a 3.4$\\times$ improvement in\ncorrectly answering experimental questions.Curie is open-sourced at\nhttps://github.com/Just-Curieous/Curie.",
+        "publication_date": "2025-02-22",
+        "publication_time": "03:58:19",
+        "tags": [
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 9
+    },
+    "2502.18461": {
+        "url": "https://arxiv.org/abs/2502.18461",
+        "title": "K-LoRA: Unlocking Training-Free Fusion of Any Subject and Style LoRAs",
+        "authors": [
+            "Ziheng Ouyang",
+            "Zhen Li",
+            "Qibin Hou"
+        ],
+        "abstract": "Recent studies have explored combining different LoRAs to jointly generate\nlearned style and content. However, existing methods either fail to effectively\npreserve both the original subject and style simultaneously or require\nadditional training. In this paper, we argue that the intrinsic properties of\nLoRA can effectively guide diffusion models in merging learned subject and\nstyle. Building on this insight, we propose K-LoRA, a simple yet effective\ntraining-free LoRA fusion approach. In each attention layer, K-LoRA compares\nthe Top-K elements in each LoRA to be fused, determining which LoRA to select\nfor optimal fusion. This selection mechanism ensures that the most\nrepresentative features of both subject and style are retained during the\nfusion process, effectively balancing their contributions. Experimental results\ndemonstrate that the proposed method effectively integrates the subject and\nstyle information learned by the original LoRAs, outperforming state-of-the-art\ntraining-based approaches in both qualitative and quantitative results.",
+        "publication_date": "2025-02-25",
+        "publication_time": "18:59:12",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 9
+    },
+    "2502.18356": {
+        "url": "https://arxiv.org/abs/2502.18356",
+        "title": "WebGames: Challenging General-Purpose Web-Browsing AI Agents",
+        "authors": [
+            "George Thomas",
+            "Alex J. Chan",
+            "Jikun Kang",
+            "Wenqi Wu",
+            "Filippos Christianos",
+            "Fraser Greenlee",
+            "Andy Toulis",
+            "Marvin Purtorab"
+        ],
+        "abstract": "We introduce WebGames, a comprehensive benchmark suite designed to evaluate\ngeneral-purpose web-browsing AI agents through a collection of 50+ interactive\nchallenges. These challenges are specifically crafted to be straightforward for\nhumans while systematically testing the limitations of current AI systems\nacross fundamental browser interactions, advanced input processing, cognitive\ntasks, workflow automation, and interactive entertainment. Our framework\neliminates external dependencies through a hermetic testing environment,\nensuring reproducible evaluation with verifiable ground-truth solutions. We\nevaluate leading vision-language models including GPT-4o, Claude Computer-Use,\nGemini-1.5-Pro, and Qwen2-VL against human performance. Results reveal a\nsubstantial capability gap, with the best AI system achieving only 43.1%\nsuccess rate compared to human performance of 95.7%, highlighting fundamental\nlimitations in current AI systems' ability to handle common web interaction\npatterns that humans find intuitive. The benchmark is publicly available at\nwebgames.convergence.ai, offering a lightweight, client-side implementation\nthat facilitates rapid evaluation cycles. Through its modular architecture and\nstandardized challenge specifications, WebGames provides a robust foundation\nfor measuring progress in development of more capable web-browsing agents.",
+        "publication_date": "2025-02-25",
+        "publication_time": "16:45:08",
+        "tags": [
+            "cs.LG"
+        ],
+        "upvotes": 6
+    },
+    "2502.17425": {
+        "url": "https://arxiv.org/abs/2502.17425",
+        "title": "Introducing Visual Perception Token into Multimodal Large Language Model",
+        "authors": [
+            "Runpeng Yu",
+            "Xinyin Ma",
+            "Xinchao Wang"
+        ],
+        "abstract": "To utilize visual information, Multimodal Large Language Model (MLLM) relies\non the perception process of its vision encoder. The completeness and accuracy\nof visual perception significantly influence the precision of spatial\nreasoning, fine-grained understanding, and other tasks. However, MLLM still\nlacks the autonomous capability to control its own visual perception processes,\nfor example, selectively reviewing specific regions of an image or focusing on\ninformation related to specific object categories. In this work, we propose the\nconcept of Visual Perception Token, aiming to empower MLLM with a mechanism to\ncontrol its visual perception processes. We design two types of Visual\nPerception Tokens, termed the Region Selection Token and the Vision Re-Encoding\nToken. MLLMs autonomously generate these tokens, just as they generate text,\nand use them to trigger additional visual perception actions. The Region\nSelection Token explicitly identifies specific regions in an image that require\nfurther perception, while the Vision Re-Encoding Token uses its hidden states\nas control signals to guide additional visual perception processes. Extensive\nexperiments demonstrate the advantages of these tokens in handling spatial\nreasoning, improving fine-grained understanding, and other tasks. On average,\nthe introduction of Visual Perception Tokens improves the performance of a 2B\nmodel by 23.6\\%, increasing its score from 0.572 to 0.708, and even outperforms\na 7B parameter model by 13.4\\% (from 0.624). Please check out our repo\nhttps://github.com/yu-rp/VisualPerceptionToken",
+        "publication_date": "2025-02-24",
+        "publication_time": "18:56:12",
+        "tags": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "upvotes": 5
+    },
+    "2502.17535": {
+        "url": "https://arxiv.org/abs/2502.17535",
+        "title": "The Lottery LLM Hypothesis, Rethinking What Abilities Should LLM\n  Compression Preserve?",
+        "authors": [
+            "Zhenheng Tang",
+            "Xiang Liu",
+            "Qian Wang",
+            "Peijie Dong",
+            "Bingsheng He",
+            "Xiaowen Chu",
+            "Bo Li"
+        ],
+        "abstract": "Motivated by reducing the computational and storage costs of LLMs, model\ncompression and KV cache compression have attracted much attention from\nresearchers. However, current methods predominantly emphasize maintaining the\nperformance of compressed LLMs, as measured by perplexity or simple accuracy on\ntasks of common sense knowledge QA and basic arithmetic reasoning. In this\nblog, we present a brief review of recent advancements in LLMs related to\nretrieval-augmented generation, multi-step reasoning, external tools, and\ncomputational expressivity, all of which substantially enhance LLM performance.\nThen, we propose a lottery LLM hypothesis suggesting that for a given LLM and\ntask, there exists a smaller lottery LLM capable of producing the same\nperformance as the original LLM with the assistance of multi-step reasoning and\nexternal tools. Based on the review of current progress in LLMs, we discuss and\nsummarize the essential capabilities that the lottery LLM and KV cache\ncompression must possess, which are currently overlooked in existing methods.",
+        "publication_date": "2025-02-24",
+        "publication_time": "15:39:35",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL",
+            "cs.FL"
+        ],
+        "upvotes": 4
+    },
+    "2502.16794": {
+        "url": "https://arxiv.org/abs/2502.16794",
+        "title": "AAD-LLM: Neural Attention-Driven Auditory Scene Understanding",
+        "authors": [
+            "Xilin Jiang",
+            "Sukru Samet Dindar",
+            "Vishal Choudhari",
+            "Stephan Bickel",
+            "Ashesh Mehta",
+            "Guy M McKhann",
+            "Adeen Flinker",
+            "Daniel Friedman",
+            "Nima Mesgarani"
+        ],
+        "abstract": "Auditory foundation models, including auditory large language models (LLMs),\nprocess all sound inputs equally, independent of listener perception. However,\nhuman auditory perception is inherently selective: listeners focus on specific\nspeakers while ignoring others in complex auditory scenes. Existing models do\nnot incorporate this selectivity, limiting their ability to generate\nperception-aligned responses. To address this, we introduce Intention-Informed\nAuditory Scene Understanding (II-ASU) and present Auditory Attention-Driven LLM\n(AAD-LLM), a prototype system that integrates brain signals to infer listener\nattention. AAD-LLM extends an auditory LLM by incorporating intracranial\nelectroencephalography (iEEG) recordings to decode which speaker a listener is\nattending to and refine responses accordingly. The model first predicts the\nattended speaker from neural activity, then conditions response generation on\nthis inferred attentional state. We evaluate AAD-LLM on speaker description,\nspeech transcription and extraction, and question answering in multitalker\nscenarios, with both objective and subjective ratings showing improved\nalignment with listener intention. By taking a first step toward\nintention-aware auditory AI, this work explores a new paradigm where listener\nperception informs machine listening, paving the way for future\nlistener-centered auditory systems. Demo and code available:\nhttps://aad-llm.github.io.",
+        "publication_date": "2025-02-24",
+        "publication_time": "03:06:45",
+        "tags": [
+            "cs.SD",
+            "cs.AI",
+            "cs.CL",
+            "cs.HC",
+            "eess.AS"
+        ],
+        "upvotes": 4
+    },
+    "2502.16825": {
+        "url": "https://arxiv.org/abs/2502.16825",
+        "title": "Finding the Sweet Spot: Preference Data Construction for Scaling\n  Preference Optimization",
+        "authors": [
+            "Yao Xiao",
+            "Hai Ye",
+            "Linyao Chen",
+            "Hwee Tou Ng",
+            "Lidong Bing",
+            "Xiaoli Li",
+            "Roy Ka-wei Lee"
+        ],
+        "abstract": "Iterative data generation and model retraining are widely used to align large\nlanguage models (LLMs). It typically involves a policy model to generate\non-policy responses and a reward model to guide training data selection. Direct\nPreference Optimization (DPO) further enhances this process by constructing\npreference pairs of chosen and rejected responses. In this work, we aim to\n\\emph{scale up} the number of on-policy samples via repeated random sampling to\nimprove alignment performance. Conventional practice selects the sample with\nthe highest reward as chosen and the lowest as rejected for DPO. However, our\nexperiments reveal that this strategy leads to a \\emph{decline} in performance\nas the sample size increases. To address this, we investigate preference data\nconstruction through the lens of underlying normal distribution of sample\nrewards. We categorize the reward space into seven representative points and\nsystematically explore all 21 ($C_7^2$) pairwise combinations. Through\nevaluations on four models using AlpacaEval 2, we find that selecting the\nrejected response at reward position $\\mu - 2\\sigma$ rather than the minimum\nreward, is crucial for optimal performance. We finally introduce a scalable\npreference data construction strategy that consistently enhances model\nperformance as the sample scale increases.",
+        "publication_date": "2025-02-24",
+        "publication_time": "04:22:57",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 3
+    },
+    "2502.14855": {
+        "url": "https://arxiv.org/abs/2502.14855",
+        "title": "Prompt-to-Leaderboard",
+        "authors": [
+            "Evan Frick",
+            "Connor Chen",
+            "Joseph Tennyson",
+            "Tianle Li",
+            "Wei-Lin Chiang",
+            "Anastasios N. Angelopoulos",
+            "Ion Stoica"
+        ],
+        "abstract": "Large language model (LLM) evaluations typically rely on aggregated metrics\nlike accuracy or human preference, averaging across users and prompts. This\naveraging obscures user- and prompt-specific variations in model performance.\nTo address this, we propose Prompt-to-Leaderboard (P2L), a method that produces\nleaderboards specific to a prompt. The core idea is to train an LLM taking\nnatural language prompts as input to output a vector of Bradley-Terry\ncoefficients which are then used to predict the human preference vote. The\nresulting prompt-dependent leaderboards allow for unsupervised task-specific\nevaluation, optimal routing of queries to models, personalization, and\nautomated evaluation of model strengths and weaknesses. Data from Chatbot Arena\nsuggest that P2L better captures the nuanced landscape of language model\nperformance than the averaged leaderboard. Furthermore, our findings suggest\nthat P2L's ability to produce prompt-specific evaluations follows a power law\nscaling similar to that observed in LLMs themselves. In January 2025, the\nrouter we trained based on this methodology achieved the \\#1 spot in the\nChatbot Arena leaderboard. Our code is available at this GitHub link:\nhttps://github.com/lmarena/p2l.",
+        "publication_date": "2025-02-20",
+        "publication_time": "18:58:07",
+        "tags": [
+            "cs.LG",
+            "cs.CL"
+        ],
+        "upvotes": 2
+    },
+    "2502.15612": {
+        "url": "https://arxiv.org/abs/2502.15612",
+        "title": "LaTIM: Measuring Latent Token-to-Token Interactions in Mamba Models",
+        "authors": [
+            "Hugo Pitorro",
+            "Marcos Treviso"
+        ],
+        "abstract": "State space models (SSMs), such as Mamba, have emerged as an efficient\nalternative to transformers for long-context sequence modeling. However,\ndespite their growing adoption, SSMs lack the interpretability tools that have\nbeen crucial for understanding and improving attention-based architectures.\nWhile recent efforts provide insights into Mamba's internal mechanisms, they do\nnot explicitly decompose token-wise contributions, leaving gaps in\nunderstanding how Mamba selectively processes sequences across layers. In this\nwork, we introduce LaTIM, a novel token-level decomposition method for both\nMamba-1 and Mamba-2 that enables fine-grained interpretability. We extensively\nevaluate our method across diverse tasks, including machine translation,\ncopying, and retrieval-based generation, demonstrating its effectiveness in\nrevealing Mamba's token-to-token interaction patterns.",
+        "publication_date": "2025-02-21",
+        "publication_time": "17:33:59",
+        "tags": [
+            "cs.CL",
+            "I.2.7"
+        ],
+        "upvotes": 2
+    },
+    "2502.17092": {
+        "url": "https://arxiv.org/abs/2502.17092",
+        "title": "Shakti-VLMs: Scalable Vision-Language Models for Enterprise AI",
+        "authors": [
+            "Syed Abdul Gaffar Shakhadri",
+            "Kruthika KR",
+            "Kartik Basavaraj Angadi"
+        ],
+        "abstract": "We introduce Shakti VLM, a family of vision-language models in the capacity\nof 1B and 4B parameters designed to address data efficiency challenges in\nmultimodal learning. While recent VLMs achieve strong performance through\nextensive training data, Shakti models leverage architectural innovations to\nattain competitive results with fewer tokens. Key advancements include\nQK-Normalization for attention stability, hybrid normalization techniques, and\nenhanced positional encoding. A three-stage training strategy further optimizes\nlearning efficiency. Evaluations show that Shakti-Shakti-VLM-1B and\nShakti-VLM-4B excel in document understanding, Visual Reasoning, OCR\nextraction, and general multimodal reasoning. Our results highlight that high\nperformance can be achieved through model design and training strategy rather\nthan sheer data volume, making Shakti an efficient solution for\nenterprise-scale multimodal tasks.",
+        "publication_date": "2025-02-24",
+        "publication_time": "12:15:07",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 2
+    },
+    "2502.17910": {
+        "url": "https://arxiv.org/abs/2502.17910",
+        "title": "Scaling LLM Pre-training with Vocabulary Curriculum",
+        "authors": [
+            "Fangyuan Yu"
+        ],
+        "abstract": "Modern language models rely on static vocabularies, fixed before pretraining,\nin contrast to the adaptive vocabulary acquisition observed in human language\nlearning. To bridge this gap, we introduce vocabulary curriculum learning, an\napproach that improves pretraining efficiency with log-linear scaling gains\nrelative to vocabulary size. Our method alternates between entropy-guided\nvocabulary expansion and model optimization, enabling models to learn\ntransferable representations across diverse tokenization granularities. This\napproach naturally gives rise to an optimal computation allocation pattern:\nlonger tokens capture predictable content, while shorter tokens focus on more\ncomplex, harder-to-predict contexts. Experiments on small-scale GPT models\ndemonstrate improved scaling efficiency, reinforcing the effectiveness of\ndynamic tokenization. We release our code to support further research and plan\nto extend our experiments to larger models and diverse domains.",
+        "publication_date": "2025-02-25",
+        "publication_time": "07:18:29",
+        "tags": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "upvotes": 1
+    },
+    "2502.17422": {
+        "url": "https://arxiv.org/abs/2502.17422",
+        "title": "MLLMs Know Where to Look: Training-free Perception of Small Visual\n  Details with Multimodal LLMs",
+        "authors": [
+            "Jiarui Zhang",
+            "Mahyar Khayatkhoei",
+            "Prateek Chhikara",
+            "Filip Ilievski"
+        ],
+        "abstract": "Multimodal Large Language Models (MLLMs) have experienced rapid progress in\nvisual recognition tasks in recent years. Given their potential integration\ninto many critical applications, it is important to understand the limitations\nof their visual perception. In this work, we study whether MLLMs can perceive\nsmall visual details as effectively as large ones when answering questions\nabout images. We observe that their performance is very sensitive to the size\nof the visual subject of the question, and further show that this effect is in\nfact causal by conducting an intervention study. Next, we study the attention\npatterns of MLLMs when answering visual questions, and intriguingly find that\nthey consistently know where to look, even when they provide the wrong answer.\nBased on these findings, we then propose training-free visual intervention\nmethods that leverage the internal knowledge of any MLLM itself, in the form of\nattention and gradient maps, to enhance its perception of small visual details.\nWe evaluate our proposed methods on two widely-used MLLMs and seven visual\nquestion answering benchmarks and show that they can significantly improve\nMLLMs' accuracy without requiring any training. Our results elucidate the risk\nof applying MLLMs to visual recognition tasks concerning small details and\nindicate that visual intervention using the model's internal state is a\npromising direction to mitigate this risk.",
+        "publication_date": "2025-02-24",
+        "publication_time": "18:54:40",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 1
+    },
+    "2502.17814": {
+        "url": "https://arxiv.org/abs/2502.17814",
+        "title": "An Overview of Large Language Models for Statisticians",
+        "authors": [
+            "Wenlong Ji",
+            "Weizhe Yuan",
+            "Emily Getzen",
+            "Kyunghyun Cho",
+            "Michael I. Jordan",
+            "Song Mei",
+            "Jason E Weston",
+            "Weijie J. Su",
+            "Jing Xu",
+            "Linjun Zhang"
+        ],
+        "abstract": "Large Language Models (LLMs) have emerged as transformative tools in\nartificial intelligence (AI), exhibiting remarkable capabilities across diverse\ntasks such as text generation, reasoning, and decision-making. While their\nsuccess has primarily been driven by advances in computational power and deep\nlearning architectures, emerging problems -- in areas such as uncertainty\nquantification, decision-making, causal inference, and distribution shift --\nrequire a deeper engagement with the field of statistics. This paper explores\npotential areas where statisticians can make important contributions to the\ndevelopment of LLMs, particularly those that aim to engender trustworthiness\nand transparency for human users. Thus, we focus on issues such as uncertainty\nquantification, interpretability, fairness, privacy, watermarking and model\nadaptation. We also consider possible roles for LLMs in statistical analysis.\nBy bridging AI and statistics, we aim to foster a deeper collaboration that\nadvances both the theoretical foundations and practical applications of LLMs,\nultimately shaping their role in addressing complex societal challenges.",
+        "publication_date": "2025-02-25",
+        "publication_time": "03:40:36",
+        "tags": [
+            "stat.ML",
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+        ],
+        "upvotes": 1
+    },
+    "2502.18302": {
+        "url": "https://arxiv.org/abs/2502.18302",
+        "title": "LDGen: Enhancing Text-to-Image Synthesis via Large Language Model-Driven\n  Language Representation",
+        "authors": [
+            "Pengzhi Li",
+            "Pengfei Yu",
+            "Zide Liu",
+            "Wei He",
+            "Xuhao Pan",
+            "Xudong Rao",
+            "Tao Wei",
+            "Wei Chen"
+        ],
+        "abstract": "In this paper, we introduce LDGen, a novel method for integrating large\nlanguage models (LLMs) into existing text-to-image diffusion models while\nminimizing computational demands. Traditional text encoders, such as CLIP and\nT5, exhibit limitations in multilingual processing, hindering image generation\nacross diverse languages. We address these challenges by leveraging the\nadvanced capabilities of LLMs. Our approach employs a language representation\nstrategy that applies hierarchical caption optimization and human instruction\ntechniques to derive precise semantic information,. Subsequently, we\nincorporate a lightweight adapter and a cross-modal refiner to facilitate\nefficient feature alignment and interaction between LLMs and image features.\nLDGen reduces training time and enables zero-shot multilingual image\ngeneration. Experimental results indicate that our method surpasses baseline\nmodels in both prompt adherence and image aesthetic quality, while seamlessly\nsupporting multiple languages. Project page: https://zrealli.github.io/LDGen.",
+        "publication_date": "2025-02-25",
+        "publication_time": "15:42:34",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 0
+    },
+    "2502.18316": {
+        "url": "https://arxiv.org/abs/2502.18316",
+        "title": "WiCkeD: A Simple Method to Make Multiple Choice Benchmarks More\n  Challenging",
+        "authors": [
+            "Ahmed Elhady",
+            "Eneko Agirre",
+            "Mikel Artetxe"
+        ],
+        "abstract": "We introduce WiCkeD, a simple method to increase the complexity of existing\nmultiple-choice benchmarks by randomly replacing a choice with \"None of the\nabove\", a method often used in educational tests. We show that WiCkeD can be\nautomatically applied to any existing benchmark, making it more challenging. We\napply WiCkeD to 6 popular benchmarks and use it to evaluate 18 open-weight\nLLMs. The performance of the models drops 12.1 points on average with respect\nto the original versions of the datasets. When using chain-of-thought on 3 MMLU\ndatasets, the performance drop for the WiCkeD variant is similar to the one\nobserved when using the LLMs directly, showing that WiCkeD is also challenging\nfor models with enhanced reasoning abilities. WiCkeD also uncovers that some\nmodels are more sensitive to the extra reasoning required, providing additional\ninformation with respect to the original benchmarks. We relase our code and\ndata at https://github.com/ahmedselhady/wicked-benchmarks.",
+        "publication_date": "2025-02-25",
+        "publication_time": "16:09:38",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 0
     }
 }
