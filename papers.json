@@ -135508,5 +135508,495 @@
             "cs.CV"
         ],
         "upvotes": 0
+    },
+    "2502.20311": {
+        "url": "https://arxiv.org/abs/2502.20311",
+        "title": "Adapting Automatic Speech Recognition for Accented Air Traffic Control\n  Communications",
+        "authors": [
+            "Marcus Yu Zhe Wee",
+            "Justin Juin Hng Wong",
+            "Lynus Lim",
+            "Joe Yu Wei Tan",
+            "Prannaya Gupta",
+            "Dillion Lim",
+            "En Hao Tew",
+            "Aloysius Keng Siew Han",
+            "Yong Zhi Lim"
+        ],
+        "abstract": "Effective communication in Air Traffic Control (ATC) is critical to\nmaintaining aviation safety, yet the challenges posed by accented English\nremain largely unaddressed in Automatic Speech Recognition (ASR) systems.\nExisting models struggle with transcription accuracy for Southeast\nAsian-accented (SEA-accented) speech, particularly in noisy ATC environments.\nThis study presents the development of ASR models fine-tuned specifically for\nSoutheast Asian accents using a newly created dataset. Our research achieves\nsignificant improvements, achieving a Word Error Rate (WER) of 0.0982 or 9.82%\non SEA-accented ATC speech. Additionally, the paper highlights the importance\nof region-specific datasets and accent-focused training, offering a pathway for\ndeploying ASR systems in resource-constrained military operations. The findings\nemphasize the need for noise-robust training techniques and region-specific\ndatasets to improve transcription accuracy for non-Western accents in ATC\ncommunications.",
+        "publication_date": "2025-02-27",
+        "publication_time": "17:35:59",
+        "tags": [
+            "cs.LG",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "upvotes": 3
+    },
+    "2502.19870": {
+        "url": "https://arxiv.org/abs/2502.19870",
+        "title": "MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge",
+        "authors": [
+            "Yuntao Du",
+            "Kailin Jiang",
+            "Zhi Gao",
+            "Chenrui Shi",
+            "Zilong Zheng",
+            "Siyuan Qi",
+            "Qing Li"
+        ],
+        "abstract": "Knowledge editing techniques have emerged as essential tools for updating the\nfactual knowledge of large language models (LLMs) and multimodal models (LMMs),\nallowing them to correct outdated or inaccurate information without retraining\nfrom scratch. However, existing benchmarks for multimodal knowledge editing\nprimarily focus on entity-level knowledge represented as simple triplets, which\nfail to capture the complexity of real-world multimodal information. To address\nthis issue, we introduce MMKE-Bench, a comprehensive MultiModal Knowledge\nEditing Benchmark, designed to evaluate the ability of LMMs to edit diverse\nvisual knowledge in real-world scenarios. MMKE-Bench addresses these\nlimitations by incorporating three types of editing tasks: visual entity\nediting, visual semantic editing, and user-specific editing. Besides,\nMMKE-Bench uses free-form natural language to represent and edit knowledge,\noffering a more flexible and effective format. The benchmark consists of 2,940\npieces of knowledge and 8,363 images across 33 broad categories, with\nevaluation questions automatically generated and human-verified. We assess five\nstate-of-the-art knowledge editing methods on three prominent LMMs, revealing\nthat no method excels across all criteria, and that visual and user-specific\nedits are particularly challenging. MMKE-Bench sets a new standard for\nevaluating the robustness of multimodal knowledge editing techniques, driving\nprogress in this rapidly evolving field.",
+        "publication_date": "2025-02-27",
+        "publication_time": "08:21:28",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 3
+    },
+    "2502.19613": {
+        "url": "https://arxiv.org/abs/2502.19613",
+        "title": "Self-rewarding correction for mathematical reasoning",
+        "authors": [
+            "Wei Xiong",
+            "Hanning Zhang",
+            "Chenlu Ye",
+            "Lichang Chen",
+            "Nan Jiang",
+            "Tong Zhang"
+        ],
+        "abstract": "We study self-rewarding reasoning large language models (LLMs), which can\nsimultaneously generate step-by-step reasoning and evaluate the correctness of\ntheir outputs during the inference time-without external feedback. This\nintegrated approach allows a single model to independently guide its reasoning\nprocess, offering computational advantages for model deployment. We\nparticularly focus on the representative task of self-correction, where models\nautonomously detect errors in their responses, revise outputs, and decide when\nto terminate iterative refinement loops. To enable this, we propose a\ntwo-staged algorithmic framework for constructing self-rewarding reasoning\nmodels using only self-generated data. In the first stage, we employ sequential\nrejection sampling to synthesize long chain-of-thought trajectories that\nincorporate both self-rewarding and self-correction mechanisms. Fine-tuning\nmodels on these curated data allows them to learn the patterns of\nself-rewarding and self-correction. In the second stage, we further enhance the\nmodels' ability to assess response accuracy and refine outputs through\nreinforcement learning with rule-based signals. Experiments with Llama-3 and\nQwen-2.5 demonstrate that our approach surpasses intrinsic self-correction\ncapabilities and achieves performance comparable to systems that rely on\nexternal reward models.",
+        "publication_date": "2025-02-26",
+        "publication_time": "23:01:16",
+        "tags": [
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 49
+    },
+    "2502.19634": {
+        "url": "https://arxiv.org/abs/2502.19634",
+        "title": "MedVLM-R1: Incentivizing Medical Reasoning Capability of Vision-Language\n  Models (VLMs) via Reinforcement Learning",
+        "authors": [
+            "Jiazhen Pan",
+            "Che Liu",
+            "Junde Wu",
+            "Fenglin Liu",
+            "Jiayuan Zhu",
+            "Hongwei Bran Li",
+            "Chen Chen",
+            "Cheng Ouyang",
+            "Daniel Rueckert"
+        ],
+        "abstract": "Reasoning is a critical frontier for advancing medical image analysis, where\ntransparency and trustworthiness play a central role in both clinician trust\nand regulatory approval. Although Medical Visual Language Models (VLMs) show\npromise for radiological tasks, most existing VLMs merely produce final answers\nwithout revealing the underlying reasoning. To address this gap, we introduce\nMedVLM-R1, a medical VLM that explicitly generates natural language reasoning\nto enhance transparency and trustworthiness. Instead of relying on supervised\nfine-tuning (SFT), which often suffers from overfitting to training\ndistributions and fails to foster genuine reasoning, MedVLM-R1 employs a\nreinforcement learning framework that incentivizes the model to discover\nhuman-interpretable reasoning paths without using any reasoning references.\nDespite limited training data (600 visual question answering samples) and model\nparameters (2B), MedVLM-R1 boosts accuracy from 55.11% to 78.22% across MRI,\nCT, and X-ray benchmarks, outperforming larger models trained on over a million\nsamples. It also demonstrates robust domain generalization under\nout-of-distribution tasks. By unifying medical image analysis with explicit\nreasoning, MedVLM-R1 marks a pivotal step toward trustworthy and interpretable\nAI in clinical practice.",
+        "publication_date": "2025-02-26",
+        "publication_time": "23:57:34",
+        "tags": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "upvotes": 43
+    },
+    "2502.20395": {
+        "url": "https://arxiv.org/abs/2502.20395",
+        "title": "R2-T2: Re-Routing in Test-Time for Multimodal Mixture-of-Experts",
+        "authors": [
+            "Zhongyang Li",
+            "Ziyue Li",
+            "Tianyi Zhou"
+        ],
+        "abstract": "In large multimodal models (LMMs), the perception of non-language modalities\n(e.g., visual representations) is usually not on par with the large language\nmodels (LLMs)' powerful reasoning capabilities, deterring LMMs' performance on\nchallenging downstream tasks. This weakness has been recently mitigated by\nreplacing the vision encoder with a mixture-of-experts (MoE), which provides\nrich, multi-granularity, and diverse representations required by diverse\ndownstream tasks. The performance of multimodal MoE largely depends on its\nrouter, which reweights and mixes the representations of different experts for\neach input. However, we find that the end-to-end trained router does not always\nproduce the optimal routing weights for every test sample. To bridge the gap,\nwe propose a novel and efficient method \"Re-Routing in Test-Time(R2-T2) that\nlocally optimizes the vector of routing weights in test-time by moving it\ntoward those vectors of the correctly predicted samples in a neighborhood of\nthe test sample. We propose three R2-T2 strategies with different optimization\nobjectives and neighbor-search spaces. R2-T2 consistently and greatly improves\nstate-of-the-art LMMs' performance on challenging benchmarks of diverse tasks,\nwithout training any base-model parameters.",
+        "publication_date": "2025-02-27",
+        "publication_time": "18:59:32",
+        "tags": [
+            "cs.LG"
+        ],
+        "upvotes": 32
+    },
+    "2502.20082": {
+        "url": "https://arxiv.org/abs/2502.20082",
+        "title": "LongRoPE2: Near-Lossless LLM Context Window Scaling",
+        "authors": [
+            "Ning Shang",
+            "Li Lyna Zhang",
+            "Siyuan Wang",
+            "Gaokai Zhang",
+            "Gilsinia Lopez",
+            "Fan Yang",
+            "Weizhu Chen",
+            "Mao Yang"
+        ],
+        "abstract": "LongRoPE2 is a novel approach that extends the effective context window of\npre-trained large language models (LLMs) to the target length, while preserving\nthe performance on the original shorter context window. This is achieved by\nthree contributions: (1) a hypothesis that insufficient training in higher RoPE\ndimensions contributes to the persistent out-of-distribution (OOD) issues\nobserved in existing methods; (2) an effective RoPE rescaling algorithm that\nadopts evolutionary search guided by \"needle-driven\" perplexity to address the\ninsufficient training problem; (3) a mixed context window training approach\nthat fine-tunes model weights to adopt rescaled RoPE for long-context sequences\nwhile preserving the short-context performance with the original RoPE.\nExtensive experiments on LLaMA3-8B and Phi3-mini-3.8B across various benchmarks\nvalidate the hypothesis and demonstrate the effectiveness of LongRoPE2.\nRemarkably, LongRoPE2 extends LLaMA3-8B to achieve a 128K effective context\nlength while retaining over 98.5% of short-context performance, using only 10B\ntokens -- 80x fewer than Meta's approach, which fails to reach the target\neffective context length. Code will be available at\nhttps://github.com/microsoft/LongRoPE.",
+        "publication_date": "2025-02-27",
+        "publication_time": "13:41:07",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 21
+    },
+    "2502.20238": {
+        "url": "https://arxiv.org/abs/2502.20238",
+        "title": "FINEREASON: Evaluating and Improving LLMs' Deliberate Reasoning through\n  Reflective Puzzle Solving",
+        "authors": [
+            "Guizhen Chen",
+            "Weiwen Xu",
+            "Hao Zhang",
+            "Hou Pong Chan",
+            "Chaoqun Liu",
+            "Lidong Bing",
+            "Deli Zhao",
+            "Anh Tuan Luu",
+            "Yu Rong"
+        ],
+        "abstract": "Many challenging reasoning tasks require not just rapid, intuitive responses,\nbut a more deliberate, multi-step approach. Recent progress in large language\nmodels (LLMs) highlights an important shift from the \"System 1\" way of quick\nreactions to the \"System 2\" style of reflection-and-correction problem solving.\nHowever, current benchmarks heavily rely on the final-answer accuracy, leaving\nmuch of a model's intermediate reasoning steps unexamined. This fails to assess\nthe model's ability to reflect and rectify mistakes within the reasoning\nprocess. To bridge this gap, we introduce FINEREASON, a logic-puzzle benchmark\nfor fine-grained evaluation of LLMs' reasoning capabilities. Each puzzle can be\ndecomposed into atomic steps, making it ideal for rigorous validation of\nintermediate correctness. Building on this, we introduce two tasks: state\nchecking, and state transition, for a comprehensive evaluation of how models\nassess the current situation and plan the next move. To support broader\nresearch, we also provide a puzzle training set aimed at enhancing performance\non general mathematical tasks. We show that models trained on our state\nchecking and transition data demonstrate gains in math reasoning by up to 5.1%\non GSM8K.",
+        "publication_date": "2025-02-27",
+        "publication_time": "16:23:25",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 18
+    },
+    "2502.16645": {
+        "url": "https://arxiv.org/abs/2502.16645",
+        "title": "CODESYNC: Synchronizing Large Language Models with Dynamic Code\n  Evolution at Scale",
+        "authors": [
+            "Chenlong Wang",
+            "Zhaoyang Chu",
+            "Zhengxiang Cheng",
+            "Xuyi Yang",
+            "Kaiyue Qiu",
+            "Yao Wan",
+            "Zhou Zhao",
+            "Xuanhua Shi",
+            "Dongping Chen"
+        ],
+        "abstract": "Large Language Models (LLMs) have exhibited exceptional performance in\nsoftware engineering yet face challenges in adapting to continually evolving\ncode knowledge, particularly regarding the frequent updates of third-party\nlibrary APIs. This limitation, stemming from static pre-training datasets,\noften results in non-executable code or implementations with suboptimal safety\nand efficiency. To this end, this paper introduces CODESYNC, a data engine for\nidentifying outdated code patterns and collecting real-time code knowledge\nupdates from Python third-party libraries. Building upon CODESYNC, we develop\nCODESYNCBENCH, a comprehensive benchmark for assessing LLMs' ability to stay\nsynchronized with code evolution, which covers real-world updates for 220 APIs\nfrom six Python libraries. Our benchmark offers 3,300 test cases across three\nevaluation tasks and an update-aware instruction tuning dataset consisting of\n2,200 training samples. Extensive experiments on 14 state-of-the-art LLMs\nreveal that they struggle with dynamic code evolution, even with the support of\nadvanced knowledge updating methods (e.g., DPO, ORPO, and SimPO). We believe\nthat our benchmark can offer a strong foundation for the development of more\neffective methods for real-time code knowledge updating in the future. The\nexperimental code and dataset are publicly available at:\nhttps://github.com/Lucky-voyage/Code-Sync.",
+        "publication_date": "2025-02-23",
+        "publication_time": "16:46:18",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.SE"
+        ],
+        "upvotes": 15
+    },
+    "2502.20321": {
+        "url": "https://arxiv.org/abs/2502.20321",
+        "title": "UniTok: A Unified Tokenizer for Visual Generation and Understanding",
+        "authors": [
+            "Chuofan Ma",
+            "Yi Jiang",
+            "Junfeng Wu",
+            "Jihan Yang",
+            "Xin Yu",
+            "Zehuan Yuan",
+            "Bingyue Peng",
+            "Xiaojuan Qi"
+        ],
+        "abstract": "The representation disparity between visual generation and understanding\nimposes a critical gap in integrating these capabilities into a single\nframework. To bridge this gap, we introduce UniTok, a discrete visual tokenizer\nthat encodes fine-grained details for generation while also capturing\nhigh-level semantics for understanding. Despite recent studies have shown that\nthese objectives could induce loss conflicts in training, we reveal that the\nunderlying bottleneck stems from limited representational capacity of discrete\ntokens. We address this by introducing multi-codebook quantization, which\ndivides vector quantization with several independent sub-codebooks to expand\nthe latent feature space, while avoiding training instability caused by\noverlarge codebooks. Our method significantly raises the upper limit of unified\ndiscrete tokenizers to match or even surpass domain-specific continuous\ntokenizers. For instance, UniTok achieves a remarkable rFID of 0.38 (versus\n0.87 for SD-VAE) and a zero-shot accuracy of 78.6% (versus 76.2% for CLIP) on\nImageNet. Our code is available at https://github.com/FoundationVision/UniTok.",
+        "publication_date": "2025-02-27",
+        "publication_time": "17:47:01",
+        "tags": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "upvotes": 13
+    },
+    "2502.19587": {
+        "url": "https://arxiv.org/abs/2502.19587",
+        "title": "NeoBERT: A Next-Generation BERT",
+        "authors": [
+            "Lola Le Breton",
+            "Quentin Fournier",
+            "Mariam El Mezouar",
+            "Sarath Chandar"
+        ],
+        "abstract": "Recent innovations in architecture, pre-training, and fine-tuning have led to\nthe remarkable in-context learning and reasoning abilities of large\nauto-regressive language models such as LLaMA and DeepSeek. In contrast,\nencoders like BERT and RoBERTa have not seen the same level of progress despite\nbeing foundational for many downstream NLP applications. To bridge this gap, we\nintroduce NeoBERT, a next-generation encoder that redefines the capabilities of\nbidirectional models by integrating state-of-the-art advancements in\narchitecture, modern data, and optimized pre-training methodologies. NeoBERT is\ndesigned for seamless adoption: it serves as a plug-and-play replacement for\nexisting base models, relies on an optimal depth-to-width ratio, and leverages\nan extended context length of 4,096 tokens. Despite its compact 250M parameter\nfootprint, it achieves state-of-the-art results on the massive MTEB benchmark,\noutperforming BERT large, RoBERTa large, NomicBERT, and ModernBERT under\nidentical fine-tuning conditions. In addition, we rigorously evaluate the\nimpact of each modification on GLUE and design a uniform fine-tuning and\nevaluation framework for MTEB. We release all code, data, checkpoints, and\ntraining scripts to accelerate research and real-world adoption.",
+        "publication_date": "2025-02-26",
+        "publication_time": "22:00:22",
+        "tags": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "upvotes": 10
+    },
+    "2502.20172": {
+        "url": "https://arxiv.org/abs/2502.20172",
+        "title": "Multimodal Representation Alignment for Image Generation: Text-Image\n  Interleaved Control Is Easier Than You Think",
+        "authors": [
+            "Liang Chen",
+            "Shuai Bai",
+            "Wenhao Chai",
+            "Weichu Xie",
+            "Haozhe Zhao",
+            "Leon Vinci",
+            "Junyang Lin",
+            "Baobao Chang"
+        ],
+        "abstract": "The field of advanced text-to-image generation is witnessing the emergence of\nunified frameworks that integrate powerful text encoders, such as CLIP and T5,\nwith Diffusion Transformer backbones. Although there have been efforts to\ncontrol output images with additional conditions, like canny and depth map, a\ncomprehensive framework for arbitrary text-image interleaved control is still\nlacking. This gap is especially evident when attempting to merge concepts or\nvisual elements from multiple images in the generation process. To mitigate the\ngap, we conducted preliminary experiments showing that large multimodal models\n(LMMs) offer an effective shared representation space, where image and text can\nbe well-aligned to serve as a condition for external diffusion models. Based on\nthis discovery, we propose Dream Engine, an efficient and unified framework\ndesigned for arbitrary text-image interleaved control in image generation\nmodels. Building on powerful text-to-image models like SD3.5, we replace the\noriginal text-only encoders by incorporating versatile multimodal information\nencoders such as QwenVL. Our approach utilizes a two-stage training paradigm,\nconsisting of joint text-image alignment and multimodal interleaved instruction\ntuning. Our experiments demonstrate that this training method is effective,\nachieving a 0.69 overall score on the GenEval benchmark, and matching the\nperformance of state-of-the-art text-to-image models like SD3.5 and FLUX.",
+        "publication_date": "2025-02-27",
+        "publication_time": "15:08:39",
+        "tags": [
+            "cs.CV",
+            "cs.CL"
+        ],
+        "upvotes": 9
+    },
+    "2502.16944": {
+        "url": "https://arxiv.org/abs/2502.16944",
+        "title": "Lean and Mean: Decoupled Value Policy Optimization with Global Value\n  Guidance",
+        "authors": [
+            "Chenghua Huang",
+            "Lu Wang",
+            "Fangkai Yang",
+            "Pu Zhao",
+            "Zhixu Li",
+            "Qingwei Lin",
+            "Dongmei Zhang",
+            "Saravan Rajmohan",
+            "Qi Zhang"
+        ],
+        "abstract": "Proximal Policy Optimization (PPO)-based Reinforcement Learning from Human\nFeedback (RLHF) is essential for aligning large language models (LLMs) with\nhuman preferences. It requires joint training of an actor and critic with a\npretrained, fixed reward model for guidance. This approach increases\ncomputational complexity and instability due to actor-critic interdependence.\nAdditionally, PPO lacks access to true environment rewards in LLM tasks,\nlimiting its adaptability. Under such conditions, pretraining a value model or\na reward model becomes equivalent, as both provide fixed supervisory signals\nwithout new ground-truth feedback. To address these issues, we propose\n\\textbf{Decoupled Value Policy Optimization (DVPO)}, a lean framework that\nreplaces traditional reward modeling with a pretrained \\emph{global value model\n(GVM)}. The GVM is conditioned on policy trajectories and predicts token-level\nreturn-to-go estimates. By decoupling value model from policy training (via\nfrozen GVM-driven RL objectives), DVPO eliminates actor-critic interdependence,\nreducing GPU memory usage by 40\\% and training time by 35\\% compared to\nconventional RLHF. Experiments across benchmarks show DVPO outperforms\nefficient RLHF methods (e.g., DPO) while matching state-of-the-art PPO in\nperformance.",
+        "publication_date": "2025-02-24",
+        "publication_time": "08:11:33",
+        "tags": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "upvotes": 9
+    },
+    "2502.20126": {
+        "url": "https://arxiv.org/abs/2502.20126",
+        "title": "FlexiDiT: Your Diffusion Transformer Can Easily Generate High-Quality\n  Samples with Less Compute",
+        "authors": [
+            "Sotiris Anagnostidis",
+            "Gregor Bachmann",
+            "Yeongmin Kim",
+            "Jonas Kohler",
+            "Markos Georgopoulos",
+            "Artsiom Sanakoyeu",
+            "Yuming Du",
+            "Albert Pumarola",
+            "Ali Thabet",
+            "Edgar Sch\u00f6nfeld"
+        ],
+        "abstract": "Despite their remarkable performance, modern Diffusion Transformers are\nhindered by substantial resource requirements during inference, stemming from\nthe fixed and large amount of compute needed for each denoising step. In this\nwork, we revisit the conventional static paradigm that allocates a fixed\ncompute budget per denoising iteration and propose a dynamic strategy instead.\nOur simple and sample-efficient framework enables pre-trained DiT models to be\nconverted into \\emph{flexible} ones -- dubbed FlexiDiT -- allowing them to\nprocess inputs at varying compute budgets. We demonstrate how a single\n\\emph{flexible} model can generate images without any drop in quality, while\nreducing the required FLOPs by more than $40$\\% compared to their static\ncounterparts, for both class-conditioned and text-conditioned image generation.\nOur method is general and agnostic to input and conditioning modalities. We\nshow how our approach can be readily extended for video generation, where\nFlexiDiT models generate samples with up to $75$\\% less compute without\ncompromising performance.",
+        "publication_date": "2025-02-27",
+        "publication_time": "14:16:56",
+        "tags": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "upvotes": 9
+    },
+    "2502.16750": {
+        "url": "https://arxiv.org/abs/2502.16750",
+        "title": "Guardians of the Agentic System: Preventing Many Shots Jailbreak with\n  Agentic System",
+        "authors": [
+            "Saikat Barua",
+            "Mostafizur Rahman",
+            "Md Jafor Sadek",
+            "Rafiul Islam",
+            "Shehnaz Khaled",
+            "Ahmedul Kabir"
+        ],
+        "abstract": "The autonomous AI agents using large language models can create undeniable\nvalues in all span of the society but they face security threats from\nadversaries that warrants immediate protective solutions because trust and\nsafety issues arise. Considering the many-shot jailbreaking and deceptive\nalignment as some of the main advanced attacks, that cannot be mitigated by the\nstatic guardrails used during the supervised training, points out a crucial\nresearch priority for real world robustness. The combination of static\nguardrails in dynamic multi-agent system fails to defend against those attacks.\nWe intend to enhance security for LLM-based agents through the development of\nnew evaluation frameworks which identify and counter threats for safe\noperational deployment. Our work uses three examination methods to detect rogue\nagents through a Reverse Turing Test and analyze deceptive alignment through\nmulti-agent simulations and develops an anti-jailbreaking system by testing it\nwith GEMINI 1.5 pro and llama-3.3-70B, deepseek r1 models using tool-mediated\nadversarial scenarios. The detection capabilities are strong such as 94\\%\naccuracy for GEMINI 1.5 pro yet the system suffers persistent vulnerabilities\nwhen under long attacks as prompt length increases attack success rates (ASR)\nand diversity metrics become ineffective in prediction while revealing multiple\ncomplex system faults. The findings demonstrate the necessity of adopting\nflexible security systems based on active monitoring that can be performed by\nthe agents themselves together with adaptable interventions by system admin as\nthe current models can create vulnerabilities that can lead to the unreliable\nand vulnerable system. So, in our work, we try to address such situations and\npropose a comprehensive framework to counteract the security issues.",
+        "publication_date": "2025-02-23",
+        "publication_time": "23:35:15",
+        "tags": [
+            "cs.CR"
+        ],
+        "upvotes": 7
+    },
+    "2502.20307": {
+        "url": "https://arxiv.org/abs/2502.20307",
+        "title": "Mobius: Text to Seamless Looping Video Generation via Latent Shift",
+        "authors": [
+            "Xiuli Bi",
+            "Jianfei Yuan",
+            "Bo Liu",
+            "Yong Zhang",
+            "Xiaodong Cun",
+            "Chi-Man Pun",
+            "Bin Xiao"
+        ],
+        "abstract": "We present Mobius, a novel method to generate seamlessly looping videos from\ntext descriptions directly without any user annotations, thereby creating new\nvisual materials for the multi-media presentation. Our method repurposes the\npre-trained video latent diffusion model for generating looping videos from\ntext prompts without any training. During inference, we first construct a\nlatent cycle by connecting the starting and ending noise of the videos. Given\nthat the temporal consistency can be maintained by the context of the video\ndiffusion model, we perform multi-frame latent denoising by gradually shifting\nthe first-frame latent to the end in each step. As a result, the denoising\ncontext varies in each step while maintaining consistency throughout the\ninference process. Moreover, the latent cycle in our method can be of any\nlength. This extends our latent-shifting approach to generate seamless looping\nvideos beyond the scope of the video diffusion model's context. Unlike previous\ncinemagraphs, the proposed method does not require an image as appearance,\nwhich will restrict the motions of the generated results. Instead, our method\ncan produce more dynamic motion and better visual quality. We conduct multiple\nexperiments and comparisons to verify the effectiveness of the proposed method,\ndemonstrating its efficacy in different scenarios. All the code will be made\navailable.",
+        "publication_date": "2025-02-27",
+        "publication_time": "17:33:51",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 7
+    },
+    "2502.20127": {
+        "url": "https://arxiv.org/abs/2502.20127",
+        "title": "SoRFT: Issue Resolving with Subtask-oriented Reinforced Fine-Tuning",
+        "authors": [
+            "Zexiong Ma",
+            "Chao Peng",
+            "Pengfei Gao",
+            "Xiangxin Meng",
+            "Yanzhen Zou",
+            "Bing Xie"
+        ],
+        "abstract": "Mainstream issue-resolving frameworks predominantly rely on commercial\nmodels, leading to high costs and privacy concerns. Existing training\napproaches for issue resolving struggle with poor generalization and fail to\nfully leverage open-source development resources. We propose Subtask-oriented\nReinforced Fine-Tuning (SoRFT), a novel training approach to enhance the issue\nresolving capability of LLMs. We decomposes issue resolving into structured\nsubtasks: file localization, function localization, line localization, and code\nedit generation. SoRFT consists of two training stages: (1) rejection-sampled\nsupervised fine-tuning, Chain of Thought (CoT) data is filtered using\nground-truth before fine-tuning the LLM, and (2) rule-based reinforcement\nlearning, which leverages PPO with ground-truth based rewards. We evaluate the\nSoRFT-trained model on SWE-Bench Verified and SWE-Bench Lite, achieving\nstate-of-the-art (SOTA) performance among open-source models (e.g., resolve\n21.4% issues on SWE-Bench Verified with SoRFT-Qwen-7B). The experimental\nresults demonstrate that SoRFT significantly enhances issue-resolving\nperformance, improves model generalization, and provides a cost-efficient\nalternative to commercial models.",
+        "publication_date": "2025-02-27",
+        "publication_time": "14:19:45",
+        "tags": [
+            "cs.SE",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 7
+    },
+    "2502.19459": {
+        "url": "https://arxiv.org/abs/2502.19459",
+        "title": "Building Interactable Replicas of Complex Articulated Objects via\n  Gaussian Splatting",
+        "authors": [
+            "Yu Liu",
+            "Baoxiong Jia",
+            "Ruijie Lu",
+            "Junfeng Ni",
+            "Song-Chun Zhu",
+            "Siyuan Huang"
+        ],
+        "abstract": "Building articulated objects is a key challenge in computer vision. Existing\nmethods often fail to effectively integrate information across different object\nstates, limiting the accuracy of part-mesh reconstruction and part dynamics\nmodeling, particularly for complex multi-part articulated objects. We introduce\nArtGS, a novel approach that leverages 3D Gaussians as a flexible and efficient\nrepresentation to address these issues. Our method incorporates canonical\nGaussians with coarse-to-fine initialization and updates for aligning\narticulated part information across different object states, and employs a\nskinning-inspired part dynamics modeling module to improve both part-mesh\nreconstruction and articulation learning. Extensive experiments on both\nsynthetic and real-world datasets, including a new benchmark for complex\nmulti-part objects, demonstrate that ArtGS achieves state-of-the-art\nperformance in joint parameter estimation and part mesh reconstruction. Our\napproach significantly improves reconstruction quality and efficiency,\nespecially for multi-part articulated objects. Additionally, we provide\ncomprehensive analyses of our design choices, validating the effectiveness of\neach component to highlight potential areas for future improvement.",
+        "publication_date": "2025-02-26",
+        "publication_time": "10:25:32",
+        "tags": [
+            "cs.GR",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "upvotes": 6
+    },
+    "2502.19735": {
+        "url": "https://arxiv.org/abs/2502.19735",
+        "title": "R1-T1: Fully Incentivizing Translation Capability in LLMs via Reasoning\n  Learning",
+        "authors": [
+            "Minggui He",
+            "Yilun Liu",
+            "Shimin Tao",
+            "Yuanchang Luo",
+            "Hongyong Zeng",
+            "Chang Su",
+            "Li Zhang",
+            "Hongxia Ma",
+            "Daimeng Wei",
+            "Weibin Meng",
+            "Hao Yang",
+            "Boxing Chen",
+            "Osamu Yoshie"
+        ],
+        "abstract": "Despite recent breakthroughs in reasoning-enhanced large language models\n(LLMs) like DeepSeek-R1, incorporating inference-time reasoning into machine\ntranslation (MT), where human translators naturally employ structured,\nmulti-layered reasoning chain-of-thoughts (CoTs), is yet underexplored.\nExisting methods either design a fixed CoT tailored for a specific MT sub-task\n(e.g., literature translation), or rely on synthesizing CoTs unaligned with\nhumans and supervised fine-tuning (SFT) prone to catastrophic forgetting,\nlimiting their adaptability to diverse translation scenarios. This paper\nintroduces R1-Translator (R1-T1), a novel framework to achieve inference-time\nreasoning for general MT via reinforcement learning (RL) with human-aligned\nCoTs comprising six common patterns. Our approach pioneers three innovations:\n(1) extending reasoning-based translation beyond MT sub-tasks to six languages\nand diverse tasks (e.g., legal/medical domain adaptation, idiom resolution);\n(2) formalizing six expert-curated CoT templates that mirror hybrid human\nstrategies like context-aware paraphrasing and back translation; and (3)\nenabling self-evolving CoT discovery and anti-forgetting adaptation through RL\nwith KL-constrained rewards. Experimental results indicate a steady translation\nperformance improvement in 21 languages and 80 translation directions on\nFlores-101 test set, especially on the 15 languages unseen from training, with\nits general multilingual abilities preserved compared with plain SFT.",
+        "publication_date": "2025-02-27",
+        "publication_time": "03:57:00",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 6
+    },
+    "2502.20388": {
+        "url": "https://arxiv.org/abs/2502.20388",
+        "title": "Beyond Next-Token: Next-X Prediction for Autoregressive Visual\n  Generation",
+        "authors": [
+            "Sucheng Ren",
+            "Qihang Yu",
+            "Ju He",
+            "Xiaohui Shen",
+            "Alan Yuille",
+            "Liang-Chieh Chen"
+        ],
+        "abstract": "Autoregressive (AR) modeling, known for its next-token prediction paradigm,\nunderpins state-of-the-art language and visual generative models.\nTraditionally, a ``token'' is treated as the smallest prediction unit, often a\ndiscrete symbol in language or a quantized patch in vision. However, the\noptimal token definition for 2D image structures remains an open question.\nMoreover, AR models suffer from exposure bias, where teacher forcing during\ntraining leads to error accumulation at inference. In this paper, we propose\nxAR, a generalized AR framework that extends the notion of a token to an entity\nX, which can represent an individual patch token, a cell (a $k\\times k$\ngrouping of neighboring patches), a subsample (a non-local grouping of distant\npatches), a scale (coarse-to-fine resolution), or even a whole image.\nAdditionally, we reformulate discrete token classification as\n\\textbf{continuous entity regression}, leveraging flow-matching methods at each\nAR step. This approach conditions training on noisy entities instead of ground\ntruth tokens, leading to Noisy Context Learning, which effectively alleviates\nexposure bias. As a result, xAR offers two key advantages: (1) it enables\nflexible prediction units that capture different contextual granularity and\nspatial structures, and (2) it mitigates exposure bias by avoiding reliance on\nteacher forcing. On ImageNet-256 generation benchmark, our base model, xAR-B\n(172M), outperforms DiT-XL/SiT-XL (675M) while achieving 20$\\times$ faster\ninference. Meanwhile, xAR-H sets a new state-of-the-art with an FID of 1.24,\nrunning 2.2$\\times$ faster than the previous best-performing model without\nrelying on vision foundation modules (\\eg, DINOv2) or advanced guidance\ninterval sampling.",
+        "publication_date": "2025-02-27",
+        "publication_time": "18:59:08",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 5
+    },
+    "2502.17355": {
+        "url": "https://arxiv.org/abs/2502.17355",
+        "title": "On Relation-Specific Neurons in Large Language Models",
+        "authors": [
+            "Yihong Liu",
+            "Runsheng Chen",
+            "Lea Hirlimann",
+            "Ahmad Dawar Hakimi",
+            "Mingyang Wang",
+            "Amir Hossein Kargaran",
+            "Sascha Rothe",
+            "Fran\u00e7ois Yvon",
+            "Hinrich Sch\u00fctze"
+        ],
+        "abstract": "In large language models (LLMs), certain neurons can store distinct pieces of\nknowledge learned during pretraining. While knowledge typically appears as a\ncombination of relations and entities, it remains unclear whether some neurons\nfocus on a relation itself -- independent of any entity. We hypothesize such\nneurons detect a relation in the input text and guide generation involving such\na relation. To investigate this, we study the Llama-2 family on a chosen set of\nrelations with a statistics-based method. Our experiments demonstrate the\nexistence of relation-specific neurons. We measure the effect of selectively\ndeactivating candidate neurons specific to relation $r$ on the LLM's ability to\nhandle (1) facts whose relation is $r$ and (2) facts whose relation is a\ndifferent relation $r' \\neq r$. With respect to their capacity for encoding\nrelation information, we give evidence for the following three properties of\nrelation-specific neurons. $\\textbf{(i) Neuron cumulativity.}$ The neurons for\n$r$ present a cumulative effect so that deactivating a larger portion of them\nresults in the degradation of more facts in $r$. $\\textbf{(ii) Neuron\nversatility.}$ Neurons can be shared across multiple closely related as well as\nless related relations. Some relation neurons transfer across languages.\n$\\textbf{(iii) Neuron interference.}$ Deactivating neurons specific to one\nrelation can improve LLM generation performance for facts of other relations.\nWe will make our code publicly available at\nhttps://github.com/cisnlp/relation-specific-neurons.",
+        "publication_date": "2025-02-24",
+        "publication_time": "17:33:18",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 4
+    },
+    "2502.18197": {
+        "url": "https://arxiv.org/abs/2502.18197",
+        "title": "Training Consistency Models with Variational Noise Coupling",
+        "authors": [
+            "Gianluigi Silvestri",
+            "Luca Ambrogioni",
+            "Chieh-Hsin Lai",
+            "Yuhta Takida",
+            "Yuki Mitsufuji"
+        ],
+        "abstract": "Consistency Training (CT) has recently emerged as a promising alternative to\ndiffusion models, achieving competitive performance in image generation tasks.\nHowever, non-distillation consistency training often suffers from high variance\nand instability, and analyzing and improving its training dynamics is an active\narea of research. In this work, we propose a novel CT training approach based\non the Flow Matching framework. Our main contribution is a trained\nnoise-coupling scheme inspired by the architecture of Variational Autoencoders\n(VAE). By training a data-dependent noise emission model implemented as an\nencoder architecture, our method can indirectly learn the geometry of the\nnoise-to-data mapping, which is instead fixed by the choice of the forward\nprocess in classical CT. Empirical results across diverse image datasets show\nsignificant generative improvements, with our model outperforming baselines and\nachieving the state-of-the-art (SoTA) non-distillation CT FID on CIFAR-10, and\nattaining FID on par with SoTA on ImageNet at $64 \\times 64$ resolution in\n2-step generation. Our code is available at https://github.com/sony/vct .",
+        "publication_date": "2025-02-25",
+        "publication_time": "13:38:04",
+        "tags": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "upvotes": 3
+    },
+    "2502.16111": {
+        "url": "https://arxiv.org/abs/2502.16111",
+        "title": "PlanGEN: A Multi-Agent Framework for Generating Planning and Reasoning\n  Trajectories for Complex Problem Solving",
+        "authors": [
+            "Mihir Parmar",
+            "Xin Liu",
+            "Palash Goyal",
+            "Yanfei Chen",
+            "Long Le",
+            "Swaroop Mishra",
+            "Hossein Mobahi",
+            "Jindong Gu",
+            "Zifeng Wang",
+            "Hootan Nakhost",
+            "Chitta Baral",
+            "Chen-Yu Lee",
+            "Tomas Pfister",
+            "Hamid Palangi"
+        ],
+        "abstract": "Recent agent frameworks and inference-time algorithms often struggle with\ncomplex planning problems due to limitations in verifying generated plans or\nreasoning and varying complexity of instances within a single task. Many\nexisting methods for these tasks either perform task-level verification without\nconsidering constraints or apply inference-time algorithms without adapting to\ninstance-level complexity. To address these limitations, we propose PlanGEN, a\nmodel-agnostic and easily scalable agent framework with three key components:\nconstraint, verification, and selection agents. Specifically, our approach\nproposes constraint-guided iterative verification to enhance performance of\ninference-time algorithms--Best of N, Tree-of-Thought, and REBASE. In PlanGEN\nframework, the selection agent optimizes algorithm choice based on instance\ncomplexity, ensuring better adaptability to complex planning problems.\nExperimental results demonstrate significant improvements over the strongest\nbaseline across multiple benchmarks, achieving state-of-the-art results on\nNATURAL PLAN ($\\sim$8%$\\uparrow$), OlympiadBench ($\\sim$4%$\\uparrow$), DocFinQA\n($\\sim$7%$\\uparrow$), and GPQA ($\\sim$1%$\\uparrow$). Our key finding highlights\nthat constraint-guided iterative verification improves inference-time\nalgorithms, and adaptive selection further boosts performance on complex\nplanning and reasoning problems.",
+        "publication_date": "2025-02-22",
+        "publication_time": "06:21:56",
+        "tags": [
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 1
+    },
+    "2502.20378": {
+        "url": "https://arxiv.org/abs/2502.20378",
+        "title": "Efficient Gaussian Splatting for Monocular Dynamic Scene Rendering via\n  Sparse Time-Variant Attribute Modeling",
+        "authors": [
+            "Hanyang Kong",
+            "Xingyi Yang",
+            "Xinchao Wang"
+        ],
+        "abstract": "Rendering dynamic scenes from monocular videos is a crucial yet challenging\ntask. The recent deformable Gaussian Splatting has emerged as a robust solution\nto represent real-world dynamic scenes. However, it often leads to heavily\nredundant Gaussians, attempting to fit every training view at various time\nsteps, leading to slower rendering speeds. Additionally, the attributes of\nGaussians in static areas are time-invariant, making it unnecessary to model\nevery Gaussian, which can cause jittering in static regions. In practice, the\nprimary bottleneck in rendering speed for dynamic scenes is the number of\nGaussians. In response, we introduce Efficient Dynamic Gaussian Splatting\n(EDGS), which represents dynamic scenes via sparse time-variant attribute\nmodeling. Our approach formulates dynamic scenes using a sparse anchor-grid\nrepresentation, with the motion flow of dense Gaussians calculated via a\nclassical kernel representation. Furthermore, we propose an unsupervised\nstrategy to efficiently filter out anchors corresponding to static areas. Only\nanchors associated with deformable objects are input into MLPs to query\ntime-variant attributes. Experiments on two real-world datasets demonstrate\nthat our EDGS significantly improves the rendering speed with superior\nrendering quality compared to previous state-of-the-art methods.",
+        "publication_date": "2025-02-27",
+        "publication_time": "18:53:06",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 1
     }
 }
