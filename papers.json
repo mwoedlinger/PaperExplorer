@@ -135998,5 +135998,357 @@
             "cs.CV"
         ],
         "upvotes": 2
+    },
+    "2502.20730": {
+        "url": "https://arxiv.org/abs/2502.20730",
+        "title": "DeepSolution: Boosting Complex Engineering Solution Design via\n  Tree-based Exploration and Bi-point Thinking",
+        "authors": [
+            "Zhuoqun Li",
+            "Haiyang Yu",
+            "Xuanang Chen",
+            "Hongyu Lin",
+            "Yaojie Lu",
+            "Fei Huang",
+            "Xianpei Han",
+            "Yongbin Li",
+            "Le Sun"
+        ],
+        "abstract": "Designing solutions for complex engineering challenges is crucial in human\nproduction activities. However, previous research in the retrieval-augmented\ngeneration (RAG) field has not sufficiently addressed tasks related to the\ndesign of complex engineering solutions. To fill this gap, we introduce a new\nbenchmark, SolutionBench, to evaluate a system's ability to generate complete\nand feasible solutions for engineering problems with multiple complex\nconstraints. To further advance the design of complex engineering solutions, we\npropose a novel system, SolutionRAG, that leverages the tree-based exploration\nand bi-point thinking mechanism to generate reliable solutions. Extensive\nexperimental results demonstrate that SolutionRAG achieves state-of-the-art\n(SOTA) performance on the SolutionBench, highlighting its potential to enhance\nthe automation and reliability of complex engineering solution design in\nreal-world applications.",
+        "publication_date": "2025-02-28",
+        "publication_time": "05:23:10",
+        "tags": [
+            "cs.AI"
+        ],
+        "upvotes": 25
+    },
+    "2502.18600": {
+        "url": "https://arxiv.org/abs/2502.18600",
+        "title": "Chain of Draft: Thinking Faster by Writing Less",
+        "authors": [
+            "Silei Xu",
+            "Wenhao Xie",
+            "Lingxiao Zhao",
+            "Pengcheng He"
+        ],
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in\nsolving complex reasoning tasks through mechanisms like Chain-of-Thought (CoT)\nprompting, which emphasizes verbose, step-by-step reasoning. However, humans\ntypically employ a more efficient strategy: drafting concise intermediate\nthoughts that capture only essential information. In this work, we propose\nChain of Draft (CoD), a novel paradigm inspired by human cognitive processes,\nwhere LLMs generate minimalistic yet informative intermediate reasoning outputs\nwhile solving tasks. By reducing verbosity and focusing on critical insights,\nCoD matches or surpasses CoT in accuracy while using as little as only 7.6% of\nthe tokens, significantly reducing cost and latency across various reasoning\ntasks.",
+        "publication_date": "2025-02-25",
+        "publication_time": "19:36:06",
+        "tags": [
+            "cs.CL",
+            "I.2.7"
+        ],
+        "upvotes": 24
+    },
+    "2502.20380": {
+        "url": "https://arxiv.org/abs/2502.20380",
+        "title": "Multi-Turn Code Generation Through Single-Step Rewards",
+        "authors": [
+            "Arnav Kumar Jain",
+            "Gonzalo Gonzalez-Pumariega",
+            "Wayne Chen",
+            "Alexander M Rush",
+            "Wenting Zhao",
+            "Sanjiban Choudhury"
+        ],
+        "abstract": "We address the problem of code generation from multi-turn execution feedback.\nExisting methods either generate code without feedback or use complex,\nhierarchical reinforcement learning to optimize multi-turn rewards. We propose\na simple yet scalable approach, $\\mu$Code, that solves multi-turn code\ngeneration using only single-step rewards. Our key insight is that code\ngeneration is a one-step recoverable MDP, where the correct code can be\nrecovered from any intermediate code state in a single turn. $\\mu$Code\niteratively trains both a generator to provide code solutions conditioned on\nmulti-turn execution feedback and a verifier to score the newly generated code.\nExperimental evaluations show that our approach achieves significant\nimprovements over the state-of-the-art baselines. We provide analysis of the\ndesign choices of the reward models and policy, and show the efficacy of\n$\\mu$Code at utilizing the execution feedback. Our code is available at\nhttps://github.com/portal-cornell/muCode.",
+        "publication_date": "2025-02-27",
+        "publication_time": "18:55:05",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 21
+    },
+    "2502.21318": {
+        "url": "https://arxiv.org/abs/2502.21318",
+        "title": "How far can we go with ImageNet for Text-to-Image generation?",
+        "authors": [
+            "L. Degeorge",
+            "A. Ghosh",
+            "N. Dufour",
+            "D. Picard",
+            "V. Kalogeiton"
+        ],
+        "abstract": "Recent text-to-image (T2I) generation models have achieved remarkable results\nby training on billion-scale datasets, following a `bigger is better' paradigm\nthat prioritizes data quantity over quality. We challenge this established\nparadigm by demonstrating that strategic data augmentation of small,\nwell-curated datasets can match or outperform models trained on massive\nweb-scraped collections. Using only ImageNet enhanced with well-designed text\nand image augmentations, we achieve a +2 overall score over SD-XL on GenEval\nand +5 on DPGBench while using just 1/10th the parameters and 1/1000th the\ntraining images. Our results suggest that strategic data augmentation, rather\nthan massive datasets, could offer a more sustainable path forward for T2I\ngeneration.",
+        "publication_date": "2025-02-28",
+        "publication_time": "18:59:42",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 14
+    },
+    "2502.20545": {
+        "url": "https://arxiv.org/abs/2502.20545",
+        "title": "SoS1: O1 and R1-Like Reasoning LLMs are Sum-of-Square Solvers",
+        "authors": [
+            "Kechen Li",
+            "Wenqi Zhu",
+            "Coralia Cartis",
+            "Tianbo Ji",
+            "Shiwei Liu"
+        ],
+        "abstract": "Large Language Models (LLMs) have achieved human-level proficiency across\ndiverse tasks, but their ability to perform rigorous mathematical problem\nsolving remains an open challenge. In this work, we investigate a fundamental\nyet computationally intractable problem: determining whether a given\nmultivariate polynomial is nonnegative. This problem, closely related to\nHilbert's Seventeenth Problem, plays a crucial role in global polynomial\noptimization and has applications in various fields. First, we introduce\nSoS-1K, a meticulously curated dataset of approximately 1,000 polynomials,\nalong with expert-designed reasoning instructions based on five progressively\nchallenging criteria. Evaluating multiple state-of-the-art LLMs, we find that\nwithout structured guidance, all models perform only slightly above the random\nguess baseline 50%. However, high-quality reasoning instructions significantly\nimprove accuracy, boosting performance up to 81%. Furthermore, our 7B model,\nSoS-7B, fine-tuned on SoS-1K for just 4 hours, outperforms the 671B DeepSeek-V3\nand GPT-4o-mini in accuracy while only requiring 1.8% and 5% of the computation\ntime needed for letters, respectively. Our findings highlight the potential of\nLLMs to push the boundaries of mathematical reasoning and tackle NP-hard\nproblems.",
+        "publication_date": "2025-02-27",
+        "publication_time": "21:41:43",
+        "tags": [
+            "cs.LG"
+        ],
+        "upvotes": 12
+    },
+    "2502.18017": {
+        "url": "https://arxiv.org/abs/2502.18017",
+        "title": "ViDoRAG: Visual Document Retrieval-Augmented Generation via Dynamic\n  Iterative Reasoning Agents",
+        "authors": [
+            "Qiuchen Wang",
+            "Ruixue Ding",
+            "Zehui Chen",
+            "Weiqi Wu",
+            "Shihang Wang",
+            "Pengjun Xie",
+            "Feng Zhao"
+        ],
+        "abstract": "Understanding information from visually rich documents remains a significant\nchallenge for traditional Retrieval-Augmented Generation (RAG) methods.\nExisting benchmarks predominantly focus on image-based question answering (QA),\noverlooking the fundamental challenges of efficient retrieval, comprehension,\nand reasoning within dense visual documents. To bridge this gap, we introduce\nViDoSeek, a novel dataset designed to evaluate RAG performance on visually rich\ndocuments requiring complex reasoning. Based on it, we identify key limitations\nin current RAG approaches: (i) purely visual retrieval methods struggle to\neffectively integrate both textual and visual features, and (ii) previous\napproaches often allocate insufficient reasoning tokens, limiting their\neffectiveness. To address these challenges, we propose ViDoRAG, a novel\nmulti-agent RAG framework tailored for complex reasoning across visual\ndocuments. ViDoRAG employs a Gaussian Mixture Model (GMM)-based hybrid strategy\nto effectively handle multi-modal retrieval. To further elicit the model's\nreasoning capabilities, we introduce an iterative agent workflow incorporating\nexploration, summarization, and reflection, providing a framework for\ninvestigating test-time scaling in RAG domains. Extensive experiments on\nViDoSeek validate the effectiveness and generalization of our approach.\nNotably, ViDoRAG outperforms existing methods by over 10% on the competitive\nViDoSeek benchmark.",
+        "publication_date": "2025-02-25",
+        "publication_time": "09:26:12",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL",
+            "cs.IR"
+        ],
+        "upvotes": 11
+    },
+    "2502.20396": {
+        "url": "https://arxiv.org/abs/2502.20396",
+        "title": "Sim-to-Real Reinforcement Learning for Vision-Based Dexterous\n  Manipulation on Humanoids",
+        "authors": [
+            "Toru Lin",
+            "Kartik Sachdev",
+            "Linxi Fan",
+            "Jitendra Malik",
+            "Yuke Zhu"
+        ],
+        "abstract": "Reinforcement learning has delivered promising results in achieving human- or\neven superhuman-level capabilities across diverse problem domains, but success\nin dexterous robot manipulation remains limited. This work investigates the key\nchallenges in applying reinforcement learning to solve a collection of\ncontact-rich manipulation tasks on a humanoid embodiment. We introduce novel\ntechniques to overcome the identified challenges with empirical validation. Our\nmain contributions include an automated real-to-sim tuning module that brings\nthe simulated environment closer to the real world, a generalized reward design\nscheme that simplifies reward engineering for long-horizon contact-rich\nmanipulation tasks, a divide-and-conquer distillation process that improves the\nsample efficiency of hard-exploration problems while maintaining sim-to-real\nperformance, and a mixture of sparse and dense object representations to bridge\nthe sim-to-real perception gap. We show promising results on three humanoid\ndexterous manipulation tasks, with ablation studies on each technique. Our work\npresents a successful approach to learning humanoid dexterous manipulation\nusing sim-to-real reinforcement learning, achieving robust generalization and\nhigh performance without the need for human demonstration.",
+        "publication_date": "2025-02-27",
+        "publication_time": "18:59:52",
+        "tags": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.SY",
+            "eess.SY"
+        ],
+        "upvotes": 9
+    },
+    "2502.19577": {
+        "url": "https://arxiv.org/abs/2502.19577",
+        "title": "Tell me why: Visual foundation models as self-explainable classifiers",
+        "authors": [
+            "Hugues Turb\u00e9",
+            "Mina Bjelogrlic",
+            "Gianmarco Mengaldo",
+            "Christian Lovis"
+        ],
+        "abstract": "Visual foundation models (VFMs) have become increasingly popular due to their\nstate-of-the-art performance. However, interpretability remains crucial for\ncritical applications. In this sense, self-explainable models (SEM) aim to\nprovide interpretable classifiers that decompose predictions into a weighted\nsum of interpretable concepts. Despite their promise, recent studies have shown\nthat these explanations often lack faithfulness. In this work, we combine VFMs\nwith a novel prototypical architecture and specialized training objectives. By\ntraining only a lightweight head (approximately 1M parameters) on top of frozen\nVFMs, our approach (ProtoFM) offers an efficient and interpretable solution.\nEvaluations demonstrate that our approach achieves competitive classification\nperformance while outperforming existing models across a range of\ninterpretability metrics derived from the literature. Code is available at\nhttps://github.com/hturbe/proto-fm.",
+        "publication_date": "2025-02-26",
+        "publication_time": "21:40:30",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "68T10",
+            "I.2.6; I.2.10; I.5.4"
+        ],
+        "upvotes": 7
+    },
+    "2502.20969": {
+        "url": "https://arxiv.org/abs/2502.20969",
+        "title": "TeleRAG: Efficient Retrieval-Augmented Generation Inference with\n  Lookahead Retrieval",
+        "authors": [
+            "Chien-Yu Lin",
+            "Keisuke Kamahori",
+            "Yiyu Liu",
+            "Xiaoxiang Shi",
+            "Madhav Kashyap",
+            "Yile Gu",
+            "Rulin Shao",
+            "Zihao Ye",
+            "Kan Zhu",
+            "Stephanie Wang",
+            "Arvind Krishnamurthy",
+            "Rohan Kadekodi",
+            "Luis Ceze",
+            "Baris Kasikci"
+        ],
+        "abstract": "Retrieval-augmented generation (RAG) extends large language models (LLMs)\nwith external data sources to enhance factual correctness and domain coverage.\nModern RAG pipelines rely on large datastores, leading to system challenges in\nlatency-sensitive deployments, especially when limited GPU memory is available.\nTo address these challenges, we propose TeleRAG, an efficient inference system\nthat reduces RAG latency with minimal GPU memory requirements. The core\ninnovation of TeleRAG is lookahead retrieval, a prefetching mechanism that\nanticipates required data and transfers it from CPU to GPU in parallel with LLM\ngeneration. By leveraging the modularity of RAG pipelines, the inverted file\nindex (IVF) search algorithm and similarities between queries, TeleRAG\noptimally overlaps data movement and computation. Experimental results show\nthat TeleRAG reduces end-to-end RAG inference latency by up to 1.72x on average\ncompared to state-of-the-art systems, enabling faster, more memory-efficient\ndeployments of advanced RAG applications.",
+        "publication_date": "2025-02-28",
+        "publication_time": "11:32:22",
+        "tags": [
+            "cs.DC",
+            "cs.LG"
+        ],
+        "upvotes": 6
+    },
+    "2502.17941": {
+        "url": "https://arxiv.org/abs/2502.17941",
+        "title": "Optimal Brain Apoptosis",
+        "authors": [
+            "Mingyuan Sun",
+            "Zheng Fang",
+            "Jiaxu Wang",
+            "Junjie Jiang",
+            "Delei Kong",
+            "Chenming Hu",
+            "Yuetong Fang",
+            "Renjing Xu"
+        ],
+        "abstract": "The increasing complexity and parameter count of Convolutional Neural\nNetworks (CNNs) and Transformers pose challenges in terms of computational\nefficiency and resource demands. Pruning has been identified as an effective\nstrategy to address these challenges by removing redundant elements such as\nneurons, channels, or connections, thereby enhancing computational efficiency\nwithout heavily compromising performance. This paper builds on the foundational\nwork of Optimal Brain Damage (OBD) by advancing the methodology of parameter\nimportance estimation using the Hessian matrix. Unlike previous approaches that\nrely on approximations, we introduce Optimal Brain Apoptosis (OBA), a novel\npruning method that calculates the Hessian-vector product value directly for\neach parameter. By decomposing the Hessian matrix across network layers and\nidentifying conditions under which inter-layer Hessian submatrices are\nnon-zero, we propose a highly efficient technique for computing the\nsecond-order Taylor expansion of parameters. This approach allows for a more\nprecise pruning process, particularly in the context of CNNs and Transformers,\nas validated in our experiments including VGG19, ResNet32, ResNet50, and\nViT-B/16 on CIFAR10, CIFAR100 and Imagenet datasets. Our code is available at\nhttps://github.com/NEU-REAL/OBA.",
+        "publication_date": "2025-02-25",
+        "publication_time": "08:03:04",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 5
+    },
+    "2502.20583": {
+        "url": "https://arxiv.org/abs/2502.20583",
+        "title": "LiteASR: Efficient Automatic Speech Recognition with Low-Rank\n  Approximation",
+        "authors": [
+            "Keisuke Kamahori",
+            "Jungo Kasai",
+            "Noriyuki Kojima",
+            "Baris Kasikci"
+        ],
+        "abstract": "Modern automatic speech recognition (ASR) models, such as OpenAI's Whisper,\nrely on deep encoder-decoder architectures, and their encoders are a critical\nbottleneck for efficient deployment due to high computational intensity. We\nintroduce LiteASR, a low-rank compression scheme for ASR encoders that\nsignificantly reduces inference costs while maintaining transcription accuracy.\nOur approach leverages the strong low-rank properties observed in intermediate\nactivations: by applying principal component analysis (PCA) with a small\ncalibration dataset, we approximate linear transformations with a chain of\nlow-rank matrix multiplications, and further optimize self-attention to work in\nthe reduced dimension. Evaluation results show that our method can compress\nWhisper large-v3's encoder size by over 50%, matching Whisper medium's size\nwith better transcription accuracy, thereby establishing a new Pareto-optimal\nfrontier of efficiency and performance. The code of LiteASR is available at\nhttps://github.com/efeslab/LiteASR.",
+        "publication_date": "2025-02-27",
+        "publication_time": "22:52:21",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "upvotes": 5
+    },
+    "2502.19731": {
+        "url": "https://arxiv.org/abs/2502.19731",
+        "title": "Preference Learning Unlocks LLMs' Psycho-Counseling Skills",
+        "authors": [
+            "Mian Zhang",
+            "Shaun M. Eack",
+            "Zhiyu Zoey Chen"
+        ],
+        "abstract": "Applying large language models (LLMs) to assist in psycho-counseling is an\nemerging and meaningful approach, driven by the significant gap between patient\nneeds and the availability of mental health support. However, current LLMs\nstruggle to consistently provide effective responses to client speeches,\nlargely due to the lack of supervision from high-quality real psycho-counseling\ndata, whose content is typically inaccessible due to client privacy concerns.\nFurthermore, the quality of therapists' responses in available sessions can\nvary significantly based on their professional training and experience.\nAssessing the quality of therapists' responses remains an open challenge. In\nthis work, we address these challenges by first proposing a set of professional\nand comprehensive principles to evaluate therapists' responses to client\nspeeches. Using these principles, we create a preference dataset,\nPsychoCounsel-Preference, which contains 36k high-quality preference comparison\npairs. This dataset aligns with the preferences of professional\npsychotherapists, providing a robust foundation for evaluating and improving\nLLMs in psycho-counseling. Experiments on reward modeling and preference\nlearning demonstrate that PsychoCounsel-Preference is an excellent resource for\nLLMs to acquire essential skills for responding to clients in a counseling\nsession. Our best-aligned model, PsychoCounsel-Llama3-8B, achieves an\nimpressive win rate of 87% against GPT-4o. We release PsychoCounsel-Preference,\nPsychoCounsel-Llama3-8B and the reward model PsychoCounsel Llama3-8B-Reward to\nfacilitate the research of psycho-counseling with LLMs at:\nhttps://hf.co/Psychotherapy-LLM.",
+        "publication_date": "2025-02-27",
+        "publication_time": "03:50:25",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 4
+    },
+    "2502.20900": {
+        "url": "https://arxiv.org/abs/2502.20900",
+        "title": "DexGraspVLA: A Vision-Language-Action Framework Towards General\n  Dexterous Grasping",
+        "authors": [
+            "Yifan Zhong",
+            "Xuchuan Huang",
+            "Ruochong Li",
+            "Ceyao Zhang",
+            "Yitao Liang",
+            "Yaodong Yang",
+            "Yuanpei Chen"
+        ],
+        "abstract": "Dexterous grasping remains a fundamental yet challenging problem in robotics.\nA general-purpose robot must be capable of grasping diverse objects in\narbitrary scenarios. However, existing research typically relies on specific\nassumptions, such as single-object settings or limited environments, leading to\nconstrained generalization. Our solution is DexGraspVLA, a hierarchical\nframework that utilizes a pre-trained Vision-Language model as the high-level\ntask planner and learns a diffusion-based policy as the low-level Action\ncontroller. The key insight lies in iteratively transforming diverse language\nand visual inputs into domain-invariant representations, where imitation\nlearning can be effectively applied due to the alleviation of domain shift.\nThus, it enables robust generalization across a wide range of real-world\nscenarios. Notably, our method achieves a 90+% success rate under thousands of\nunseen object, lighting, and background combinations in a ``zero-shot''\nenvironment. Empirical analysis further confirms the consistency of internal\nmodel behavior across environmental variations, thereby validating our design\nand explaining its generalization performance. We hope our work can be a step\nforward in achieving general dexterous grasping. Our demo and code can be found\nat https://dexgraspvla.github.io/.",
+        "publication_date": "2025-02-28",
+        "publication_time": "09:57:20",
+        "tags": [
+            "cs.RO",
+            "cs.AI"
+        ],
+        "upvotes": 4
+    },
+    "2502.21291": {
+        "url": "https://arxiv.org/abs/2502.21291",
+        "title": "MIGE: A Unified Framework for Multimodal Instruction-Based Image\n  Generation and Editing",
+        "authors": [
+            "Xueyun Tian",
+            "Wei Li",
+            "Bingbing Xu",
+            "Yige Yuan",
+            "Yuanzhuo Wang",
+            "Huawei Shen"
+        ],
+        "abstract": "Despite significant progress in diffusion-based image generation,\nsubject-driven generation and instruction-based editing remain challenging.\nExisting methods typically treat them separately, struggling with limited\nhigh-quality data and poor generalization. However, both tasks require\ncapturing complex visual variations while maintaining consistency between\ninputs and outputs. Therefore, we propose MIGE, a unified framework that\nstandardizes task representations using multimodal instructions. It treats\nsubject-driven generation as creation on a blank canvas and instruction-based\nediting as modification of an existing image, establishing a shared\ninput-output formulation. MIGE introduces a novel multimodal encoder that maps\nfree-form multimodal instructions into a unified vision-language space,\nintegrating visual and semantic features through a feature fusion\nmechanism.This unification enables joint training of both tasks, providing two\nkey advantages: (1) Cross-Task Enhancement: By leveraging shared visual and\nsemantic representations, joint training improves instruction adherence and\nvisual consistency in both subject-driven generation and instruction-based\nediting. (2) Generalization: Learning in a unified format facilitates\ncross-task knowledge transfer, enabling MIGE to generalize to novel\ncompositional tasks, including instruction-based subject-driven editing.\nExperiments show that MIGE excels in both subject-driven generation and\ninstruction-based editing while setting a state-of-the-art in the new task of\ninstruction-based subject-driven editing. Code and model have been publicly\navailable at https://github.com/Eureka-Maggie/MIGE.",
+        "publication_date": "2025-02-28",
+        "publication_time": "18:21:08",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 4
+    },
+    "2502.17125": {
+        "url": "https://arxiv.org/abs/2502.17125",
+        "title": "LettuceDetect: A Hallucination Detection Framework for RAG Applications",
+        "authors": [
+            "\u00c1d\u00e1m Kov\u00e1cs",
+            "G\u00e1bor Recski"
+        ],
+        "abstract": "Retrieval Augmented Generation (RAG) systems remain vulnerable to\nhallucinated answers despite incorporating external knowledge sources. We\npresent LettuceDetect a framework that addresses two critical limitations in\nexisting hallucination detection methods: (1) the context window constraints of\ntraditional encoder-based methods, and (2) the computational inefficiency of\nLLM based approaches. Building on ModernBERT's extended context capabilities\n(up to 8k tokens) and trained on the RAGTruth benchmark dataset, our approach\noutperforms all previous encoder-based models and most prompt-based models,\nwhile being approximately 30 times smaller than the best models. LettuceDetect\nis a token-classification model that processes context-question-answer triples,\nallowing for the identification of unsupported claims at the token level.\nEvaluations on the RAGTruth corpus demonstrate an F1 score of 79.22% for\nexample-level detection, which is a 14.8% improvement over Luna, the previous\nstate-of-the-art encoder-based architecture. Additionally, the system can\nprocess 30 to 60 examples per second on a single GPU, making it more practical\nfor real-world RAG applications.",
+        "publication_date": "2025-02-24",
+        "publication_time": "13:11:47",
+        "tags": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "upvotes": 3
+    },
+    "2502.20490": {
+        "url": "https://arxiv.org/abs/2502.20490",
+        "title": "EgoNormia: Benchmarking Physical Social Norm Understanding",
+        "authors": [
+            "MohammadHossein Rezaei",
+            "Yicheng Fu",
+            "Phil Cuvin",
+            "Caleb Ziems",
+            "Yanzhe Zhang",
+            "Hao Zhu",
+            "Diyi Yang"
+        ],
+        "abstract": "Human activity is moderated by norms. When performing actions in the real\nworld, humans not only follow norms, but also consider the trade-off between\ndifferent norms However, machines are often trained without explicit\nsupervision on norm understanding and reasoning, especially when the norms are\ngrounded in a physical and social context. To improve and evaluate the\nnormative reasoning capability of vision-language models (VLMs), we present\nEgoNormia $\\|\\epsilon\\|$, consisting of 1,853 ego-centric videos of human\ninteractions, each of which has two related questions evaluating both the\nprediction and justification of normative actions. The normative actions\nencompass seven categories: safety, privacy, proxemics, politeness,\ncooperation, coordination/proactivity, and communication/legibility. To compile\nthis dataset at scale, we propose a novel pipeline leveraging video sampling,\nautomatic answer generation, filtering, and human validation. Our work\ndemonstrates that current state-of-the-art vision-language models lack robust\nnorm understanding, scoring a maximum of 45% on EgoNormia (versus a human bench\nof 92%). Our analysis of performance in each dimension highlights the\nsignificant risks of safety, privacy, and the lack of collaboration and\ncommunication capability when applied to real-world agents. We additionally\nshow that through a retrieval-based generation method, it is possible to use\nEgoNomia to enhance normative reasoning in VLMs.",
+        "publication_date": "2025-02-27",
+        "publication_time": "19:54:16",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 2
+    },
+    "2502.20811": {
+        "url": "https://arxiv.org/abs/2502.20811",
+        "title": "HAIC: Improving Human Action Understanding and Generation with Better\n  Captions for Multi-modal Large Language Models",
+        "authors": [
+            "Xiao Wang",
+            "Jingyun Hua",
+            "Weihong Lin",
+            "Yuanxing Zhang",
+            "Fuzheng Zhang",
+            "Jianlong Wu",
+            "Di Zhang",
+            "Liqiang Nie"
+        ],
+        "abstract": "Recent Multi-modal Large Language Models (MLLMs) have made great progress in\nvideo understanding. However, their performance on videos involving human\nactions is still limited by the lack of high-quality data. To address this, we\nintroduce a two-stage data annotation pipeline. First, we design strategies to\naccumulate videos featuring clear human actions from the Internet. Second,\nvideos are annotated in a standardized caption format that uses human\nattributes to distinguish individuals and chronologically details their actions\nand interactions. Through this pipeline, we curate two datasets, namely\nHAICTrain and HAICBench. \\textbf{HAICTrain} comprises 126K video-caption pairs\ngenerated by Gemini-Pro and verified for training purposes. Meanwhile,\n\\textbf{HAICBench} includes 500 manually annotated video-caption pairs and\n1,400 QA pairs, for a comprehensive evaluation of human action understanding.\nExperimental results demonstrate that training with HAICTrain not only\nsignificantly enhances human understanding abilities across 4 benchmarks, but\ncan also improve text-to-video generation results. Both the HAICTrain and\nHAICBench are released at https://huggingface.co/datasets/KuaishouHAIC/HAIC.",
+        "publication_date": "2025-02-28",
+        "publication_time": "07:53:40",
+        "tags": [
+            "cs.CV",
+            "cs.CL",
+            "cs.MM"
+        ],
+        "upvotes": 1
     }
 }
