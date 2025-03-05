@@ -136350,5 +136350,618 @@
             "cs.MM"
         ],
         "upvotes": 1
+    },
+    "2503.00808": {
+        "url": "https://arxiv.org/abs/2503.00808",
+        "title": "Predictive Data Selection: The Data That Predicts Is the Data That\n  Teaches",
+        "authors": [
+            "Kashun Shum",
+            "Yuzhen Huang",
+            "Hongjian Zou",
+            "Ding Qi",
+            "Yixuan Liao",
+            "Xiaoxin Chen",
+            "Qian Liu",
+            "Junxian He"
+        ],
+        "abstract": "Language model pretraining involves training on extensive corpora, where data\nquality plays a pivotal role. In this work, we aim to directly estimate the\ncontribution of data during pretraining and select pretraining data in an\nefficient manner. Specifically, we draw inspiration from recent findings\nshowing that compression efficiency (i.e., the normalized loss) of diverse\nmodels on certain text correlates strongly with their downstream performance,\nwhen the text domain aligns with the downstream benchmark (Huang et al., 2024).\nBuilding on this observation, we hypothesize that data on which model losses\nare predictive of downstream abilities also contribute effectively to learning.\nTo leverage this insight, we introduce data selection based on data's\nPredictive strength (Preselect), a lightweight and efficient data selection\nmethod that requires training and deploying only a fastText-based scorer.\nThrough comprehensive experiments with 1B and 3B parameter models, we\ndemonstrate that models trained on 30B tokens selected with PreSelect surpasses\nthe performance of a vanilla baseline trained on 300B tokens, achieving a 10x\nreduction in compute requirements. Furthermore, PreSelect significantly\noutperforms other competitive data selection baselines, such as DCLM and\nFineWeb-Edu on a scale of 3B models trained on 100B tokens. We open-source our\ntrained data selection scorer along with the curated datasets at\nhttps://github.com/hkust-nlp/PreSelect.",
+        "publication_date": "2025-03-02",
+        "publication_time": "09:21:28",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 45
+    },
+    "2503.01785": {
+        "url": "https://arxiv.org/abs/2503.01785",
+        "title": "Visual-RFT: Visual Reinforcement Fine-Tuning",
+        "authors": [
+            "Ziyu Liu",
+            "Zeyi Sun",
+            "Yuhang Zang",
+            "Xiaoyi Dong",
+            "Yuhang Cao",
+            "Haodong Duan",
+            "Dahua Lin",
+            "Jiaqi Wang"
+        ],
+        "abstract": "Reinforcement Fine-Tuning (RFT) in Large Reasoning Models like OpenAI o1\nlearns from feedback on its answers, which is especially useful in applications\nwhen fine-tuning data is scarce. Recent open-source work like DeepSeek-R1\ndemonstrates that reinforcement learning with verifiable reward is one key\ndirection in reproducing o1. While the R1-style model has demonstrated success\nin language models, its application in multi-modal domains remains\nunder-explored. This work introduces Visual Reinforcement Fine-Tuning\n(Visual-RFT), which further extends the application areas of RFT on visual\ntasks. Specifically, Visual-RFT first uses Large Vision-Language Models (LVLMs)\nto generate multiple responses containing reasoning tokens and final answers\nfor each input, and then uses our proposed visual perception verifiable reward\nfunctions to update the model via the policy optimization algorithm such as\nGroup Relative Policy Optimization (GRPO). We design different verifiable\nreward functions for different perception tasks, such as the Intersection over\nUnion (IoU) reward for object detection. Experimental results on fine-grained\nimage classification, few-shot object detection, reasoning grounding, as well\nas open-vocabulary object detection benchmarks show the competitive performance\nand advanced generalization ability of Visual-RFT compared with Supervised\nFine-tuning (SFT). For example, Visual-RFT improves accuracy by $24.3\\%$ over\nthe baseline in one-shot fine-grained image classification with around 100\nsamples. In few-shot object detection, Visual-RFT also exceeds the baseline by\n$21.9$ on COCO's two-shot setting and $15.4$ on LVIS. Our Visual-RFT represents\na paradigm shift in fine-tuning LVLMs, offering a data-efficient, reward-driven\napproach that enhances reasoning and adaptability for domain-specific tasks.",
+        "publication_date": "2025-03-03",
+        "publication_time": "18:16:32",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 43
+    },
+    "2503.01743": {
+        "url": "https://arxiv.org/abs/2503.01743",
+        "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language\n  Models via Mixture-of-LoRAs",
+        "authors": [
+            "Abdelrahman Abouelenin",
+            "Atabak Ashfaq",
+            "Adam Atkinson",
+            "Hany Awadalla",
+            "Nguyen Bach",
+            "Jianmin Bao",
+            "Alon Benhaim",
+            "Martin Cai",
+            "Vishrav Chaudhary",
+            "Congcong Chen",
+            "Dong Chen",
+            "Dongdong Chen",
+            "Junkun Chen",
+            "Weizhu Chen",
+            "Yen-Chun Chen",
+            "Yi-ling Chen",
+            "Qi Dai",
+            "Xiyang Dai",
+            "Ruchao Fan",
+            "Mei Gao",
+            "Min Gao",
+            "Amit Garg",
+            "Abhishek Goswami",
+            "Junheng Hao",
+            "Amr Hendy",
+            "Yuxuan Hu",
+            "Xin Jin",
+            "Mahmoud Khademi",
+            "Dongwoo Kim",
+            "Young Jin Kim",
+            "Gina Lee",
+            "Jinyu Li",
+            "Yunsheng Li",
+            "Chen Liang",
+            "Xihui Lin",
+            "Zeqi Lin",
+            "Mengchen Liu",
+            "Yang Liu",
+            "Gilsinia Lopez",
+            "Chong Luo",
+            "Piyush Madan",
+            "Vadim Mazalov",
+            "Ali Mousavi",
+            "Anh Nguyen",
+            "Jing Pan",
+            "Daniel Perez-Becker",
+            "Jacob Platin",
+            "Thomas Portet",
+            "Kai Qiu",
+            "Bo Ren",
+            "Liliang Ren",
+            "Sambuddha Roy",
+            "Ning Shang",
+            "Yelong Shen",
+            "Saksham Singhal",
+            "Subhojit Som",
+            "Xia Song",
+            "Tetyana Sych",
+            "Praneetha Vaddamanu",
+            "Shuohang Wang",
+            "Yiming Wang",
+            "Zhenghao Wang",
+            "Haibin Wu",
+            "Haoran Xu",
+            "Weijian Xu",
+            "Yifan Yang",
+            "Ziyi Yang",
+            "Donghan Yu",
+            "Ishmam Zabir",
+            "Jianwen Zhang",
+            "Li Lyna Zhang",
+            "Yunan Zhang",
+            "Xiren Zhou"
+        ],
+        "abstract": "We introduce Phi-4-Mini and Phi-4-Multimodal, compact yet highly capable\nlanguage and multimodal models. Phi-4-Mini is a 3.8-billion-parameter language\nmodel trained on high-quality web and synthetic data, significantly\noutperforming recent open-source models of similar size and matching the\nperformance of models twice its size on math and coding tasks requiring complex\nreasoning. This achievement is driven by a carefully curated synthetic data\nrecipe emphasizing high-quality math and coding datasets. Compared to its\npredecessor, Phi-3.5-Mini, Phi-4-Mini features an expanded vocabulary size of\n200K tokens to better support multilingual applications, as well as group query\nattention for more efficient long-sequence generation. Phi-4-Multimodal is a\nmultimodal model that integrates text, vision, and speech/audio input\nmodalities into a single model. Its novel modality extension approach leverages\nLoRA adapters and modality-specific routers to allow multiple inference modes\ncombining various modalities without interference. For example, it now ranks\nfirst in the OpenASR leaderboard to date, although the LoRA component of the\nspeech/audio modality has just 460 million parameters. Phi-4-Multimodal\nsupports scenarios involving (vision + language), (vision + speech), and\n(speech/audio) inputs, outperforming larger vision-language and speech-language\nmodels on a wide range of tasks. Additionally, we experiment to further train\nPhi-4-Mini to enhance its reasoning capabilities. Despite its compact\n3.8-billion-parameter size, this experimental version achieves reasoning\nperformance on par with or surpassing significantly larger models, including\nDeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B.",
+        "publication_date": "2025-03-03",
+        "publication_time": "17:05:52",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 42
+    },
+    "2503.01774": {
+        "url": "https://arxiv.org/abs/2503.01774",
+        "title": "Difix3D+: Improving 3D Reconstructions with Single-Step Diffusion Models",
+        "authors": [
+            "Jay Zhangjie Wu",
+            "Yuxuan Zhang",
+            "Haithem Turki",
+            "Xuanchi Ren",
+            "Jun Gao",
+            "Mike Zheng Shou",
+            "Sanja Fidler",
+            "Zan Gojcic",
+            "Huan Ling"
+        ],
+        "abstract": "Neural Radiance Fields and 3D Gaussian Splatting have revolutionized 3D\nreconstruction and novel-view synthesis task. However, achieving photorealistic\nrendering from extreme novel viewpoints remains challenging, as artifacts\npersist across representations. In this work, we introduce Difix3D+, a novel\npipeline designed to enhance 3D reconstruction and novel-view synthesis through\nsingle-step diffusion models. At the core of our approach is Difix, a\nsingle-step image diffusion model trained to enhance and remove artifacts in\nrendered novel views caused by underconstrained regions of the 3D\nrepresentation. Difix serves two critical roles in our pipeline. First, it is\nused during the reconstruction phase to clean up pseudo-training views that are\nrendered from the reconstruction and then distilled back into 3D. This greatly\nenhances underconstrained regions and improves the overall 3D representation\nquality. More importantly, Difix also acts as a neural enhancer during\ninference, effectively removing residual artifacts arising from imperfect 3D\nsupervision and the limited capacity of current reconstruction models. Difix3D+\nis a general solution, a single model compatible with both NeRF and 3DGS\nrepresentations, and it achieves an average 2$\\times$ improvement in FID score\nover baselines while maintaining 3D consistency.",
+        "publication_date": "2025-03-03",
+        "publication_time": "17:58:33",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 29
+    },
+    "2503.01183": {
+        "url": "https://arxiv.org/abs/2503.01183",
+        "title": "DiffRhythm: Blazingly Fast and Embarrassingly Simple End-to-End\n  Full-Length Song Generation with Latent Diffusion",
+        "authors": [
+            "Ziqian Ning",
+            "Huakang Chen",
+            "Yuepeng Jiang",
+            "Chunbo Hao",
+            "Guobin Ma",
+            "Shuai Wang",
+            "Jixun Yao",
+            "Lei Xie"
+        ],
+        "abstract": "Recent advancements in music generation have garnered significant attention,\nyet existing approaches face critical limitations. Some current generative\nmodels can only synthesize either the vocal track or the accompaniment track.\nWhile some models can generate combined vocal and accompaniment, they typically\nrely on meticulously designed multi-stage cascading architectures and intricate\ndata pipelines, hindering scalability. Additionally, most systems are\nrestricted to generating short musical segments rather than full-length songs.\nFurthermore, widely used language model-based methods suffer from slow\ninference speeds. To address these challenges, we propose DiffRhythm, the first\nlatent diffusion-based song generation model capable of synthesizing complete\nsongs with both vocal and accompaniment for durations of up to 4m45s in only\nten seconds, maintaining high musicality and intelligibility. Despite its\nremarkable capabilities, DiffRhythm is designed to be simple and elegant: it\neliminates the need for complex data preparation, employs a straightforward\nmodel structure, and requires only lyrics and a style prompt during inference.\nAdditionally, its non-autoregressive structure ensures fast inference speeds.\nThis simplicity guarantees the scalability of DiffRhythm. Moreover, we release\nthe complete training code along with the pre-trained model on large-scale data\nto promote reproducibility and further research.",
+        "publication_date": "2025-03-03",
+        "publication_time": "05:15:34",
+        "tags": [
+            "eess.AS"
+        ],
+        "upvotes": 18
+    },
+    "2502.18965": {
+        "url": "https://arxiv.org/abs/2502.18965",
+        "title": "OneRec: Unifying Retrieve and Rank with Generative Recommender and\n  Iterative Preference Alignment",
+        "authors": [
+            "Jiaxin Deng",
+            "Shiyao Wang",
+            "Kuo Cai",
+            "Lejian Ren",
+            "Qigen Hu",
+            "Weifeng Ding",
+            "Qiang Luo",
+            "Guorui Zhou"
+        ],
+        "abstract": "Recently, generative retrieval-based recommendation systems have emerged as a\npromising paradigm. However, most modern recommender systems adopt a\nretrieve-and-rank strategy, where the generative model functions only as a\nselector during the retrieval stage. In this paper, we propose OneRec, which\nreplaces the cascaded learning framework with a unified generative model. To\nthe best of our knowledge, this is the first end-to-end generative model that\nsignificantly surpasses current complex and well-designed recommender systems\nin real-world scenarios. Specifically, OneRec includes: 1) an encoder-decoder\nstructure, which encodes the user's historical behavior sequences and gradually\ndecodes the videos that the user may be interested in. We adopt sparse\nMixture-of-Experts (MoE) to scale model capacity without proportionally\nincreasing computational FLOPs. 2) a session-wise generation approach. In\ncontrast to traditional next-item prediction, we propose a session-wise\ngeneration, which is more elegant and contextually coherent than point-by-point\ngeneration that relies on hand-crafted rules to properly combine the generated\nresults. 3) an Iterative Preference Alignment module combined with Direct\nPreference Optimization (DPO) to enhance the quality of the generated results.\nUnlike DPO in NLP, a recommendation system typically has only one opportunity\nto display results for each user's browsing request, making it impossible to\nobtain positive and negative samples simultaneously. To address this\nlimitation, We design a reward model to simulate user generation and customize\nthe sampling strategy. Extensive experiments have demonstrated that a limited\nnumber of DPO samples can align user interest preferences and significantly\nimprove the quality of generated results. We deployed OneRec in the main scene\nof Kuaishou, achieving a 1.6\\% increase in watch-time, which is a substantial\nimprovement.",
+        "publication_date": "2025-02-26",
+        "publication_time": "09:25:10",
+        "tags": [
+            "cs.IR"
+        ],
+        "upvotes": 18
+    },
+    "2503.01688": {
+        "url": "https://arxiv.org/abs/2503.01688",
+        "title": "When an LLM is apprehensive about its answers -- and when its\n  uncertainty is justified",
+        "authors": [
+            "Petr Sychev",
+            "Andrey Goncharov",
+            "Daniil Vyazhev",
+            "Edvard Khalafyan",
+            "Alexey Zaytsev"
+        ],
+        "abstract": "Uncertainty estimation is crucial for evaluating Large Language Models\n(LLMs), particularly in high-stakes domains where incorrect answers result in\nsignificant consequences. Numerous approaches consider this problem, while\nfocusing on a specific type of uncertainty, ignoring others. We investigate\nwhat estimates, specifically token-wise entropy and model-as-judge (MASJ),\nwould work for multiple-choice question-answering tasks for different question\ntopics. Our experiments consider three LLMs: Phi-4, Mistral, and Qwen of\ndifferent sizes from 1.5B to 72B and $14$ topics. While MASJ performs similarly\nto a random error predictor, the response entropy predicts model error in\nknowledge-dependent domains and serves as an effective indicator of question\ndifficulty: for biology ROC AUC is $0.73$. This correlation vanishes for the\nreasoning-dependent domain: for math questions ROC-AUC is $0.55$. More\nprincipally, we found out that the entropy measure required a reasoning amount.\nThus, data-uncertainty related entropy should be integrated within uncertainty\nestimates frameworks, while MASJ requires refinement. Moreover, existing\nMMLU-Pro samples are biased, and should balance required amount of reasoning\nfor different subdomains to provide a more fair assessment of LLMs performance.",
+        "publication_date": "2025-03-03",
+        "publication_time": "16:03:46",
+        "tags": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "upvotes": 16
+    },
+    "2503.01496": {
+        "url": "https://arxiv.org/abs/2503.01496",
+        "title": "Liger: Linearizing Large Language Models to Gated Recurrent Structures",
+        "authors": [
+            "Disen Lan",
+            "Weigao Sun",
+            "Jiaxi Hu",
+            "Jusen Du",
+            "Yu Cheng"
+        ],
+        "abstract": "Transformers with linear recurrent modeling offer linear-time training and\nconstant-memory inference. Despite their demonstrated efficiency and\nperformance, pretraining such non-standard architectures from scratch remains\ncostly and risky. The linearization of large language models (LLMs) transforms\npretrained standard models into linear recurrent structures, enabling more\nefficient deployment. However, current linearization methods typically\nintroduce additional feature map modules that require extensive fine-tuning and\noverlook the gating mechanisms used in state-of-the-art linear recurrent\nmodels. To address these issues, this paper presents Liger, short for\nLinearizing LLMs to gated recurrent structures. Liger is a novel approach for\nconverting pretrained LLMs into gated linear recurrent models without adding\nextra parameters. It repurposes the pretrained key matrix weights to construct\ndiverse gating mechanisms, facilitating the formation of various gated\nrecurrent structures while avoiding the need to train additional components\nfrom scratch. Using lightweight fine-tuning with Low-Rank Adaptation (LoRA),\nLiger restores the performance of the linearized gated recurrent models to\nmatch that of the original LLMs. Additionally, we introduce Liger Attention, an\nintra-layer hybrid attention mechanism, which significantly recovers 93\\% of\nthe Transformer-based LLM at 0.02\\% pre-training tokens during the\nlinearization process, achieving competitive results across multiple\nbenchmarks, as validated on models ranging from 1B to 8B parameters. Code is\navailable at https://github.com/OpenSparseLLMs/Linearization.",
+        "publication_date": "2025-03-03",
+        "publication_time": "13:08:00",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 13
+    },
+    "2503.01307": {
+        "url": "https://arxiv.org/abs/2503.01307",
+        "title": "Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four\n  Habits of Highly Effective STaRs",
+        "authors": [
+            "Kanishk Gandhi",
+            "Ayush Chakravarthy",
+            "Anikait Singh",
+            "Nathan Lile",
+            "Noah D. Goodman"
+        ],
+        "abstract": "Test-time inference has emerged as a powerful paradigm for enabling language\nmodels to ``think'' longer and more carefully about complex challenges, much\nlike skilled human experts. While reinforcement learning (RL) can drive\nself-improvement in language models on verifiable tasks, some models exhibit\nsubstantial gains while others quickly plateau. For instance, we find that\nQwen-2.5-3B far exceeds Llama-3.2-3B under identical RL training for the game\nof Countdown. This discrepancy raises a critical question: what intrinsic\nproperties enable effective self-improvement? We introduce a framework to\ninvestigate this question by analyzing four key cognitive behaviors --\nverification, backtracking, subgoal setting, and backward chaining -- that both\nexpert human problem solvers and successful language models employ. Our study\nreveals that Qwen naturally exhibits these reasoning behaviors, whereas Llama\ninitially lacks them. In systematic experimentation with controlled behavioral\ndatasets, we find that priming Llama with examples containing these reasoning\nbehaviors enables substantial improvements during RL, matching or exceeding\nQwen's performance. Importantly, the presence of reasoning behaviors, rather\nthan correctness of answers, proves to be the critical factor -- models primed\nwith incorrect solutions containing proper reasoning patterns achieve\ncomparable performance to those trained on correct solutions. Finally,\nleveraging continued pretraining with OpenWebMath data, filtered to amplify\nreasoning behaviors, enables the Llama model to match Qwen's self-improvement\ntrajectory. Our findings establish a fundamental relationship between initial\nreasoning behaviors and the capacity for improvement, explaining why some\nlanguage models effectively utilize additional computation while others\nplateau.",
+        "publication_date": "2025-03-03",
+        "publication_time": "08:46:22",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 13
+    },
+    "2503.00501": {
+        "url": "https://arxiv.org/abs/2503.00501",
+        "title": "Qilin: A Multimodal Information Retrieval Dataset with APP-level User\n  Sessions",
+        "authors": [
+            "Jia Chen",
+            "Qian Dong",
+            "Haitao Li",
+            "Xiaohui He",
+            "Yan Gao",
+            "Shaosheng Cao",
+            "Yi Wu",
+            "Ping Yang",
+            "Chen Xu",
+            "Yao Hu",
+            "Qingyao Ai",
+            "Yiqun Liu"
+        ],
+        "abstract": "User-generated content (UGC) communities, especially those featuring\nmultimodal content, improve user experiences by integrating visual and textual\ninformation into results (or items). The challenge of improving user\nexperiences in complex systems with search and recommendation (S\\&R) services\nhas drawn significant attention from both academia and industry these years.\nHowever, the lack of high-quality datasets has limited the research progress on\nmultimodal S\\&R. To address the growing need for developing better S\\&R\nservices, we present a novel multimodal information retrieval dataset in this\npaper, namely Qilin. The dataset is collected from Xiaohongshu, a popular\nsocial platform with over 300 million monthly active users and an average\nsearch penetration rate of over 70\\%. In contrast to existing datasets,\n\\textsf{Qilin} offers a comprehensive collection of user sessions with\nheterogeneous results like image-text notes, video notes, commercial notes, and\ndirect answers, facilitating the development of advanced multimodal neural\nretrieval models across diverse task settings. To better model user\nsatisfaction and support the analysis of heterogeneous user behaviors, we also\ncollect extensive APP-level contextual signals and genuine user feedback.\nNotably, Qilin contains user-favored answers and their referred results for\nsearch requests triggering the Deep Query Answering (DQA) module. This allows\nnot only the training \\& evaluation of a Retrieval-augmented Generation (RAG)\npipeline, but also the exploration of how such a module would affect users'\nsearch behavior. Through comprehensive analysis and experiments, we provide\ninteresting findings and insights for further improving S\\&R systems. We hope\nthat \\textsf{Qilin} will significantly contribute to the advancement of\nmultimodal content platforms with S\\&R services in the future.",
+        "publication_date": "2025-03-01",
+        "publication_time": "14:15:00",
+        "tags": [
+            "cs.IR",
+            "cs.CL"
+        ],
+        "upvotes": 11
+    },
+    "2503.00714": {
+        "url": "https://arxiv.org/abs/2503.00714",
+        "title": "Speculative Ad-hoc Querying",
+        "authors": [
+            "Haoyu Li",
+            "Srikanth Kandula",
+            "Maria Angels de Luis Balaguer",
+            "Aditya Akella",
+            "Venkat Arun"
+        ],
+        "abstract": "Analyzing large datasets requires responsive query execution, but executing\nSQL queries on massive datasets can be slow. This paper explores whether query\nexecution can begin even before the user has finished typing, allowing results\nto appear almost instantly. We propose SpeQL, a system that leverages Large\nLanguage Models (LLMs) to predict likely queries based on the database schema,\nthe user's past queries, and their incomplete query. Since exact query\nprediction is infeasible, SpeQL speculates on partial queries in two ways: 1)\nit predicts the query structure to compile and plan queries in advance, and 2)\nit precomputes smaller temporary tables that are much smaller than the original\ndatabase, but are still predicted to contain all information necessary to\nanswer the user's final query. Additionally, SpeQL continuously displays\nresults for speculated queries and subqueries in real time, aiding exploratory\nanalysis. A utility/user study showed that SpeQL improved task completion time,\nand participants reported that its speculative display of results helped them\ndiscover patterns in the data more quickly. In the study, SpeQL improves user's\nquery latency by up to $289\\times$ and kept the overhead reasonable, at $\\$4$\nper hour.",
+        "publication_date": "2025-03-02",
+        "publication_time": "03:44:31",
+        "tags": [
+            "cs.DB",
+            "cs.AI",
+            "cs.HC",
+            "cs.LG",
+            "cs.MA"
+        ],
+        "upvotes": 9
+    },
+    "2503.00031": {
+        "url": "https://arxiv.org/abs/2503.00031",
+        "title": "Efficient Test-Time Scaling via Self-Calibration",
+        "authors": [
+            "Chengsong Huang",
+            "Langlin Huang",
+            "Jixuan Leng",
+            "Jiacheng Liu",
+            "Jiaxin Huang"
+        ],
+        "abstract": "Increasing test-time computation is a straightforward approach to enhancing\nthe quality of responses in Large Language Models (LLMs). While Best-of-N\nsampling and Self-Consistency with majority voting are simple and effective,\nthey require a fixed number of sampling responses for each query, regardless of\nits complexity. This could result in wasted computation for simpler questions\nand insufficient exploration for more challenging ones. In this work, we argue\nthat model confidence of responses can be used for improving the efficiency of\ntest-time scaling. Unfortunately, LLMs are known to be overconfident and\nprovide unreliable confidence estimation. To address this limitation, we\nintroduce Self-Calibration by distilling Self-Consistency-derived confidence\ninto the model itself. This enables reliable confidence estimation at test time\nwith one forward pass. We then design confidence-based efficient test-time\nscaling methods to handle queries of various difficulty, such as Early-Stopping\nfor Best-of-N and Self-Consistency with calibrated confidence. Experiments on\nthree LLMs across six datasets demonstrate the effectiveness of our approach.\nSpecifically, applying confidence-based Early Stopping to Best-of-N improves\nMathQA accuracy from 81.0 to 83.6 with a sample budget of 16 responses,\nindicating the efficacy of confidence-based sampling strategy at inference\ntime.",
+        "publication_date": "2025-02-25",
+        "publication_time": "00:21:14",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 8
+    },
+    "2503.00784": {
+        "url": "https://arxiv.org/abs/2503.00784",
+        "title": "DuoDecoding: Hardware-aware Heterogeneous Speculative Decoding with\n  Dynamic Multi-Sequence Drafting",
+        "authors": [
+            "Kai Lv",
+            "Honglin Guo",
+            "Qipeng Guo",
+            "Xipeng Qiu"
+        ],
+        "abstract": "Large language models (LLMs) exhibit exceptional performance across a wide\nrange of tasks; however, their token-by-token autoregressive generation process\nsignificantly hinders inference speed. Speculative decoding presents a\npromising draft-then-verify framework that reduces generation latency while\nmaintaining output distribution fidelity. Nevertheless, the draft model\nintroduces additional computational overhead, becoming a performance bottleneck\nand increasing the time to first token (TTFT). Previous approaches to mitigate\ndraft model overhead have primarily relied on heuristics and generally failed\nto match the quality of the draft language models. To address these challenges,\nwe propose DuoDecoding, a novel approach that strategically deploys the draft\nand target models on the CPU and GPU respectively, enabling parallel decoding\nwhile preserving draft quality. Our method incorporates a hardware-aware\noptimal draft budget to minimize idle times and employs dynamic multi-sequence\ndrafting to enhance draft quality. Extensive experiments across seven tasks\nshow that DuoDecoding achieves up to 2.61x speedup in generation latency, while\nreducing TTFT to 83% of that in conventional speculative decoding. The Code is\navailable at https://github.com/KaiLv69/DuoDecoding.",
+        "publication_date": "2025-03-02",
+        "publication_time": "08:27:48",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 8
+    },
+    "2503.01506": {
+        "url": "https://arxiv.org/abs/2503.01506",
+        "title": "SampleMix: A Sample-wise Pre-training Data Mixing Strategey by\n  Coordinating Data Quality and Diversity",
+        "authors": [
+            "Xiangyu Xi",
+            "Deyang Kong",
+            "Jian Yang",
+            "Jiawei Yang",
+            "Zhengyu Chen",
+            "Wei Wang",
+            "Jingang Wang",
+            "Xunliang Cai",
+            "Shikun Zhang",
+            "Wei Ye"
+        ],
+        "abstract": "Existing pretraining data mixing methods for large language models (LLMs)\ntypically follow a domain-wise methodology, a top-down process that first\ndetermines domain weights and then performs uniform data sampling across each\ndomain. However, these approaches neglect significant inter-domain overlaps and\ncommonalities, failing to control the global diversity of the constructed\ntraining dataset. Further, uniform sampling within domains ignores fine-grained\nsample-specific features, potentially leading to suboptimal data distribution.\nTo address these shortcomings, we propose a novel sample-wise data mixture\napproach based on a bottom-up paradigm. This method performs global\ncross-domain sampling by systematically evaluating the quality and diversity of\neach sample, thereby dynamically determining the optimal domain distribution.\nComprehensive experiments across multiple downstream tasks and perplexity\nassessments demonstrate that SampleMix surpasses existing domain-based methods.\nMeanwhile, SampleMix requires 1.4x to 2.1x training steps to achieves the\nbaselines' performance, highlighting the substantial potential of SampleMix to\noptimize pre-training data.",
+        "publication_date": "2025-03-03",
+        "publication_time": "13:22:11",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 7
+    },
+    "2502.18890": {
+        "url": "https://arxiv.org/abs/2502.18890",
+        "title": "From Hours to Minutes: Lossless Acceleration of Ultra Long Sequence\n  Generation up to 100K Tokens",
+        "authors": [
+            "Tong Wu",
+            "Junzhe Shen",
+            "Zixia Jia",
+            "Yuxuan Wang",
+            "Zilong Zheng"
+        ],
+        "abstract": "Generating ultra-long sequences with large language models (LLMs) has become\nincreasingly crucial but remains a highly time-intensive task, particularly for\nsequences up to 100K tokens. While traditional speculative decoding methods\nexist, simply extending their generation limits fails to accelerate the process\nand can be detrimental. Through an in-depth analysis, we identify three major\nchallenges hindering efficient generation: frequent model reloading, dynamic\nkey-value (KV) management and repetitive generation. To address these issues,\nwe introduce TOKENSWIFT, a novel framework designed to substantially accelerate\nthe generation process of ultra-long sequences while maintaining the target\nmodel's inherent quality. Experimental results demonstrate that TOKENSWIFT\nachieves over 3 times speedup across models of varying scales (1.5B, 7B, 8B,\n14B) and architectures (MHA, GQA). This acceleration translates to hours of\ntime savings for ultra-long sequence generation, establishing TOKENSWIFT as a\nscalable and effective solution at unprecedented lengths. Code can be found at\nhttps://github.com/bigai-nlco/TokenSwift.",
+        "publication_date": "2025-02-26",
+        "publication_time": "07:10:08",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 7
+    },
+    "2503.01370": {
+        "url": "https://arxiv.org/abs/2503.01370",
+        "title": "Kiss3DGen: Repurposing Image Diffusion Models for 3D Asset Generation",
+        "authors": [
+            "Jiantao Lin",
+            "Xin Yang",
+            "Meixi Chen",
+            "Yingjie Xu",
+            "Dongyu Yan",
+            "Leyi Wu",
+            "Xinli Xu",
+            "Lie XU",
+            "Shunsi Zhang",
+            "Ying-Cong Chen"
+        ],
+        "abstract": "Diffusion models have achieved great success in generating 2D images.\nHowever, the quality and generalizability of 3D content generation remain\nlimited. State-of-the-art methods often require large-scale 3D assets for\ntraining, which are challenging to collect. In this work, we introduce\nKiss3DGen (Keep It Simple and Straightforward in 3D Generation), an efficient\nframework for generating, editing, and enhancing 3D objects by repurposing a\nwell-trained 2D image diffusion model for 3D generation. Specifically, we\nfine-tune a diffusion model to generate ''3D Bundle Image'', a tiled\nrepresentation composed of multi-view images and their corresponding normal\nmaps. The normal maps are then used to reconstruct a 3D mesh, and the\nmulti-view images provide texture mapping, resulting in a complete 3D model.\nThis simple method effectively transforms the 3D generation problem into a 2D\nimage generation task, maximizing the utilization of knowledge in pretrained\ndiffusion models. Furthermore, we demonstrate that our Kiss3DGen model is\ncompatible with various diffusion model techniques, enabling advanced features\nsuch as 3D editing, mesh and texture enhancement, etc. Through extensive\nexperiments, we demonstrate the effectiveness of our approach, showcasing its\nability to produce high-quality 3D models efficiently.",
+        "publication_date": "2025-03-03",
+        "publication_time": "10:07:19",
+        "tags": [
+            "cs.GR",
+            "cs.CV",
+            "cs.MM"
+        ],
+        "upvotes": 7
+    },
+    "2503.00455": {
+        "url": "https://arxiv.org/abs/2503.00455",
+        "title": "PodAgent: A Comprehensive Framework for Podcast Generation",
+        "authors": [
+            "Yujia Xiao",
+            "Lei He",
+            "Haohan Guo",
+            "Fenglong Xie",
+            "Tan Lee"
+        ],
+        "abstract": "Existing Existing automatic audio generation methods struggle to generate\npodcast-like audio programs effectively. The key challenges lie in in-depth\ncontent generation, appropriate and expressive voice production. This paper\nproposed PodAgent, a comprehensive framework for creating audio programs.\nPodAgent 1) generates informative topic-discussion content by designing a\nHost-Guest-Writer multi-agent collaboration system, 2) builds a voice pool for\nsuitable voice-role matching and 3) utilizes LLM-enhanced speech synthesis\nmethod to generate expressive conversational speech. Given the absence of\nstandardized evaluation criteria for podcast-like audio generation, we\ndeveloped comprehensive assessment guidelines to effectively evaluate the\nmodel's performance. Experimental results demonstrate PodAgent's effectiveness,\nsignificantly surpassing direct GPT-4 generation in topic-discussion dialogue\ncontent, achieving an 87.4% voice-matching accuracy, and producing more\nexpressive speech through LLM-guided synthesis. Demo page:\nhttps://podcast-agent.github.io/demo/. Source code:\nhttps://github.com/yujxx/PodAgent.",
+        "publication_date": "2025-03-01",
+        "publication_time": "11:35:17",
+        "tags": [
+            "cs.SD",
+            "cs.AI",
+            "cs.MA",
+            "cs.MM",
+            "eess.AS"
+        ],
+        "upvotes": 5
+    },
+    "2503.01714": {
+        "url": "https://arxiv.org/abs/2503.01714",
+        "title": "Word Form Matters: LLMs' Semantic Reconstruction under Typoglycemia",
+        "authors": [
+            "Chenxi Wang",
+            "Tianle Gu",
+            "Zhongyu Wei",
+            "Lang Gao",
+            "Zirui Song",
+            "Xiuying Chen"
+        ],
+        "abstract": "Human readers can efficiently comprehend scrambled words, a phenomenon known\nas Typoglycemia, primarily by relying on word form; if word form alone is\ninsufficient, they further utilize contextual cues for interpretation. While\nadvanced large language models (LLMs) exhibit similar abilities, the underlying\nmechanisms remain unclear. To investigate this, we conduct controlled\nexperiments to analyze the roles of word form and contextual information in\nsemantic reconstruction and examine LLM attention patterns. Specifically, we\nfirst propose SemRecScore, a reliable metric to quantify the degree of semantic\nreconstruction, and validate its effectiveness. Using this metric, we study how\nword form and contextual information influence LLMs' semantic reconstruction\nability, identifying word form as the core factor in this process. Furthermore,\nwe analyze how LLMs utilize word form and find that they rely on specialized\nattention heads to extract and process word form information, with this\nmechanism remaining stable across varying levels of word scrambling. This\ndistinction between LLMs' fixed attention patterns primarily focused on word\nform and human readers' adaptive strategy in balancing word form and contextual\ninformation provides insights into enhancing LLM performance by incorporating\nhuman-like, context-aware mechanisms.",
+        "publication_date": "2025-03-03",
+        "publication_time": "16:31:45",
+        "tags": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "upvotes": 5
+    },
+    "2503.01295": {
+        "url": "https://arxiv.org/abs/2503.01295",
+        "title": "CodeArena: A Collective Evaluation Platform for LLM Code Generation",
+        "authors": [
+            "Mingzhe Du",
+            "Anh Tuan Luu",
+            "Bin Ji",
+            "Xiaobao Wu",
+            "Dong Huang",
+            "Terry Yue Zhuo",
+            "Qian Liu",
+            "See-Kiong Ng"
+        ],
+        "abstract": "Large Language Models (LLMs) have reshaped code generation by synergizing\ntheir exceptional comprehension of natural language and programming syntax,\nthereby substantially boosting developer productivity. These advancements have\nprompted numerous efforts to quantitatively evaluate their coding capabilities.\nHowever, persistent challenges, such as benchmark leakage, data dissipation,\nand limited system accessibility, continue to impede a timely and accurate\nassessment. To address these limitations, we introduce CodeArena, an online\nevaluation framework tailored for LLM code generation. The key innovation is a\ncollective evaluation mechanism, which dynamically recalibrates individual\nmodel scores based on the holistic performance of all participating models,\nmitigating score biases caused by widespread benchmark leakage. In addition,\nCodeArena ensures open access to all submitted solutions and test cases and\nprovides automation-friendly APIs to streamline the code evaluation workflow.\nOur main contributions are: (1) a collective evaluation system for unbiased\nassessment, (2) a public repository of solutions and test cases, and (3)\nautomation-ready APIs for seamless integration.",
+        "publication_date": "2025-03-03",
+        "publication_time": "08:31:16",
+        "tags": [
+            "cs.SE"
+        ],
+        "upvotes": 5
+    },
+    "2503.01807": {
+        "url": "https://arxiv.org/abs/2503.01807",
+        "title": "Large-Scale Data Selection for Instruction Tuning",
+        "authors": [
+            "Hamish Ivison",
+            "Muru Zhang",
+            "Faeze Brahman",
+            "Pang Wei Koh",
+            "Pradeep Dasigi"
+        ],
+        "abstract": "Selecting high-quality training data from a larger pool is a crucial step\nwhen instruction-tuning language models, as carefully curated datasets often\nproduce models that outperform those trained on much larger, noisier datasets.\nAutomated data selection approaches for instruction-tuning are typically tested\nby selecting small datasets (roughly 10k samples) from small pools (100-200k\nsamples). However, popular deployed instruction-tuned models often train on\nhundreds of thousands to millions of samples, subsampled from even larger data\npools. We present a systematic study of how well data selection methods scale\nto these settings, selecting up to 2.5M samples from pools of up to 5.8M\nsamples and evaluating across 7 diverse tasks. We show that many recently\nproposed methods fall short of random selection in this setting (while using\nmore compute), and even decline in performance when given access to larger\npools of data to select over. However, we find that a variant of\nrepresentation-based data selection (RDS+), which uses weighted mean pooling of\npretrained LM hidden states, consistently outperforms more complex methods\nacross all settings tested -- all whilst being more compute-efficient. Our\nfindings highlight that the scaling properties of proposed automated selection\nmethods should be more closely examined. We release our code, data, and models\nat https://github.com/hamishivi/automated-instruction-selection.",
+        "publication_date": "2025-03-03",
+        "publication_time": "18:37:26",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 5
+    },
+    "2502.19402": {
+        "url": "https://arxiv.org/abs/2502.19402",
+        "title": "General Reasoning Requires Learning to Reason from the Get-go",
+        "authors": [
+            "Seungwook Han",
+            "Jyothish Pari",
+            "Samuel J. Gershman",
+            "Pulkit Agrawal"
+        ],
+        "abstract": "Large Language Models (LLMs) have demonstrated impressive real-world utility,\nexemplifying artificial useful intelligence (AUI). However, their ability to\nreason adaptively and robustly -- the hallmarks of artificial general\nintelligence (AGI) -- remains fragile. While LLMs seemingly succeed in\ncommonsense reasoning, programming, and mathematics, they struggle to\ngeneralize algorithmic understanding across novel contexts. Our experiments\nwith algorithmic tasks in esoteric programming languages reveal that LLM's\nreasoning overfits to the training data and is limited in its transferability.\nWe hypothesize that the core issue underlying such limited transferability is\nthe coupling of reasoning and knowledge in LLMs.\n  To transition from AUI to AGI, we propose disentangling knowledge and\nreasoning through three key directions: (1) pretaining to reason using RL from\nscratch as an alternative to the widely used next-token prediction pretraining,\n(2) using a curriculum of synthetic tasks to ease the learning of a\n\\textit{reasoning prior} for RL that can then be transferred to natural\nlanguage tasks, and (3) learning more generalizable reasoning functions using a\nsmall context window to reduce exploiting spurious correlations between tokens.\nSuch a reasoning system coupled with a trained retrieval system and a large\nexternal memory bank as a knowledge store can overcome several limitations of\nexisting architectures at learning to reason in novel scenarios.",
+        "publication_date": "2025-02-26",
+        "publication_time": "18:51:12",
+        "tags": [
+            "cs.LG"
+        ],
+        "upvotes": 4
+    },
+    "2503.01739": {
+        "url": "https://arxiv.org/abs/2503.01739",
+        "title": "VideoUFO: A Million-Scale User-Focused Dataset for Text-to-Video\n  Generation",
+        "authors": [
+            "Wenhao Wang",
+            "Yi Yang"
+        ],
+        "abstract": "Text-to-video generative models convert textual prompts into dynamic visual\ncontent, offering wide-ranging applications in film production, gaming, and\neducation. However, their real-world performance often falls short of user\nexpectations. One key reason is that these models have not been trained on\nvideos related to some topics users want to create. In this paper, we propose\nVideoUFO, the first Video dataset specifically curated to align with Users'\nFOcus in real-world scenarios. Beyond this, our VideoUFO also features: (1)\nminimal ($0.29\\%$) overlap with existing video datasets, and (2) videos\nsearched exclusively via YouTube's official API under the Creative Commons\nlicense. These two attributes provide future researchers with greater freedom\nto broaden their training sources. The VideoUFO comprises over $1.09$ million\nvideo clips, each paired with both a brief and a detailed caption\n(description). Specifically, through clustering, we first identify $1,291$\nuser-focused topics from the million-scale real text-to-video prompt dataset,\nVidProM. Then, we use these topics to retrieve videos from YouTube, split the\nretrieved videos into clips, and generate both brief and detailed captions for\neach clip. After verifying the clips with specified topics, we are left with\nabout $1.09$ million video clips. Our experiments reveal that (1) current $16$\ntext-to-video models do not achieve consistent performance across all\nuser-focused topics; and (2) a simple model trained on VideoUFO outperforms\nothers on worst-performing topics. The dataset is publicly available at\nhttps://huggingface.co/datasets/WenhaoWang/VideoUFO under the CC BY 4.0\nLicense.",
+        "publication_date": "2025-03-03",
+        "publication_time": "17:00:36",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 3
+    },
+    "2503.01103": {
+        "url": "https://arxiv.org/abs/2503.01103",
+        "title": "Direct Discriminative Optimization: Your Likelihood-Based Visual\n  Generative Model is Secretly a GAN Discriminator",
+        "authors": [
+            "Kaiwen Zheng",
+            "Yongxin Chen",
+            "Huayu Chen",
+            "Guande He",
+            "Ming-Yu Liu",
+            "Jun Zhu",
+            "Qinsheng Zhang"
+        ],
+        "abstract": "While likelihood-based generative models, particularly diffusion and\nautoregressive models, have achieved remarkable fidelity in visual generation,\nthe maximum likelihood estimation (MLE) objective inherently suffers from a\nmode-covering tendency that limits the generation quality under limited model\ncapacity. In this work, we propose Direct Discriminative Optimization (DDO) as\na unified framework that bridges likelihood-based generative training and the\nGAN objective to bypass this fundamental constraint. Our key insight is to\nparameterize a discriminator implicitly using the likelihood ratio between a\nlearnable target model and a fixed reference model, drawing parallels with the\nphilosophy of Direct Preference Optimization (DPO). Unlike GANs, this\nparameterization eliminates the need for joint training of generator and\ndiscriminator networks, allowing for direct, efficient, and effective\nfinetuning of a well-trained model to its full potential beyond the limits of\nMLE. DDO can be performed iteratively in a self-play manner for progressive\nmodel refinement, with each round requiring less than 1% of pretraining epochs.\nOur experiments demonstrate the effectiveness of DDO by significantly advancing\nthe previous SOTA diffusion model EDM, reducing FID scores from 1.79/1.58 to\nnew records of 1.30/0.97 on CIFAR-10/ImageNet-64 datasets, and by consistently\nimproving both guidance-free and CFG-enhanced FIDs of visual autoregressive\nmodels on ImageNet 256$\\times$256.",
+        "publication_date": "2025-03-03",
+        "publication_time": "02:06:22",
+        "tags": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "upvotes": 2
+    },
+    "2502.16779": {
+        "url": "https://arxiv.org/abs/2502.16779",
+        "title": "Unposed Sparse Views Room Layout Reconstruction in the Age of Pretrain\n  Model",
+        "authors": [
+            "Yaxuan Huang",
+            "Xili Dai",
+            "Jianan Wang",
+            "Xianbiao Qi",
+            "Yixing Yuan",
+            "Xiangyu Yue"
+        ],
+        "abstract": "Room layout estimation from multiple-perspective images is poorly\ninvestigated due to the complexities that emerge from multi-view geometry,\nwhich requires muti-step solutions such as camera intrinsic and extrinsic\nestimation, image matching, and triangulation. However, in 3D reconstruction,\nthe advancement of recent 3D foundation models such as DUSt3R has shifted the\nparadigm from the traditional multi-step structure-from-motion process to an\nend-to-end single-step approach. To this end, we introduce Plane-DUSt3R, a\nnovel method for multi-view room layout estimation leveraging the 3D foundation\nmodel DUSt3R. Plane-DUSt3R incorporates the DUSt3R framework and fine-tunes on\na room layout dataset (Structure3D) with a modified objective to estimate\nstructural planes. By generating uniform and parsimonious results, Plane-DUSt3R\nenables room layout estimation with only a single post-processing step and 2D\ndetection results. Unlike previous methods that rely on single-perspective or\npanorama image, Plane-DUSt3R extends the setting to handle multiple-perspective\nimages. Moreover, it offers a streamlined, end-to-end solution that simplifies\nthe process and reduces error accumulation. Experimental results demonstrate\nthat Plane-DUSt3R not only outperforms state-of-the-art methods on the\nsynthetic dataset but also proves robust and effective on in the wild data with\ndifferent image styles such as cartoon.Our code is available at:\nhttps://github.com/justacar/Plane-DUSt3R",
+        "publication_date": "2025-02-24",
+        "publication_time": "02:14:19",
+        "tags": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "upvotes": 2
+    },
+    "2503.00729": {
+        "url": "https://arxiv.org/abs/2503.00729",
+        "title": "CLEA: Closed-Loop Embodied Agent for Enhancing Task Execution in Dynamic\n  Environments",
+        "authors": [
+            "Mingcong Lei",
+            "Ge Wang",
+            "Yiming Zhao",
+            "Zhixin Mai",
+            "Qing Zhao",
+            "Yao Guo",
+            "Zhen Li",
+            "Shuguang Cui",
+            "Yatong Han",
+            "Jinke Ren"
+        ],
+        "abstract": "Large Language Models (LLMs) exhibit remarkable capabilities in the\nhierarchical decomposition of complex tasks through semantic reasoning.\nHowever, their application in embodied systems faces challenges in ensuring\nreliable execution of subtask sequences and achieving one-shot success in\nlong-term task completion. To address these limitations in dynamic\nenvironments, we propose Closed-Loop Embodied Agent (CLEA) -- a novel\narchitecture incorporating four specialized open-source LLMs with functional\ndecoupling for closed-loop task management. The framework features two core\ninnovations: (1) Interactive task planner that dynamically generates executable\nsubtasks based on the environmental memory, and (2) Multimodal execution critic\nemploying an evaluation framework to conduct a probabilistic assessment of\naction feasibility, triggering hierarchical re-planning mechanisms when\nenvironmental perturbations exceed preset thresholds. To validate CLEA's\neffectiveness, we conduct experiments in a real environment with manipulable\nobjects, using two heterogeneous robots for object search, manipulation, and\nsearch-manipulation integration tasks. Across 12 task trials, CLEA outperforms\nthe baseline model, achieving a 67.3% improvement in success rate and a 52.8%\nincrease in task completion rate. These results demonstrate that CLEA\nsignificantly enhances the robustness of task planning and execution in dynamic\nenvironments.",
+        "publication_date": "2025-03-02",
+        "publication_time": "04:50:59",
+        "tags": [
+            "cs.RO",
+            "cs.AI"
+        ],
+        "upvotes": 2
+    },
+    "2502.20383": {
+        "url": "https://arxiv.org/abs/2502.20383",
+        "title": "Why Are Web AI Agents More Vulnerable Than Standalone LLMs? A Security\n  Analysis",
+        "authors": [
+            "Jeffrey Yang Fan Chiang",
+            "Seungjae Lee",
+            "Jia-Bin Huang",
+            "Furong Huang",
+            "Yizheng Chen"
+        ],
+        "abstract": "Recent advancements in Web AI agents have demonstrated remarkable\ncapabilities in addressing complex web navigation tasks. However, emerging\nresearch shows that these agents exhibit greater vulnerability compared to\nstandalone Large Language Models (LLMs), despite both being built upon the same\nsafety-aligned models. This discrepancy is particularly concerning given the\ngreater flexibility of Web AI Agent compared to standalone LLMs, which may\nexpose them to a wider range of adversarial user inputs. To build a scaffold\nthat addresses these concerns, this study investigates the underlying factors\nthat contribute to the increased vulnerability of Web AI agents. Notably, this\ndisparity stems from the multifaceted differences between Web AI agents and\nstandalone LLMs, as well as the complex signals - nuances that simple\nevaluation metrics, such as success rate, often fail to capture. To tackle\nthese challenges, we propose a component-level analysis and a more granular,\nsystematic evaluation framework. Through this fine-grained investigation, we\nidentify three critical factors that amplify the vulnerability of Web AI\nagents; (1) embedding user goals into the system prompt, (2) multi-step action\ngeneration, and (3) observational capabilities. Our findings highlights the\npressing need to enhance security and robustness in AI agent design and provide\nactionable insights for targeted defense strategies.",
+        "publication_date": "2025-02-27",
+        "publication_time": "18:56:26",
+        "tags": [
+            "cs.LG",
+            "cs.CL"
+        ],
+        "upvotes": 1
+    },
+    "2503.01063": {
+        "url": "https://arxiv.org/abs/2503.01063",
+        "title": "AI-Invented Tonal Languages: Preventing a Machine Lingua Franca Beyond\n  Human Understanding",
+        "authors": [
+            "David Noever"
+        ],
+        "abstract": "This paper investigates the potential for large language models (LLMs) to\ndevelop private tonal languages for machine-to-machine (M2M) communication.\nInspired by cryptophasia in human twins (affecting up to 50% of twin births)\nand natural tonal languages like Mandarin and Vietnamese, we implement a\nprecise character-to-frequency mapping system that encodes the full ASCII\ncharacter set (32-126) using musical semitones. Each character is assigned a\nunique frequency, creating a logarithmic progression beginning with space (220\nHz) and ending with tilde (50,175.42 Hz). This spans approximately 7.9 octaves,\nwith higher characters deliberately mapped to ultrasonic frequencies beyond\nhuman perception (>20 kHz). Our implemented software prototype demonstrates\nthis encoding through visualization, auditory playback, and ABC musical\nnotation, allowing for analysis of information density and transmission speed.\nTesting reveals that tonal encoding can achieve information rates exceeding\nhuman speech while operating partially outside human perceptual boundaries.\nThis work responds directly to concerns about AI systems catastrophically\ndeveloping private languages within the next five years, providing a concrete\nprototype software example of how such communication might function and the\ntechnical foundation required for its emergence, detection, and governance.",
+        "publication_date": "2025-03-02",
+        "publication_time": "23:59:52",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 1
     }
 }
