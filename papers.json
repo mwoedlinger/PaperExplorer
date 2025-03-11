@@ -138462,5 +138462,524 @@
             "cs.CL"
         ],
         "upvotes": 2
+    },
+    "2503.05236": {
+        "url": "https://arxiv.org/abs/2503.05236",
+        "title": "Unified Reward Model for Multimodal Understanding and Generation",
+        "authors": [
+            "Yibin Wang",
+            "Yuhang Zang",
+            "Hao Li",
+            "Cheng Jin",
+            "Jiaqi Wang"
+        ],
+        "abstract": "Recent advances in human preference alignment have significantly enhanced\nmultimodal generation and understanding. A key approach is training reward\nmodels to guide preference optimization. However, existing models are often\ntask-specific, limiting their adaptability across diverse visual applications.\nWe also argue that jointly learning to assess multiple tasks may foster a\nsynergistic effect, where improved image understanding enhances image\ngeneration assessment, and refined image evaluation benefits video assessment\nthrough better frame analysis. To this end, this paper proposes UnifiedReward,\nthe first unified reward model for multimodal understanding and generation\nassessment, enabling both pairwise ranking and pointwise scoring, which can be\nemployed for vision model preference alignment. Specifically, (1) we first\ndevelop UnifiedReward on our constructed large-scale human preference dataset,\nincluding both image and video generation/understanding tasks. (2) Then, it is\nutilized to automatically construct high-quality preference pair data based on\nthe vision models, fine-gradually filtering their outputs through pair ranking\nand point sifting. (3) Finally, these data are used for their preference\nalignment through Direct Preference Optimization (DPO). Experimental results\ndemonstrate that joint learning to assess diverse visual tasks can lead to\nsubstantial mutual benefits and we apply our pipeline to both image and video\nunderstanding/generation tasks, significantly improving the performance in each\ndomain.",
+        "publication_date": "2025-03-07",
+        "publication_time": "08:36:05",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 86
+    },
+    "2503.05179": {
+        "url": "https://arxiv.org/abs/2503.05179",
+        "title": "Sketch-of-Thought: Efficient LLM Reasoning with Adaptive\n  Cognitive-Inspired Sketching",
+        "authors": [
+            "Simon A. Aytes",
+            "Jinheon Baek",
+            "Sung Ju Hwang"
+        ],
+        "abstract": "Recent advances in large language models have demonstrated remarkable\nreasoning capabilities through Chain of Thought (CoT) prompting, but often at\nthe cost of excessive verbosity in their intermediate outputs, which increases\ncomputational overhead. We introduce Sketch-of-Thought (SoT), a novel prompting\nframework that combines cognitive-inspired reasoning paradigms with linguistic\nconstraints to minimize token usage while preserving reasoning accuracy. SoT is\ndesigned as a flexible framework that can incorporate any custom reasoning\nparadigms based on cognitive science, and we instantiate it with three such\nparadigms - Conceptual Chaining, Chunked Symbolism, and Expert Lexicons - each\ntailored to different reasoning tasks and selected dynamically via a\nlightweight routing model. Through comprehensive evaluation across 15 reasoning\ndatasets with multiple languages and multimodal scenarios, we demonstrate that\nSoT achieves token reductions of 76% with negligible accuracy impact. In\ncertain domains like mathematical and multi-hop reasoning, it even improves\naccuracy while using significantly fewer tokens. Our code is publicly\navailable: https://www.github.com/SimonAytes/SoT.",
+        "publication_date": "2025-03-07",
+        "publication_time": "06:57:17",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 37
+    },
+    "2503.02130": {
+        "url": "https://arxiv.org/abs/2503.02130",
+        "title": "Forgetting Transformer: Softmax Attention with a Forget Gate",
+        "authors": [
+            "Zhixuan Lin",
+            "Evgenii Nikishin",
+            "Xu Owen He",
+            "Aaron Courville"
+        ],
+        "abstract": "An essential component of modern recurrent sequence models is the forget\ngate. While Transformers do not have an explicit recurrent form, we show that a\nforget gate can be naturally incorporated into Transformers by down-weighting\nthe unnormalized attention scores in a data-dependent way. We name this\nattention mechanism the Forgetting Attention and the resulting model the\nForgetting Transformer (FoX). We show that FoX outperforms the Transformer on\nlong-context language modeling, length extrapolation, and short-context\ndownstream tasks, while performing on par with the Transformer on long-context\ndownstream tasks. Moreover, it is compatible with the FlashAttention algorithm\nand does not require any positional embeddings. Several analyses, including the\nneedle-in-the-haystack test, show that FoX also retains the Transformer's\nsuperior long-context capabilities over recurrent sequence models such as\nMamba-2, HGRN2, and DeltaNet. We also introduce a \"Pro\" block design that\nincorporates some common architectural components in recurrent sequence models\nand find it significantly improves the performance of both FoX and the\nTransformer. Our code is available at\nhttps://github.com/zhixuan-lin/forgetting-transformer.",
+        "publication_date": "2025-03-03",
+        "publication_time": "23:35:23",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 18
+    },
+    "2502.21263": {
+        "url": "https://arxiv.org/abs/2502.21263",
+        "title": "RuCCoD: Towards Automated ICD Coding in Russian",
+        "authors": [
+            "Aleksandr Nesterov",
+            "Andrey Sakhovskiy",
+            "Ivan Sviridov",
+            "Airat Valiev",
+            "Vladimir Makharev",
+            "Petr Anokhin",
+            "Galina Zubkova",
+            "Elena Tutubalina"
+        ],
+        "abstract": "This study investigates the feasibility of automating clinical coding in\nRussian, a language with limited biomedical resources. We present a new dataset\nfor ICD coding, which includes diagnosis fields from electronic health records\n(EHRs) annotated with over 10,000 entities and more than 1,500 unique ICD\ncodes. This dataset serves as a benchmark for several state-of-the-art models,\nincluding BERT, LLaMA with LoRA, and RAG, with additional experiments examining\ntransfer learning across domains (from PubMed abstracts to medical diagnosis)\nand terminologies (from UMLS concepts to ICD codes). We then apply the\nbest-performing model to label an in-house EHR dataset containing patient\nhistories from 2017 to 2021. Our experiments, conducted on a carefully curated\ntest set, demonstrate that training with the automated predicted codes leads to\na significant improvement in accuracy compared to manually annotated data from\nphysicians. We believe our findings offer valuable insights into the potential\nfor automating clinical coding in resource-limited languages like Russian,\nwhich could enhance clinical efficiency and data accuracy in these contexts.",
+        "publication_date": "2025-02-28",
+        "publication_time": "17:40:24",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.DB"
+        ],
+        "upvotes": 110
+    },
+    "2503.05500": {
+        "url": "https://arxiv.org/abs/2503.05500",
+        "title": "EuroBERT: Scaling Multilingual Encoders for European Languages",
+        "authors": [
+            "Nicolas Boizard",
+            "Hippolyte Gisserot-Boukhlef",
+            "Duarte M. Alves",
+            "Andr\u00e9 Martins",
+            "Ayoub Hammal",
+            "Caio Corro",
+            "C\u00e9line Hudelot",
+            "Emmanuel Malherbe",
+            "Etienne Malaboeuf",
+            "Fanny Jourdan",
+            "Gabriel Hautreux",
+            "Jo\u00e3o Alves",
+            "Kevin El-Haddad",
+            "Manuel Faysse",
+            "Maxime Peyrard",
+            "Nuno M. Guerreiro",
+            "Patrick Fernandes",
+            "Ricardo Rei",
+            "Pierre Colombo"
+        ],
+        "abstract": "General-purpose multilingual vector representations, used in retrieval,\nregression and classification, are traditionally obtained from bidirectional\nencoder models. Despite their wide applicability, encoders have been recently\novershadowed by advances in generative decoder-only models. However, many\ninnovations driving this progress are not inherently tied to decoders. In this\npaper, we revisit the development of multilingual encoders through the lens of\nthese advances, and introduce EuroBERT, a family of multilingual encoders\ncovering European and widely spoken global languages. Our models outperform\nexisting alternatives across a diverse range of tasks, spanning multilingual\ncapabilities, mathematics, and coding, and natively supporting sequences of up\nto 8,192 tokens. We also examine the design decisions behind EuroBERT, offering\ninsights into our dataset composition and training pipeline. We publicly\nrelease the EuroBERT models, including intermediate training checkpoints,\ntogether with our training framework.",
+        "publication_date": "2025-03-07",
+        "publication_time": "15:13:58",
+        "tags": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "upvotes": 58
+    },
+    "2503.05085": {
+        "url": "https://arxiv.org/abs/2503.05085",
+        "title": "S2S-Arena, Evaluating Speech2Speech Protocols on Instruction Following\n  with Paralinguistic Information",
+        "authors": [
+            "Feng Jiang",
+            "Zhiyu Lin",
+            "Fan Bu",
+            "Yuhao Du",
+            "Benyou Wang",
+            "Haizhou Li"
+        ],
+        "abstract": "The rapid development of large language models (LLMs) has brought significant\nattention to speech models, particularly recent progress in speech2speech\nprotocols supporting speech input and output. However, the existing benchmarks\nadopt automatic text-based evaluators for evaluating the instruction following\nability of these models lack consideration for paralinguistic information in\nboth speech understanding and generation. To address these issues, we introduce\nS2S-Arena, a novel arena-style S2S benchmark that evaluates\ninstruction-following capabilities with paralinguistic information in both\nspeech-in and speech-out across real-world tasks. We design 154 samples that\nfused TTS and live recordings in four domains with 21 tasks and manually\nevaluate existing popular speech models in an arena-style manner. The\nexperimental results show that: (1) in addition to the superior performance of\nGPT-4o, the speech model of cascaded ASR, LLM, and TTS outperforms the jointly\ntrained model after text-speech alignment in speech2speech protocols; (2)\nconsidering paralinguistic information, the knowledgeability of the speech\nmodel mainly depends on the LLM backbone, and the multilingual support of that\nis limited by the speech module; (3) excellent speech models can already\nunderstand the paralinguistic information in speech input, but generating\nappropriate audio with paralinguistic information is still a challenge.",
+        "publication_date": "2025-03-07",
+        "publication_time": "02:07:00",
+        "tags": [
+            "cs.CL",
+            "cs.SD",
+            "eess.AS"
+        ],
+        "upvotes": 39
+    },
+    "2503.05132": {
+        "url": "https://arxiv.org/abs/2503.05132",
+        "title": "R1-Zero's \"Aha Moment\" in Visual Reasoning on a 2B Non-SFT Model",
+        "authors": [
+            "Hengguang Zhou",
+            "Xirui Li",
+            "Ruochen Wang",
+            "Minhao Cheng",
+            "Tianyi Zhou",
+            "Cho-Jui Hsieh"
+        ],
+        "abstract": "Recently DeepSeek R1 demonstrated how reinforcement learning with simple\nrule-based incentives can enable autonomous development of complex reasoning in\nlarge language models, characterized by the \"aha moment\", in which the model\nmanifest self-reflection and increased response length during training.\nHowever, attempts to extend this success to multimodal reasoning often failed\nto reproduce these key characteristics. In this report, we present the first\nsuccessful replication of these emergent characteristics for multimodal\nreasoning on only a non-SFT 2B model. Starting with Qwen2-VL-2B and applying\nreinforcement learning directly on the SAT dataset, our model achieves 59.47%\naccuracy on CVBench, outperforming the base model by approximately ~30% and\nexceeding both SFT setting by ~2%. In addition, we share our failed attempts\nand insights in attempting to achieve R1-like reasoning using RL with instruct\nmodels. aiming to shed light on the challenges involved. Our key observations\ninclude: (1) applying RL on instruct model often results in trivial reasoning\ntrajectories, and (2) naive length reward are ineffective in eliciting\nreasoning capabilities. The project code is available at\nhttps://github.com/turningpoint-ai/VisualThinker-R1-Zero",
+        "publication_date": "2025-03-07",
+        "publication_time": "04:21:47",
+        "tags": [
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "upvotes": 27
+    },
+    "2503.05592": {
+        "url": "https://arxiv.org/abs/2503.05592",
+        "title": "R1-Searcher: Incentivizing the Search Capability in LLMs via\n  Reinforcement Learning",
+        "authors": [
+            "Huatong Song",
+            "Jinhao Jiang",
+            "Yingqian Min",
+            "Jie Chen",
+            "Zhipeng Chen",
+            "Wayne Xin Zhao",
+            "Lei Fang",
+            "Ji-Rong Wen"
+        ],
+        "abstract": "Existing Large Reasoning Models (LRMs) have shown the potential of\nreinforcement learning (RL) to enhance the complex reasoning capabilities of\nLarge Language Models~(LLMs). While they achieve remarkable performance on\nchallenging tasks such as mathematics and coding, they often rely on their\ninternal knowledge to solve problems, which can be inadequate for\ntime-sensitive or knowledge-intensive questions, leading to inaccuracies and\nhallucinations. To address this, we propose \\textbf{R1-Searcher}, a novel\ntwo-stage outcome-based RL approach designed to enhance the search capabilities\nof LLMs. This method allows LLMs to autonomously invoke external search systems\nto access additional knowledge during the reasoning process. Our framework\nrelies exclusively on RL, without requiring process rewards or distillation for\na cold start. % effectively generalizing to out-of-domain datasets and\nsupporting both Base and Instruct models. Our experiments demonstrate that our\nmethod significantly outperforms previous strong RAG methods, even when\ncompared to the closed-source GPT-4o-mini.",
+        "publication_date": "2025-03-07",
+        "publication_time": "17:14:44",
+        "tags": [
+            "cs.AI",
+            "cs.CL",
+            "cs.IR"
+        ],
+        "upvotes": 18
+    },
+    "2503.04957": {
+        "url": "https://arxiv.org/abs/2503.04957",
+        "title": "SafeArena: Evaluating the Safety of Autonomous Web Agents",
+        "authors": [
+            "Ada Defne Tur",
+            "Nicholas Meade",
+            "Xing Han L\u00f9",
+            "Alejandra Zambrano",
+            "Arkil Patel",
+            "Esin Durmus",
+            "Spandana Gella",
+            "Karolina Sta\u0144czak",
+            "Siva Reddy"
+        ],
+        "abstract": "LLM-based agents are becoming increasingly proficient at solving web-based\ntasks. With this capability comes a greater risk of misuse for malicious\npurposes, such as posting misinformation in an online forum or selling illicit\nsubstances on a website. To evaluate these risks, we propose SafeArena, the\nfirst benchmark to focus on the deliberate misuse of web agents. SafeArena\ncomprises 250 safe and 250 harmful tasks across four websites. We classify the\nharmful tasks into five harm categories -- misinformation, illegal activity,\nharassment, cybercrime, and social bias, designed to assess realistic misuses\nof web agents. We evaluate leading LLM-based web agents, including GPT-4o,\nClaude-3.5 Sonnet, Qwen-2-VL 72B, and Llama-3.2 90B, on our benchmark. To\nsystematically assess their susceptibility to harmful tasks, we introduce the\nAgent Risk Assessment framework that categorizes agent behavior across four\nrisk levels. We find agents are surprisingly compliant with malicious requests,\nwith GPT-4o and Qwen-2 completing 34.7% and 27.3% of harmful requests,\nrespectively. Our findings highlight the urgent need for safety alignment\nprocedures for web agents. Our benchmark is available here:\nhttps://safearena.github.io",
+        "publication_date": "2025-03-06",
+        "publication_time": "20:43:14",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "upvotes": 16
+    },
+    "2503.05639": {
+        "url": "https://arxiv.org/abs/2503.05639",
+        "title": "VideoPainter: Any-length Video Inpainting and Editing with Plug-and-Play\n  Context Control",
+        "authors": [
+            "Yuxuan Bian",
+            "Zhaoyang Zhang",
+            "Xuan Ju",
+            "Mingdeng Cao",
+            "Liangbin Xie",
+            "Ying Shan",
+            "Qiang Xu"
+        ],
+        "abstract": "Video inpainting, which aims to restore corrupted video content, has\nexperienced substantial progress. Despite these advances, existing methods,\nwhether propagating unmasked region pixels through optical flow and receptive\nfield priors, or extending image-inpainting models temporally, face challenges\nin generating fully masked objects or balancing the competing objectives of\nbackground context preservation and foreground generation in one model,\nrespectively. To address these limitations, we propose a novel dual-stream\nparadigm VideoPainter that incorporates an efficient context encoder\n(comprising only 6% of the backbone parameters) to process masked videos and\ninject backbone-aware background contextual cues to any pre-trained video DiT,\nproducing semantically consistent content in a plug-and-play manner. This\narchitectural separation significantly reduces the model's learning complexity\nwhile enabling nuanced integration of crucial background context. We also\nintroduce a novel target region ID resampling technique that enables any-length\nvideo inpainting, greatly enhancing our practical applicability. Additionally,\nwe establish a scalable dataset pipeline leveraging current vision\nunderstanding models, contributing VPData and VPBench to facilitate\nsegmentation-based inpainting training and assessment, the largest video\ninpainting dataset and benchmark to date with over 390K diverse clips. Using\ninpainting as a pipeline basis, we also explore downstream applications\nincluding video editing and video editing pair data generation, demonstrating\ncompetitive performance and significant practical potential. Extensive\nexperiments demonstrate VideoPainter's superior performance in both any-length\nvideo inpainting and editing, across eight key metrics, including video\nquality, mask region preservation, and textual coherence.",
+        "publication_date": "2025-03-07",
+        "publication_time": "17:59:46",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.MM"
+        ],
+        "upvotes": 13
+    },
+    "2503.05379": {
+        "url": "https://arxiv.org/abs/2503.05379",
+        "title": "R1-Omni: Explainable Omni-Multimodal Emotion Recognition with\n  Reinforcing Learning",
+        "authors": [
+            "Jiaxing Zhao",
+            "Xihan Wei",
+            "Liefeng Bo"
+        ],
+        "abstract": "In this work, we present the first application of Reinforcement Learning with\nVerifiable Reward (RLVR) to an Omni-multimodal large language model in the\ncontext of emotion recognition, a task where both visual and audio modalities\nplay crucial roles. We leverage RLVR to optimize the Omni model, significantly\nenhancing its performance in three key aspects: reasoning capability, emotion\nrecognition accuracy, and generalization ability. The introduction of RLVR not\nonly improves the model's overall performance on in-distribution data but also\ndemonstrates superior robustness when evaluated on out-of-distribution\ndatasets. More importantly, the improved reasoning capability enables clear\nanalysis of the contributions of different modalities, particularly visual and\naudio information, in the emotion recognition process. This provides valuable\ninsights into the optimization of multimodal large language models.",
+        "publication_date": "2025-03-07",
+        "publication_time": "12:46:42",
+        "tags": [
+            "cs.LG",
+            "cs.CV"
+        ],
+        "upvotes": 12
+    },
+    "2503.04808": {
+        "url": "https://arxiv.org/abs/2503.04808",
+        "title": "Learning from Failures in Multi-Attempt Reinforcement Learning",
+        "authors": [
+            "Stephen Chung",
+            "Wenyu Du",
+            "Jie Fu"
+        ],
+        "abstract": "Recent advancements in reinforcement learning (RL) for large language models\n(LLMs), exemplified by DeepSeek R1, have shown that even a simple\nquestion-answering task can substantially improve an LLM's reasoning\ncapabilities. In this work, we extend this approach by modifying the task into\na multi-attempt setting. Instead of generating a single response per question,\nthe model is given multiple attempts, with feedback provided after incorrect\nresponses. The multi-attempt task encourages the model to refine its previous\nattempts and improve search efficiency. Experimental results show that even a\nsmall LLM trained on a multi-attempt task achieves significantly higher\naccuracy when evaluated with more attempts, improving from 45.6% with 1 attempt\nto 52.5% with 2 attempts on the math benchmark. In contrast, the same LLM\ntrained on a standard single-turn task exhibits only a marginal improvement,\nincreasing from 42.3% to 43.2% when given more attempts during evaluation. The\nresults indicate that, compared to the standard single-turn task, an LLM\ntrained on a multi-attempt task achieves slightly better performance on math\nbenchmarks while also learning to refine its responses more effectively based\non user feedback. Full code is available at\nhttps://github.com/DualityRL/multi-attempt",
+        "publication_date": "2025-03-04",
+        "publication_time": "02:53:39",
+        "tags": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "upvotes": 11
+    },
+    "2503.04872": {
+        "url": "https://arxiv.org/abs/2503.04872",
+        "title": "TinyR1-32B-Preview: Boosting Accuracy with Branch-Merge Distillation",
+        "authors": [
+            "Lin Sun",
+            "Guangxiang Zhao",
+            "Xiaoqi Jian",
+            "Yuhan Wu",
+            "Weihong Lin",
+            "Yongfu Zhu",
+            "Change Jia",
+            "Linglin Zhang",
+            "Jinzhu Wu",
+            "Junfeng Ran",
+            "Sai-er Hu",
+            "Zihan Jiang",
+            "Junting Zhou",
+            "Wenrui Liu",
+            "Bin Cui",
+            "Tong Yang",
+            "Xiangzheng Zhang"
+        ],
+        "abstract": "The challenge of reducing the size of Large Language Models (LLMs) while\nmaintaining their performance has gained significant attention. However,\nexisting methods, such as model distillation and transfer learning, often fail\nto achieve high accuracy. To address this limitation, we introduce the\nBranch-Merge distillation approach, which enhances model compression through\ntwo phases: (1) the Branch Phase, where knowledge from a large teacher model is\n\\textit{selectively distilled} into specialized student models via\ndomain-specific supervised fine-tuning (SFT); And (2) the Merge Phase, where\nthese student models are merged to enable cross-domain knowledge transfer and\nimprove generalization. We validate our distillation approach using DeepSeek-R1\nas the teacher and DeepSeek-R1-Distill-Qwen-32B as the student. The resulting\nmerged model, TinyR1-32B-Preview, outperforms its counterpart\nDeepSeek-R1-Distill-Qwen-32B across multiple benchmarks, including Mathematics\n(+5.5 points), Coding (+4.4 points) and Science (+2.9 points), while achieving\nnear-equal performance to DeepSeek-R1 on AIME 2024. The Branch-Merge\ndistillation approach provides a scalable solution for creating smaller,\nhigh-performing LLMs with reduced computational cost and time.",
+        "publication_date": "2025-03-06",
+        "publication_time": "16:25:53",
+        "tags": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "upvotes": 10
+    },
+    "2503.05638": {
+        "url": "https://arxiv.org/abs/2503.05638",
+        "title": "TrajectoryCrafter: Redirecting Camera Trajectory for Monocular Videos\n  via Diffusion Models",
+        "authors": [
+            "Mark YU",
+            "Wenbo Hu",
+            "Jinbo Xing",
+            "Ying Shan"
+        ],
+        "abstract": "We present TrajectoryCrafter, a novel approach to redirect camera\ntrajectories for monocular videos. By disentangling deterministic view\ntransformations from stochastic content generation, our method achieves precise\ncontrol over user-specified camera trajectories. We propose a novel dual-stream\nconditional video diffusion model that concurrently integrates point cloud\nrenders and source videos as conditions, ensuring accurate view transformations\nand coherent 4D content generation. Instead of leveraging scarce multi-view\nvideos, we curate a hybrid training dataset combining web-scale monocular\nvideos with static multi-view datasets, by our innovative double-reprojection\nstrategy, significantly fostering robust generalization across diverse scenes.\nExtensive evaluations on multi-view and large-scale monocular videos\ndemonstrate the superior performance of our method.",
+        "publication_date": "2025-03-07",
+        "publication_time": "17:57:53",
+        "tags": [
+            "cs.CV",
+            "cs.AI",
+            "cs.GR"
+        ],
+        "upvotes": 9
+    },
+    "2503.05652": {
+        "url": "https://arxiv.org/abs/2503.05652",
+        "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation\n  for Everyday Household Activities",
+        "authors": [
+            "Yunfan Jiang",
+            "Ruohan Zhang",
+            "Josiah Wong",
+            "Chen Wang",
+            "Yanjie Ze",
+            "Hang Yin",
+            "Cem Gokmen",
+            "Shuran Song",
+            "Jiajun Wu",
+            "Li Fei-Fei"
+        ],
+        "abstract": "Real-world household tasks present significant challenges for mobile\nmanipulation robots. An analysis of existing robotics benchmarks reveals that\nsuccessful task performance hinges on three key whole-body control\ncapabilities: bimanual coordination, stable and precise navigation, and\nextensive end-effector reachability. Achieving these capabilities requires\ncareful hardware design, but the resulting system complexity further\ncomplicates visuomotor policy learning. To address these challenges, we\nintroduce the BEHAVIOR Robot Suite (BRS), a comprehensive framework for\nwhole-body manipulation in diverse household tasks. Built on a bimanual,\nwheeled robot with a 4-DoF torso, BRS integrates a cost-effective whole-body\nteleoperation interface for data collection and a novel algorithm for learning\nwhole-body visuomotor policies. We evaluate BRS on five challenging household\ntasks that not only emphasize the three core capabilities but also introduce\nadditional complexities, such as long-range navigation, interaction with\narticulated and deformable objects, and manipulation in confined spaces. We\nbelieve that BRS's integrated robotic embodiment, data collection interface,\nand learning framework mark a significant step toward enabling real-world\nwhole-body manipulation for everyday household tasks. BRS is open-sourced at\nhttps://behavior-robot-suite.github.io/",
+        "publication_date": "2025-03-07",
+        "publication_time": "18:15:21",
+        "tags": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "upvotes": 8
+    },
+    "2503.04824": {
+        "url": "https://arxiv.org/abs/2503.04824",
+        "title": "ProReflow: Progressive Reflow with Decomposed Velocity",
+        "authors": [
+            "Lei Ke",
+            "Haohang Xu",
+            "Xuefei Ning",
+            "Yu Li",
+            "Jiajun Li",
+            "Haoling Li",
+            "Yuxuan Lin",
+            "Dongsheng Jiang",
+            "Yujiu Yang",
+            "Linfeng Zhang"
+        ],
+        "abstract": "Diffusion models have achieved significant progress in both image and video\ngeneration while still suffering from huge computation costs. As an effective\nsolution, flow matching aims to reflow the diffusion process of diffusion\nmodels into a straight line for a few-step and even one-step generation.\nHowever, in this paper, we suggest that the original training pipeline of flow\nmatching is not optimal and introduce two techniques to improve it. Firstly, we\nintroduce progressive reflow, which progressively reflows the diffusion models\nin local timesteps until the whole diffusion progresses, reducing the\ndifficulty of flow matching. Second, we introduce aligned v-prediction, which\nhighlights the importance of direction matching in flow matching over magnitude\nmatching. Experimental results on SDv1.5 and SDXL demonstrate the effectiveness\nof our method, for example, conducting on SDv1.5 achieves an FID of 10.70 on\nMSCOCO2014 validation set with only 4 sampling steps, close to our teacher\nmodel (32 DDIM steps, FID = 10.05).",
+        "publication_date": "2025-03-05",
+        "publication_time": "04:50:53",
+        "tags": [
+            "cs.GR"
+        ],
+        "upvotes": 8
+    },
+    "2503.04548": {
+        "url": "https://arxiv.org/abs/2503.04548",
+        "title": "An Empirical Study on Eliciting and Improving R1-like Reasoning Models",
+        "authors": [
+            "Zhipeng Chen",
+            "Yingqian Min",
+            "Beichen Zhang",
+            "Jie Chen",
+            "Jinhao Jiang",
+            "Daixuan Cheng",
+            "Wayne Xin Zhao",
+            "Zheng Liu",
+            "Xu Miao",
+            "Yang Lu",
+            "Lei Fang",
+            "Zhongyuan Wang",
+            "Ji-Rong Wen"
+        ],
+        "abstract": "In this report, we present the third technical report on the development of\nslow-thinking models as part of the STILL project. As the technical pathway\nbecomes clearer, scaling RL training has become a central technique for\nimplementing such reasoning models. We systematically experiment with and\ndocument the effects of various factors influencing RL training, conducting\nexperiments on both base models and fine-tuned models. Specifically, we\ndemonstrate that our RL training approach consistently improves the Qwen2.5-32B\nbase models, enhancing both response length and test accuracy. Furthermore, we\nshow that even when a model like DeepSeek-R1-Distill-Qwen-1.5B has already\nachieved a high performance level, it can be further refined through RL\ntraining, reaching an accuracy of 39.33% on AIME 2024. Beyond RL training, we\nalso explore the use of tool manipulation, finding that it significantly boosts\nthe reasoning performance of large reasoning models. This approach achieves a\nremarkable accuracy of 86.67% with greedy search on AIME 2024, underscoring its\neffectiveness in enhancing model capabilities. We release our resources at the\nSTILL project website: https://github.com/RUCAIBox/Slow_Thinking_with_LLMs.",
+        "publication_date": "2025-03-06",
+        "publication_time": "15:34:27",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 7
+    },
+    "2503.05447": {
+        "url": "https://arxiv.org/abs/2503.05447",
+        "title": "Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts",
+        "authors": [
+            "Weigao Sun",
+            "Disen Lan",
+            "Tong Zhu",
+            "Xiaoye Qu",
+            "Yu Cheng"
+        ],
+        "abstract": "Linear Sequence Modeling (LSM) like linear attention, state space models and\nlinear RNNs, and Mixture-of-Experts (MoE) have recently emerged as significant\narchitectural improvements. In this paper, we introduce Linear-MoE, a\nproduction-level system for modeling and training large-scale models that\nintegrate LSM with MoE. Linear-MoE leverages the advantages of both LSM modules\nfor linear-complexity sequence modeling and MoE layers for sparsely activation,\naiming to offer high performance with efficient training. The Linear-MoE system\ncomprises: 1) Modeling subsystem, which provides a unified framework supporting\nall instances of LSM. and 2) Training subsystem, which facilitates efficient\ntraining by incorporating various advanced parallelism technologies,\nparticularly Sequence Parallelism designed for Linear-MoE models. Additionally,\nwe explore hybrid models that combine Linear-MoE layers with standard\nTransformer-MoE layers with its Sequence Parallelism to further enhance model\nflexibility and performance. Evaluations on two model series, A0.3B-2B and\nA1B-7B, demonstrate Linear-MoE achieves efficiency gains while maintaining\ncompetitive performance on various benchmarks, showcasing its potential as a\nnext-generation foundational model architecture. Code:\nhttps://github.com/OpenSparseLLMs/Linear-MoE.",
+        "publication_date": "2025-03-07",
+        "publication_time": "14:17:45",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL",
+            "cs.DC"
+        ],
+        "upvotes": 6
+    },
+    "2503.04359": {
+        "url": "https://arxiv.org/abs/2503.04359",
+        "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code\n  Understanding",
+        "authors": [
+            "Jia Li",
+            "Xuyuan Guo",
+            "Lei Li",
+            "Kechi Zhang",
+            "Ge Li",
+            "Jia Li",
+            "Zhengwei Tao",
+            "Fang Liu",
+            "Chongyang Tao",
+            "Yuqi Zhu",
+            "Zhi Jin"
+        ],
+        "abstract": "Current advanced long-context language models offer great potential for\nreal-world software engineering applications. However, progress in this\ncritical domain remains hampered by a fundamental limitation: the absence of a\nrigorous evaluation framework for long code understanding. To gap this\nobstacle, we propose a long code understanding benchmark LONGCODEU from four\naspects (8 tasks) to evaluate LCLMs' long code understanding ability required\nfor practical applications, including code unit perception, intra-code unit\nunderstanding, inter-code unit relation understanding, and long code\ndocumentation understanding. We evaluate 9 popular LCLMs on LONGCODEU (i.e., 6\ngeneral models and 3 code models). Our experimental results reveal key\nlimitations in current LCLMs' capabilities for long code understanding.\nParticularly, the performance of LCLMs drops dramatically when the long code\nlength is greater than 32K, falling far short of their claimed 128K-1M context\nwindows. In the four aspects, inter-code unit relation understanding is the\nmost challenging for LCLMs. Our study provides valuable insights for optimizing\nLCLMs and driving advancements in software engineering.",
+        "publication_date": "2025-03-06",
+        "publication_time": "12:02:31",
+        "tags": [
+            "cs.SE"
+        ],
+        "upvotes": 5
+    },
+    "2503.01713": {
+        "url": "https://arxiv.org/abs/2503.01713",
+        "title": "SAGE: A Framework of Precise Retrieval for RAG",
+        "authors": [
+            "Jintao Zhang",
+            "Guoliang Li",
+            "Jinyang Su"
+        ],
+        "abstract": "Retrieval-augmented generation (RAG) has demonstrated significant proficiency\nin conducting question-answering (QA) tasks within a specified corpus.\nNonetheless, numerous failure instances of RAG in QA still exist. These\nfailures are not solely attributable to the limitations of Large Language\nModels (LLMs); instead, they predominantly arise from the retrieval of\ninaccurate information for LLMs due to two limitations: (1) Current RAG methods\nsegment the corpus without considering semantics, making it difficult to find\nrelevant context due to impaired correlation between questions and the\nsegments. (2) There is a trade-off between missing essential context with fewer\ncontext retrieved and getting irrelevant context with more context retrieved.\n  In this paper, we introduce a RAG framework (SAGE), to overcome these\nlimitations. First, to address the segmentation issue without considering\nsemantics, we propose to train a semantic segmentation model. This model is\ntrained to segment the corpus into semantically complete chunks. Second, to\nensure that only the most relevant chunks are retrieved while the irrelevant\nones are ignored, we design a chunk selection algorithm to dynamically select\nchunks based on the decreasing speed of the relevance score, leading to a more\nrelevant selection. Third, to further ensure the precision of the retrieved\nchunks, we propose letting LLMs assess whether retrieved chunks are excessive\nor lacking and then adjust the amount of context accordingly. Experiments show\nthat SAGE outperforms baselines by 61.25% in the quality of QA on average.\nMoreover, by avoiding retrieving noisy context, SAGE lowers the cost of the\ntokens consumed in LLM inference and achieves a 49.41% enhancement in cost\nefficiency on average. Additionally, our work offers valuable insights for\nboosting RAG.",
+        "publication_date": "2025-03-03",
+        "publication_time": "16:25:58",
+        "tags": [
+            "cs.LG",
+            "cs.AI",
+            "cs.DB",
+            "cs.IR"
+        ],
+        "upvotes": 4
+    },
+    "2503.01840": {
+        "url": "https://arxiv.org/abs/2503.01840",
+        "title": "EAGLE-3: Scaling up Inference Acceleration of Large Language Models via\n  Training-Time Test",
+        "authors": [
+            "Yuhui Li",
+            "Fangyun Wei",
+            "Chao Zhang",
+            "Hongyang Zhang"
+        ],
+        "abstract": "The sequential nature of modern LLMs makes them expensive and slow, and\nspeculative sampling has proven to be an effective solution to this problem.\nMethods like EAGLE perform autoregression at the feature level, reusing\ntop-layer features from the target model to achieve better results than vanilla\nspeculative sampling. A growing trend in the LLM community is scaling up\ntraining data to improve model intelligence without increasing inference costs.\nHowever, we observe that scaling up data provides limited improvements for\nEAGLE. We identify that this limitation arises from EAGLE's feature prediction\nconstraints. In this paper, we introduce EAGLE-3, which abandons feature\nprediction in favor of direct token prediction and replaces reliance on\ntop-layer features with multi-layer feature fusion via a technique named\ntraining-time test. These improvements significantly enhance performance and\nenable the draft model to fully benefit from scaling up training data. Our\nexperiments include both chat models and reasoning models, evaluated on five\ntasks. The results show that EAGLE-3 achieves a speedup ratio up to 6.5x, with\nabout 1.4x improvement over EAGLE-2. The code is available at\nhttps://github.com/SafeAILab/EAGLE.",
+        "publication_date": "2025-03-03",
+        "publication_time": "18:59:04",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 3
+    },
+    "2502.18968": {
+        "url": "https://arxiv.org/abs/2502.18968",
+        "title": "Know You First and Be You Better: Modeling Human-Like User Simulators\n  via Implicit Profiles",
+        "authors": [
+            "Kuang Wang",
+            "Xianfei Li",
+            "Shenghao Yang",
+            "Li Zhou",
+            "Feng Jiang",
+            "Haizhou Li"
+        ],
+        "abstract": "User simulators are crucial for replicating human interactions with dialogue\nsystems, supporting both collaborative training and automatic evaluation,\nespecially for large language models (LLMs). However, existing simulators often\nrely solely on text utterances, missing implicit user traits such as\npersonality, speaking style, and goals. In contrast, persona-based methods lack\ngeneralizability, as they depend on predefined profiles of famous individuals\nor archetypes. To address these challenges, we propose User Simulator with\nimplicit Profiles (USP), a framework that infers implicit user profiles from\nhuman-machine conversations and uses them to generate more personalized and\nrealistic dialogues. We first develop an LLM-driven extractor with a\ncomprehensive profile schema. Then, we refine the simulation through\nconditional supervised fine-tuning and reinforcement learning with cycle\nconsistency, optimizing it at both the utterance and conversation levels.\nFinally, we adopt a diverse profile sampler to capture the distribution of\nreal-world user profiles. Experimental results demonstrate that USP outperforms\nstrong baselines in terms of authenticity and diversity while achieving\ncomparable performance in consistency. Furthermore, dynamic multi-turn\nevaluations based on USP strongly align with mainstream benchmarks,\ndemonstrating its effectiveness in real-world applications.",
+        "publication_date": "2025-02-26",
+        "publication_time": "09:26:54",
+        "tags": [
+            "cs.CL"
+        ],
+        "upvotes": 3
+    },
+    "2503.05315": {
+        "url": "https://arxiv.org/abs/2503.05315",
+        "title": "LoRACode: LoRA Adapters for Code Embeddings",
+        "authors": [
+            "Saumya Chaturvedi",
+            "Aman Chadha",
+            "Laurent Bindschaedler"
+        ],
+        "abstract": "Code embeddings are essential for semantic code search; however, current\napproaches often struggle to capture the precise syntactic and contextual\nnuances inherent in code. Open-source models such as CodeBERT and UniXcoder\nexhibit limitations in scalability and efficiency, while high-performing\nproprietary systems impose substantial computational costs. We introduce a\nparameter-efficient fine-tuning method based on Low-Rank Adaptation (LoRA) to\nconstruct task-specific adapters for code retrieval. Our approach reduces the\nnumber of trainable parameters to less than two percent of the base model,\nenabling rapid fine-tuning on extensive code corpora (2 million samples in 25\nminutes on two H100 GPUs). Experiments demonstrate an increase of up to 9.1% in\nMean Reciprocal Rank (MRR) for Code2Code search, and up to 86.69% for Text2Code\nsearch tasks across multiple programming languages. Distinction in task-wise\nand language-wise adaptation helps explore the sensitivity of code retrieval\nfor syntactical and linguistic variations.",
+        "publication_date": "2025-03-07",
+        "publication_time": "10:50:45",
+        "tags": [
+            "cs.LG",
+            "cs.IR",
+            "cs.SE"
+        ],
+        "upvotes": 2
+    },
+    "2503.04504": {
+        "url": "https://arxiv.org/abs/2503.04504",
+        "title": "AnyAnomaly: Zero-Shot Customizable Video Anomaly Detection with LVLM",
+        "authors": [
+            "Sunghyun Ahn",
+            "Youngwan Jo",
+            "Kijung Lee",
+            "Sein Kwon",
+            "Inpyo Hong",
+            "Sanghyun Park"
+        ],
+        "abstract": "Video anomaly detection (VAD) is crucial for video analysis and surveillance\nin computer vision. However, existing VAD models rely on learned normal\npatterns, which makes them difficult to apply to diverse environments.\nConsequently, users should retrain models or develop separate AI models for new\nenvironments, which requires expertise in machine learning, high-performance\nhardware, and extensive data collection, limiting the practical usability of\nVAD. To address these challenges, this study proposes customizable video\nanomaly detection (C-VAD) technique and the AnyAnomaly model. C-VAD considers\nuser-defined text as an abnormal event and detects frames containing a\nspecified event in a video. We effectively implemented AnyAnomaly using a\ncontext-aware visual question answering without fine-tuning the large vision\nlanguage model. To validate the effectiveness of the proposed model, we\nconstructed C-VAD datasets and demonstrated the superiority of AnyAnomaly.\nFurthermore, our approach showed competitive performance on VAD benchmark\ndatasets, achieving state-of-the-art results on the UBnormal dataset and\noutperforming other methods in generalization across all datasets. Our code is\navailable online at github.com/SkiddieAhn/Paper-AnyAnomaly.",
+        "publication_date": "2025-03-06",
+        "publication_time": "14:52:34",
+        "tags": [
+            "cs.CV"
+        ],
+        "upvotes": 1
     }
 }
